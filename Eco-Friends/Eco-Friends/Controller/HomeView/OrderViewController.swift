@@ -41,7 +41,7 @@ class OrderViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemBackground
+    view.backgroundColor = .red
     view.clipsToBounds = true
     view.layer.cornerRadius = 20
     view.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)

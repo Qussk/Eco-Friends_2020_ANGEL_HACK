@@ -112,8 +112,20 @@ class AddressViewController: UIViewController {
   }
   
   @objc func moveToHomeView() {
-    let homeView = HomeViewController()
-    navigationController?.pushViewController(homeView, animated: true)
+   
+    let homeNavi = UINavigationController(rootViewController: HomeViewController())
+    let searchNavi = UINavigationController(rootViewController: SearchViewController())
+    let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
+    let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
+    let tabVC = UITabBarController()
+    tabVC.viewControllers = [homeNavi, searchNavi, descriptionNavi, myPageNavi]
+    
+    homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
+    searchNavi.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
+    descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
+    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 3)
+    
+    self.navigationController?.pushViewController(homeNavi, animated: true)
   }
 
 }

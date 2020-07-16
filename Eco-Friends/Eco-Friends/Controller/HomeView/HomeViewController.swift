@@ -50,9 +50,9 @@ class HomeViewController: UIViewController {
       mapView.topAnchor.constraint(equalTo: guide.topAnchor),
       mapView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       mapView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-      mapView.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.3),
+      mapView.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.4),
       
-      orderChildVC.view.topAnchor.constraint(equalTo: mapView.bottomAnchor),
+      orderChildVC.view.topAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -25),
       orderChildVC.view.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       orderChildVC.view.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
       orderChildVC.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
