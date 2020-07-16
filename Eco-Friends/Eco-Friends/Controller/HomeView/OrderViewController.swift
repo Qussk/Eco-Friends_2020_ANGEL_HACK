@@ -4,7 +4,7 @@
 //
 //  Created by 윤병일 on 2020/07/15.
 //  Copyright © 2020 Byoungil Youn. All rights reserved.
-//
+// 배고파
 
 import UIKit
 
@@ -75,7 +75,7 @@ class OrderViewController: UIViewController {
     reserveButton.setTitle("예약하기", for: .normal)
     reserveButton.setTitleColor(.white, for: .normal)
     reserveButton.backgroundColor = UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1)
-    reserveButton.layer.cornerRadius = view.frame.width / 17
+    reserveButton.layer.cornerRadius = 25
     reserveButton.addTarget(self, action: #selector(reserveClicked(_:)), for: .touchUpInside)
     view.addSubview(reserveButton)
     
