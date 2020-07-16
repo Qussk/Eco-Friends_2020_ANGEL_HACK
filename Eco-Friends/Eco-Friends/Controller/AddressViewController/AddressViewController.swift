@@ -59,6 +59,7 @@ class AddressViewController: UIViewController {
     nowButton.setTitleColor(.black, for: .normal)
     nowButton.backgroundColor = .white
     nowButton.layer.cornerRadius = 10
+    nowButton.addTarget(self, action: #selector(moveToHomeView), for: .touchUpInside)
     
     nearLabel.text = "최근 주소"
     nearLabel.font = UIFont.systemFont(ofSize: 13)
@@ -108,6 +109,11 @@ class AddressViewController: UIViewController {
       collectionView.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -18),
       collectionView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
     ])
+  }
+  
+  @objc func moveToHomeView() {
+    let homeView = HomeViewController()
+    navigationController?.pushViewController(homeView, animated: true)
   }
 
 }
