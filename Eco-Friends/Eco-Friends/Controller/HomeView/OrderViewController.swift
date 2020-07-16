@@ -76,7 +76,10 @@ class OrderViewController: UIViewController {
     reserveButton.setTitleColor(.white, for: .normal)
     reserveButton.backgroundColor = UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1)
     reserveButton.layer.cornerRadius = view.frame.width / 17
+    reserveButton.addTarget(self, action: #selector(reserveClicked(_:)), for: .touchUpInside)
     view.addSubview(reserveButton)
+    
+    
     
   }
   
@@ -114,4 +117,16 @@ class OrderViewController: UIViewController {
       reserveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35)
     ])
   }
+  
+  //MARK:- Action
+  
+  @objc func reserveClicked(_ sender: UIButton){
+    
+    let reserveVC = ReserveViewController()
+    navigationController?.pushViewController(reserveVC, animated: false)
+    reserveVC.modalPresentationStyle = .fullScreen
+
+  }
+  
+  
 }
