@@ -10,7 +10,7 @@ import UIKit
 
 class OrderViewController: UIViewController {
   //MARK: - Properties
-  
+  let text = UITextField()
   private let textLabel = UILabel()
   private let divider1 = DividerView()
   private let divider2 = DividerView()
