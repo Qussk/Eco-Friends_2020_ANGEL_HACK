@@ -113,7 +113,7 @@ class AddressViewController: UIViewController {
   
   @objc func moveToHomeView() {
     let homeView = HomeViewController()
-    navigationController?.pushViewController(homeView, animated: true)
+    
   }
 
 }
