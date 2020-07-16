@@ -71,7 +71,6 @@ extension OnboardingViewController: PaperOnboardingDataSource {
     let bgOne = UIColor(red: 217/255, green: 72/255, blue: 89/255, alpha: 1)
     let bgTwo = UIColor(red: 186/255, green: 166/255, blue: 211/255, alpha: 1)
     let bgThree = UIColor(red: 168/255, green: 166/255, blue: 78/255, alpha: 1)
-    let textColor = UIColor.white.cgColor
     
     let titleFont = UIFont(name: "AvenirNext-Bold", size: 24)!
     let descirptionFont = UIFont(name: "AvenirNext-Regular", size: 18)!

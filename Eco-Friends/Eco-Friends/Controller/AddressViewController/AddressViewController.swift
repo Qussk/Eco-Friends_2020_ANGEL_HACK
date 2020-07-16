@@ -113,9 +113,12 @@ class AddressViewController: UIViewController {
   
   @objc func moveToHomeView() {
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
     let homeView = HomeViewController()
+=======
+>>>>>>> 660897d842d1db16762c2b3e902ce1d6552e1210
 
 >>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
     let homeNavi = UINavigationController(rootViewController: HomeViewController())
@@ -140,9 +143,12 @@ class AddressViewController: UIViewController {
     tabVC.modalPresentationStyle = .fullScreen
     present(tabVC, animated: true)
     
-  //  navigationController?.pushViewController(homeView, animated: true)
   
+<<<<<<< HEAD
 >>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
+=======
+
+>>>>>>> 660897d842d1db16762c2b3e902ce1d6552e1210
   }
 
 }
