@@ -127,9 +127,7 @@ class AddressViewController: UIViewController {
     searchNavi.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 3)
-    
-
-    self.navigationController?.pushViewController(homeNavi, animated: true)
+  
 
     tabVC.modalPresentationStyle = .fullScreen
     present(tabVC, animated: true)
