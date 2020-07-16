@@ -69,6 +69,8 @@ class HomeViewController: UIViewController {
     naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
   }
   
+  
+  
   private func setMyPlace() {
     myPlace.coordinate = CLLocationCoordinate2D(latitude: 37.541708, longitude: 127.056256)
     myPlace.title = "우리집"

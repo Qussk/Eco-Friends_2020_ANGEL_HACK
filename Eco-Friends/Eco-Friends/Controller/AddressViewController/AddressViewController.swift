@@ -112,12 +112,21 @@ class AddressViewController: UIViewController {
   }
   
   @objc func moveToHomeView() {
+<<<<<<< HEAD
    
+=======
+    let homeView = HomeViewController()
+
+>>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
     let homeNavi = UINavigationController(rootViewController: HomeViewController())
     let searchNavi = UINavigationController(rootViewController: SearchViewController())
     let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
     let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
     let tabVC = UITabBarController()
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
     tabVC.viewControllers = [homeNavi, searchNavi, descriptionNavi, myPageNavi]
     
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
@@ -125,7 +134,15 @@ class AddressViewController: UIViewController {
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 3)
     
+<<<<<<< HEAD
     self.navigationController?.pushViewController(homeNavi, animated: true)
+=======
+    tabVC.modalPresentationStyle = .fullScreen
+    present(tabVC, animated: true)
+    
+  //  navigationController?.pushViewController(homeView, animated: true)
+  
+>>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
   }
 
 }

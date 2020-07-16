@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+<<<<<<< HEAD
 //
 //    let homeNavi = UINavigationController(rootViewController: HomeViewController())
 //    let searchNavi = UINavigationController(rootViewController: SearchViewController())
@@ -31,10 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = addressNavi
+=======
+   
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.rootViewController = OnboardingViewController()
+>>>>>>> e143effa70f162056bca1e512a4afcafe4e8392f
     window?.backgroundColor = .systemBackground
     window?.makeKeyAndVisible()
     
     return true
+    
   }
 }
 
