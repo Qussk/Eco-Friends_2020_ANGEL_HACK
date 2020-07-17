@@ -10,12 +10,24 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
-    override func viewDidLoad() {
+  
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
-
-      view.backgroundColor = .systemPink
+      view.backgroundColor = .systemBackground
+      setNavigation()
     }
     
+  private func setNavigation() {
+    navigationItem.title = "마이페이지"
+  }
 
+  private func setUI() {
+    
+  }
+  
+  private func setConstraint() {
+    
+  }
 
 }

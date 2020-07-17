@@ -12,7 +12,7 @@ import MapKit
 class HomeViewController: UIViewController {
   
   //MARK: -  Properties
-  private let mapView = MKMapView()
+  let mapView = MKMapView()
   private let myPlace = MKPointAnnotation()
   private let orderChildVC = OrderViewController()
   let naviTitleButton = UIButton(type: .system)
@@ -40,33 +40,35 @@ class HomeViewController: UIViewController {
   
   //MARK: - setConstraint()
   private func setConstraint() {
-    let guide = view.safeAreaLayoutGuide
+//    let guide = view.safeAreaLayoutGuide
     
     [mapView, orderChildVC.view].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     NSLayoutConstraint.activate([
-      mapView.topAnchor.constraint(equalTo: guide.topAnchor),
-      mapView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      mapView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-      mapView.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.4),
+      mapView.topAnchor.constraint(equalTo: view.topAnchor),
+      mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      mapView.heightAnchor.constraint(equalToConstant: 300),
       
       orderChildVC.view.topAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -25),
-      orderChildVC.view.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      orderChildVC.view.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-      orderChildVC.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
+      orderChildVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      orderChildVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      orderChildVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      
     ])
   }
   
   //MARK: - setNavigation()
   
   private func setNavigation() {
-    navigationItem.titleView = naviTitleButton
-    naviTitleButton.backgroundColor = .clear
-    naviTitleButton.setTitle("성수동 성수이로 108", for: .normal)
-    naviTitleButton.setTitleColor(.black, for: .normal)
-    naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
+    navigationController?.isNavigationBarHidden = true
+//    navigationItem.titleView = naviTitleButton
+//    naviTitleButton.backgroundColor = .clear
+//    naviTitleButton.setTitle("성수동 성수이로 108", for: .normal)
+//    naviTitleButton.setTitleColor(.black, for: .normal)
+//    naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
   }
   
   
@@ -76,7 +78,7 @@ class HomeViewController: UIViewController {
     myPlace.title = "우리집"
     mapView.addAnnotation(myPlace)
     
-    let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+    let span = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
     let region = MKCoordinateRegion(center: myPlace.coordinate, span: span)
     mapView.setRegion(region, animated: true)
   }
