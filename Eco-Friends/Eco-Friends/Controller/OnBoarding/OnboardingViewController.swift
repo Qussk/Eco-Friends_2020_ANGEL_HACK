@@ -37,7 +37,7 @@ class OnboardingViewController: UIViewController {
     getButton.translatesAutoresizingMaskIntoConstraints = false
     
     getButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
-   getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
+    getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
     getButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -180).isActive = true
     getButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
   }
@@ -68,38 +68,38 @@ extension OnboardingViewController: PaperOnboardingDataSource {
   
   func onboardingItem(at index: Int) -> OnboardingItemInfo {
     
-    let bgOne = UIColor(red: 217/255, green: 72/255, blue: 89/255, alpha: 1)
-    let bgTwo = UIColor(red: 186/255, green: 166/255, blue: 211/255, alpha: 1)
-    let bgThree = UIColor(red: 168/255, green: 166/255, blue: 78/255, alpha: 1)
+//    let bgOne = UIColor(red: 217/255, green: 72/255, blue: 89/255, alpha: 1)
+//    let bgTwo = UIColor(red: 186/255, green: 166/255, blue: 211/255, alpha: 1)
+//    let bgThree = UIColor(red: 168/255, green: 166/255, blue: 78/255, alpha: 1)
     
     let titleFont = UIFont(name: "AvenirNext-Bold", size: 24)!
     let descirptionFont = UIFont(name: "AvenirNext-Regular", size: 18)!
     
     return [OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
-                               title: "환영합니다",
-                               description: "ㅏㅓㅓㅓㅓㅓㅓㅓ",
+                               title: "환경을 살리는 분리수거",
+                               description: "11111111111111\n11111111111111\n111111111111",
                                pageIcon: UIImage(named:"naver")!,
-                               color: bgOne,
-                               titleColor: UIColor.white,
-                               descriptionColor: UIColor.white,
+                               color: UIColor.white,
+                               titleColor: UIColor.black,
+                               descriptionColor: UIColor.black,
                                titleFont: titleFont,
                                descriptionFont: descirptionFont),
             OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
                                title: "환영합니다2",
                                description: "ㅏㅓㅓㅓㅓㅓㅓㅓ",
                                pageIcon: UIImage(named:"naver")!,
-                               color: bgTwo,
-                               titleColor: UIColor.white,
-                               descriptionColor: UIColor.white,
+                               color: UIColor.white,
+                               titleColor: UIColor.black,
+                               descriptionColor: UIColor.black,
                                titleFont: titleFont,
                                descriptionFont: descirptionFont),
             OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
                                title: "환영합니다",
                                description: "ㅏㅓㅓㅓㅓㅓㅓㅓ",
                                pageIcon: UIImage(named:"naver")!,
-                               color: bgThree,
-                               titleColor: UIColor.white,
-                               descriptionColor: UIColor.white,
+                               color: UIColor.white,
+                               titleColor: UIColor.black,
+                               descriptionColor: UIColor.black,
                                titleFont: titleFont,
                                descriptionFont: descirptionFont)
       ][index]

@@ -29,7 +29,7 @@ class ReserveViewController: UIViewController {
     
     setupView()
     setupConstrain()
-    
+    KeyboardShow()
   }
   //MARK:- UI
   func setupView(){
@@ -37,6 +37,7 @@ class ReserveViewController: UIViewController {
     collectionView.backgroundColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
     collectionView.register(ReserveSection1CollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     collectionView.register(ReserveSection2CollectionViewCell.self, forCellWithReuseIdentifier: "Cell2")
+    collectionView.register(ReserveSection3CollectionViewCell.self, forCellWithReuseIdentifier: "Cell3")
     view.addSubview(collectionView)
     
     //67, 187, 254
@@ -81,7 +82,7 @@ class ReserveViewController: UIViewController {
 //MARK:-UICollectionViewDataSource
 extension ReserveViewController : UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    2
+    3
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -89,14 +90,14 @@ extension ReserveViewController : UICollectionViewDataSource {
     
     if section == 0 {
       return 1
+    } else if section == 1 {
+      return 1
     } else {
-      return 2
+      return 1
     }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-    
     
     if indexPath.section == 0 {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ReserveSection1CollectionViewCell
@@ -107,18 +108,41 @@ extension ReserveViewController : UICollectionViewDataSource {
       
       return cell
       
-    }else {
+    }else if indexPath.section == 1 {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell2", for: indexPath) as! ReserveSection2CollectionViewCell
       
       cell.backgroundColor = .white
       cell.layer.cornerRadius = view.frame.width/19
       
       return cell
+    }else{
+       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell3", for: indexPath) as! ReserveSection3CollectionViewCell
+      
+      cell.backgroundColor = .white
+      cell.layer.cornerRadius = view.frame.width/19
+      
+      return cell
     }
+  }
+
+    //옵저버 등록
+     func KeyboardShow() {
+     NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillShow(_:)),name: UIResponder.keyboardWillShowNotification,object: nil)
+     NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillHide(_:)),name: UIResponder.keyboardWillHideNotification,object: nil)
+       }
+    
+    
+
+    @objc private func keyboardWillShow(_ notification: Notification) {
+      collectionView.frame.origin.y = -100 }
+
+    @objc private func keyboardWillHide(_ notification: Notification) {
+       collectionView.frame.origin.y = 100 }
     
   }
+   
   
-}
+
 
 //MARK:-UICollectionViewDelegateFlowLayout
 extension ReserveViewController: UICollectionViewDelegateFlowLayout{
@@ -133,17 +157,25 @@ extension ReserveViewController: UICollectionViewDelegateFlowLayout{
     if indexPath.section == 0{
       
       let width = collectionView.frame.width - Standard.inset.left - Standard.inset.right - Standard.standard
-      let height = view.frame.height/2.4
+      let height = view.frame.height/2.5
       print(width)
       
       return CGSize(width: width, height: height)
-    } else{
       
+    } else if indexPath.section == 1{
       
       let width = collectionView.frame.width - Standard.inset.left - Standard.inset.right - Standard.standard
-      let height = collectionView.frame.height/6.5
+      let height = collectionView.frame.height/6.1
+      
       return CGSize(width: width, height: height)
+      
+    } else {
+      
+      let width = collectionView.frame.width - Standard.inset.left - Standard.inset.right - Standard.standard
+      let height = collectionView.frame.height/6.1
+      
+      return CGSize(width: width, height: height)
+      
     }
-    
   }
 }
