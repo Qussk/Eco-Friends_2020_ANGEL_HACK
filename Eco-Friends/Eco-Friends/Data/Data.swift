@@ -8,4 +8,9 @@
 
 import Foundation
 
-class DataCenter
+class SingletonClass {
+  static var shared = SingletonClass()
+  private init() {}
+  
+  var arrData: [String] = []
+}

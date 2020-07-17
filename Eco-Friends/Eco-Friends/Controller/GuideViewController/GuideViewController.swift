@@ -19,11 +19,14 @@ class GuideViewController: UIViewController {
   
   let buttonBox = UIView()
   let buttonBoxInBtn = ["음식물", "재활용", "일반", "대형"]
+  var btnArray: [UIButton] = []
   
   let layout = UICollectionViewFlowLayout()
   lazy var collectionV = UICollectionView(
     frame: .zero, collectionViewLayout: layout
   )
+  
+  let singleton = SingletonClass.shared
   
   // MARK:- viewDidLoad
   override func viewDidLoad() {
@@ -37,6 +40,9 @@ class GuideViewController: UIViewController {
   func setUI() {
     setFlowLayout()
     [textLabel, searchTextBar, buttonBox, collectionV].forEach { view.addSubview($0) }
+    
+    collectionV.dataSource = self
+    collectionV.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     
     textLabel.text = "똑똑한 분리수거 방법\n지금 찾아보세요."
     textLabel.font = UIFont.boldSystemFont(ofSize: 25)
@@ -57,7 +63,6 @@ class GuideViewController: UIViewController {
     searchButton.tintColor = .black
     searchButton.sizeToFit()
     
-    var btnArray: [UIButton] = []
     for i in buttonBoxInBtn.indices {
       let btn = UIButton()
       btn.backgroundColor = .systemGray
@@ -92,13 +97,30 @@ class GuideViewController: UIViewController {
   
   // MARK:- btnClick
   @objc func btnClick(_ sender: UIButton) {
+    guard let text = sender.titleLabel?.text else { return }
+//    var i = 0
+//    switch sender.titleLabel?.text {
+//    case "음식물" : i += 0
+//    case "재활용" : i += 1
+//    case "일반" : i += 2
+//    case "대형" : i += 3
+//    default :
+//      return
+//    }
+    
     if sender.isSelected {
+      singleton.arrData.removeAll()
       sender.backgroundColor = .systemGray
       sender.isSelected = false
     } else {
       sender.backgroundColor = .systemBlue
+      singleton.arrData.append(text)
       sender.isSelected = true
     }
+    
+    
+    
+    print(singleton.arrData)
   }
   
   // MARK:- setConstraint
@@ -144,11 +166,12 @@ class GuideViewController: UIViewController {
 // MARK:- GuideViewController
 extension GuideViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    <#code#>
+    return singleton.arrData.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    <#code#>
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+    return cell
   }
 }
 
