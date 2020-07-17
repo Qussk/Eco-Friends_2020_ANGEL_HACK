@@ -31,8 +31,8 @@ class DescriptionViewController: UIViewController {
     setupView()
     setipConstrain()
     setScrollView()
-    pageControl()
-    
+    pageViewControl()
+    animated()
   }
   
   //MARK:- UI
@@ -49,15 +49,19 @@ class DescriptionViewController: UIViewController {
     view.addSubview(descriptionLable)
     
     scrollView.contentSize = CGSize(width: 375 * 3, height: scrollView.frame.height)
-    // scrollView.delegate = self
+    scrollView.delegate = self
     scrollView.isPagingEnabled = true
     scrollView.backgroundColor = .red
     view.addSubview(scrollView)
     
+    
+    view.addSubview(pageControl)
+
+    
   }
   
-   func navigationLess(){
-  //네비게이션바 디자인 생략
+  func navigationLess(){
+    //네비게이션바 디자인 생략
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.backgroundColor = UIColor.clear
@@ -72,11 +76,10 @@ class DescriptionViewController: UIViewController {
       $0.translatesAutoresizingMaskIntoConstraints = false
       $0.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 34).isActive = true
       $0.trailingAnchor.constraint(equalTo: guide.trailingAnchor,constant: -34).isActive = true
-      
     }
     
     scrollView.translatesAutoresizingMaskIntoConstraints = false
-    
+    pageControl.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
       descriptionTitle.topAnchor.constraint(equalTo: guide.topAnchor, constant: 18),
@@ -85,41 +88,61 @@ class DescriptionViewController: UIViewController {
       
       scrollView.topAnchor.constraint(equalTo: descriptionLable.bottomAnchor, constant: 39),
       scrollView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-//     scrollView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+      //     scrollView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
       scrollView.widthAnchor.constraint(equalToConstant: 375),
-      scrollView.heightAnchor.constraint(equalToConstant: 430)
+      scrollView.heightAnchor.constraint(equalToConstant: 430),
+      
+      pageControl.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20),
+      pageControl.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       
     ])
   }
   
   func setScrollView(){
-//
+    //
     for index in images.indices {
-    scrollFrame.origin.x = view.frame.width * CGFloat(index)
-    scrollFrame.size = scrollView.frame.size
-     
+      scrollFrame.origin.x = view.frame.width * CGFloat(index)
+      scrollFrame.size = scrollView.frame.size
       
-    let descriptionImage = UIImageView()
+      
+      let descriptionImage = UIImageView()
       descriptionImage.image = UIImage(named: images[index])
       descriptionImage.frame = CGRect(x: scrollFrame.origin.x, y: 0, width: 375, height: 430)
       scrollView.addSubview(descriptionImage)
-  
-  }
-    
-    
-    func pageControl(){
       
     }
-    
-    
   }
+    
+    func pageViewControl(){
+    
+      pageControl.numberOfPages = images.count
+      pageControl.currentPage = 0
+      pageControl.pageIndicatorTintColor = .lightGray
+      pageControl.currentPageIndicatorTintColor = ColorPiker.customBlue
+      pageControl.addTarget(self, action: #selector(handlePageControl(_:)), for: .valueChanged)
+  
+    }
+    
+  
+@objc func handlePageControl(_ sender: UIPageControl) {
+            let x = CGFloat(pageControl.currentPage) * scrollView.frame.width
+            scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+          }
+  }
+  
+
 
 
 func animated(){
   UIView.animate(withDuration: 0.2, animations: {
-
-    
+  
   })
   
 }
+
+extension DescriptionViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
 }
