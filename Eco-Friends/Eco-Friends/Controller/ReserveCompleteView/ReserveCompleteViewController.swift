@@ -23,7 +23,7 @@ class ReserveCompleteViewController: UIViewController {
     setUI()
     setConstraint()
   }
-  
+  // MARK:- setUI
   func setUI() {
     
     addChild(childViewController)
@@ -51,7 +51,7 @@ class ReserveCompleteViewController: UIViewController {
     completeButton.layer.cornerRadius = 23
     
   }
-  
+  // MARK:- setConstraint
   func setConstraint() {
     let guide = view.safeAreaLayoutGuide
     [imgV, text, xButton, completeButton, childViewController.view].forEach {

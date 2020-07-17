@@ -9,16 +9,16 @@
 import UIKit
 
 class ReserveCompleteChildViewController: UIViewController {
-  
+  // MARK:- Properties
   let tableV = UITableView()
-  
+  // MARK:- viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setUI()
     setConstraint()
   }
-  
+  // MARK:- setUI
   func setUI() {
     
     view.addSubview(tableV)
@@ -30,18 +30,19 @@ class ReserveCompleteChildViewController: UIViewController {
     tableV.register(ReserveCompleteChild2TableViewCell.self, forCellReuseIdentifier: ReserveCompleteChild2TableViewCell.identifier)
     tableV.register(ReserveCompleteChild3TableViewCell.self, forCellReuseIdentifier: ReserveCompleteChild3TableViewCell.identifier)
   }
-  
+  // MARK:- setConstraint
   func setConstraint() {
     tableV.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      tableV.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-      tableV.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-      tableV.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-      tableV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
+      tableV.topAnchor.constraint(equalTo: view.topAnchor),
+      tableV.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      tableV.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      tableV.bottomAnchor.constraint(equalTo: view.bottomAnchor)
     ])
+
   }
 }
-
+// MARK:- tableViewDataSource
 extension ReserveCompleteChildViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     3
@@ -56,8 +57,6 @@ extension ReserveCompleteChildViewController: UITableViewDataSource {
       return 1
     }
   }
-  
-  
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
@@ -87,10 +86,8 @@ extension ReserveCompleteChildViewController: UITableViewDataSource {
   }
 }
 
-
-
 extension ReserveCompleteChildViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: false)
   }
 }

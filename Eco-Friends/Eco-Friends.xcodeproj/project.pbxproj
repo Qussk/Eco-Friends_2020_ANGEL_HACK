@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */; };
 		0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */; };
+		0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7324C190660005582B /* GuideViewController.swift */; };
 		0E600D4024C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */; };
 		0E87694724C0786000E3ABA7 /* ReserveCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */; };
 		0E87694A24C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87694924C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChildTableViewCell.swift; sourceTree = "<group>"; };
 		0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild2TableViewCell.swift; sourceTree = "<group>"; };
+		0E3BEF7324C190660005582B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild3TableViewCell.swift; sourceTree = "<group>"; };
 		0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteViewController.swift; sourceTree = "<group>"; };
 		0E87694924C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChildViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3BEF7224C188220005582B /* GuideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E3BEF7324C190660005582B /* GuideViewController.swift */,
+			);
+			path = GuideViewController;
+			sourceTree = "<group>";
+		};
 		0E87694324C06DBE00E3ABA7 /* ReserveCompleteView */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		0F98A28424C027BF00F4F341 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E3BEF7224C188220005582B /* GuideViewController */,
 				0E87694324C06DBE00E3ABA7 /* ReserveCompleteView */,
 				73E857C624C038A800481AF4 /* ReserveView */,
 				73E857C424C037F800481AF4 /* LoginView */,
@@ -313,6 +324,7 @@
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F98A28124C027A400F4F341 /* Button.swift in Sources */,
+				0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */,
 				0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */,
 				0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */,
 				0F98A28724C027DD00F4F341 /* HomeViewController.swift in Sources */,

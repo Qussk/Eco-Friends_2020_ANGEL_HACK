@@ -49,8 +49,7 @@ class ReserveCompleteChildTableViewCell: UITableViewCell {
 
       nowDate.topAnchor.constraint(equalTo: date.bottomAnchor, constant: 12),
       nowDate.widthAnchor.constraint(equalToConstant: 148),
-      nowDate.heightAnchor.constraint(equalToConstant: 24),
-
+      nowDate.heightAnchor.constraint(equalToConstant: 24)
     ])
   }
   

@@ -44,6 +44,7 @@ class ReserveCompleteChild2TableViewCell: UITableViewCell {
     newJusoLabel.font = UIFont.systemFont(ofSize: 13)
     newJusoLabel.textAlignment = .center
     newJusoLabel.tintColor = .gray
+    newJusoLabel.layer.borderWidth = 1
     
     newAddress.text = "성수이로 113 제강빌딩"
     newAddress.font = .preferredFont(forTextStyle: .footnote)
@@ -79,10 +80,6 @@ class ReserveCompleteChild2TableViewCell: UITableViewCell {
       newAddress.leadingAnchor.constraint(equalTo: newJusoLabel.trailingAnchor, constant: 5),
       newAddress.widthAnchor.constraint(equalToConstant: 130),
       newAddress.heightAnchor.constraint(equalToConstant: 17)
-      
     ])
   }
-  
-  
-  
 }
