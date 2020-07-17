@@ -26,7 +26,7 @@ class OnboardingViewController: UIViewController {
   //MARK:- UI
   func setButton(){
     
-    getButton.backgroundColor = .systemBlue
+    getButton.backgroundColor = ColorPiker.customHanul
     getButton.alpha = 0
     getButton.layer.cornerRadius = view.frame.width/20
     getButton.setTitle("쓸-애기 시작하기", for: .normal)

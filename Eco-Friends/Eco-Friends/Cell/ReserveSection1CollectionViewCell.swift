@@ -23,7 +23,6 @@ class ReserveSection2CollectionViewCell: UICollectionViewCell {
    
    override init(frame: CGRect) {
      super.init(frame: frame)
-     
      setupView()
      setupConstraint()
    }
@@ -49,7 +48,7 @@ class ReserveSection2CollectionViewCell: UICollectionViewCell {
     requestTextField.text = "문앞에 뒀어요"
     requestTextField.borderStyle = .roundedRect
     requestTextField.keyboardType = .emailAddress
-    requestTextField.layer.borderColor = ColorPiker.custonAlpha.cgColor
+    requestTextField.layer.borderColor = ColorPiker.customAlpha.cgColor
     requestTextField.font = UIFont.systemFont(ofSize: 16)
   }
   
@@ -77,7 +76,6 @@ class ReserveSection2CollectionViewCell: UICollectionViewCell {
     requestFrom.topAnchor.constraint(equalTo: requestTitle.bottomAnchor, constant: 10),
     requestFrom.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
     requestFrom.widthAnchor.constraint(lessThanOrEqualToConstant: 88),
-    //requestFrom.trailingAnchor.constraint(equalTo: checkButton.leadingAnchor, constant: 167),
     
     checkButton.topAnchor.constraint(equalTo: requestTitle.bottomAnchor, constant: 10),
     checkButton.leadingAnchor.constraint(equalTo: requestFrom.trailingAnchor, constant: 150),

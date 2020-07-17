@@ -23,6 +23,9 @@
 		0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29324C0289400F4F341 /* OrderViewController.swift */; };
 		7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */; };
 		7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055A24C0CBE800A05F84 /* ColorPiker.swift */; };
+		7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */; };
+		7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 7357056124C2160800A05F84 /* CenteredCollectionView */; };
+		7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */; };
 		73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */; };
 		73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BC24C037EF00481AF4 /* LoginViewController.swift */; };
 		73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BD24C037EF00481AF4 /* ReserveViewController.swift */; };
@@ -50,6 +53,8 @@
 		0F98A29324C0289400F4F341 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveSection3CollectionViewCell.swift; path = "Eco-Friends/Cell/ReserveSection3CollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
+		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
 		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E857CE24C0393F00481AF4 /* PaperOnboarding in Frameworks */,
+				7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +204,8 @@
 				73E857C924C038E700481AF4 /* ReserveSection1CollectonViewCell.swift */,
 				73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */,
 				7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */,
+				7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */,
+				7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			name = "Eco-Friends";
 			packageProductDependencies = (
 				73E857CD24C0393F00481AF4 /* PaperOnboarding */,
+				7357056124C2160800A05F84 /* CenteredCollectionView */,
 			);
 			productName = "Eco-Friends";
 			productReference = 0ED256D624C00A9B00DF1175 /* Eco-Friends.app */;
@@ -251,6 +260,7 @@
 			mainGroup = 0ED256CD24C00A9B00DF1175;
 			packageReferences = (
 				73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
+				7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
 			);
 			productRefGroup = 0ED256D724C00A9B00DF1175 /* Products */;
 			projectDirPath = "";
@@ -293,6 +303,8 @@
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
+				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
+				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F98A28124C027A400F4F341 /* Button.swift in Sources */,
 				0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */,
@@ -494,6 +506,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BenEmdon/CenteredCollectionView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
 		73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
@@ -505,6 +525,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7357056124C2160800A05F84 /* CenteredCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
+			productName = CenteredCollectionView;
+		};
 		73E857CD24C0393F00481AF4 /* PaperOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */;

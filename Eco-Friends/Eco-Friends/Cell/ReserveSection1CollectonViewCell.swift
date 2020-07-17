@@ -81,7 +81,7 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     addressLoadlable.font = UIFont.systemFont(ofSize: 14)
     addressLoadlable.textColor = ColorPiker.customGray
     
-    lineView.backgroundColor = ColorPiker.custonAlpha
+    lineView.backgroundColor = ColorPiker.customAlpha
     
     
     //MARK:- 1-2.
@@ -89,18 +89,18 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     doorTitle.font = UIFont.boldSystemFont(ofSize: 15)
     
     doorNumberButton.setImage(UIImage(systemName: "circle"), for: .normal)
-    doorNumberButton.tintColor = ColorPiker.custonAlpha
+    doorNumberButton.tintColor = ColorPiker.customAlpha
     
     setBule1.image = UIImage(systemName: "circle.fill")
     setBule1.tintColor = ColorPiker.customBlue
     
     doorTextField.borderStyle = .roundedRect
-    doorTextField.layer.borderColor = ColorPiker.custonAlpha.cgColor
+    doorTextField.layer.borderColor = ColorPiker.customAlpha.cgColor
     doorTextField.font = UIFont.systemFont(ofSize: 15)
     doorTextField.placeholder = "#1234"
     
     noNumberButton.setImage(UIImage(systemName: "circle"), for: .normal)
-    noNumberButton.tintColor = ColorPiker.custonAlpha
+    noNumberButton.tintColor = ColorPiker.customAlpha
   
     setBule2.image = UIImage(systemName: "circle.fill")
     setBule2.tintColor = ColorPiker.customBlue
@@ -108,7 +108,7 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     noNumberLable.font = UIFont(name: "PingFangSC-Light", size: 15)
     noNumberLable.text = "비밀번호 없이 출입가능"
     
-    line2View.backgroundColor = ColorPiker.custonAlpha
+    line2View.backgroundColor = ColorPiker.customAlpha
 
     //MARK:- 1-3.
     phonTitle.text = "연락처"

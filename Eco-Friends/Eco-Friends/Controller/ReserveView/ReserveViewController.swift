@@ -16,6 +16,7 @@ class ReserveViewController: UIViewController {
     return UICollectionView(frame: .zero, collectionViewLayout: layout)
   }()
   
+      
   let reserveButton = UIButton()
   
   override func viewDidLoad() {
@@ -30,7 +31,10 @@ class ReserveViewController: UIViewController {
     setupView()
     setupConstrain()
     KeyboardShow()
+
   }
+
+  
   //MARK:- UI
   func setupView(){
     
@@ -41,7 +45,7 @@ class ReserveViewController: UIViewController {
     view.addSubview(collectionView)
     
     //67, 187, 254
-    reserveButton.backgroundColor = UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1)
+    reserveButton.backgroundColor = ColorPiker.customHanul
     reserveButton.setTitle("예약하기", for: .normal)
     reserveButton.setTitleColor(.white, for: .normal)
     reserveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
