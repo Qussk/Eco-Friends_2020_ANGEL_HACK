@@ -114,7 +114,8 @@ class OrderViewController: UIViewController {
       reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 32),
       reserveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 59.5),
       reserveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64.5),
-      reserveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35)
+//      reserveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35)
+      reserveButton.heightAnchor.constraint(equalToConstant: 50)
     ])
   }
   
