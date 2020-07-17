@@ -16,6 +16,7 @@
 		0F3BF6F224C1BF3A002BF46C /* MyPageCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BF6F124C1BF3A002BF46C /* MyPageCollectionViewCell1.swift */; };
 		0F3BF6F424C1FC22002BF46C /* MyPageViewCollectionCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BF6F324C1FC22002BF46C /* MyPageViewCollectionCell2.swift */; };
 		0F3BF6F624C2074B002BF46C /* MyPageViewCollectionCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BF6F524C2074B002BF46C /* MyPageViewCollectionCell3.swift */; };
+		0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BF6F724C21758002BF46C /* TableViewCellInCollectionView3.swift */; };
 		0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F514CAD24C0B1C400C2D9E3 /* PopUpLoginView.swift */; };
 		0F98A28124C027A400F4F341 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28024C027A400F4F341 /* Button.swift */; };
 		0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28224C027AE00F4F341 /* ScrollView.swift */; };
@@ -45,6 +46,7 @@
 		0F3BF6F124C1BF3A002BF46C /* MyPageCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCollectionViewCell1.swift; sourceTree = "<group>"; };
 		0F3BF6F324C1FC22002BF46C /* MyPageViewCollectionCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewCollectionCell2.swift; sourceTree = "<group>"; };
 		0F3BF6F524C2074B002BF46C /* MyPageViewCollectionCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewCollectionCell3.swift; sourceTree = "<group>"; };
+		0F3BF6F724C21758002BF46C /* TableViewCellInCollectionView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellInCollectionView3.swift; sourceTree = "<group>"; };
 		0F514CAD24C0B1C400C2D9E3 /* PopUpLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLoginView.swift; sourceTree = "<group>"; };
 		0F98A28024C027A400F4F341 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		0F98A28224C027AE00F4F341 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				0F3BF6F124C1BF3A002BF46C /* MyPageCollectionViewCell1.swift */,
 				0F3BF6F324C1FC22002BF46C /* MyPageViewCollectionCell2.swift */,
 				0F3BF6F524C2074B002BF46C /* MyPageViewCollectionCell3.swift */,
+				0F3BF6F724C21758002BF46C /* TableViewCellInCollectionView3.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				0F98A28924C027ED00F4F341 /* DividerView.swift in Sources */,
 				0ED256DA24C00A9B00DF1175 /* AppDelegate.swift in Sources */,
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
+				0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */,
 				0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
