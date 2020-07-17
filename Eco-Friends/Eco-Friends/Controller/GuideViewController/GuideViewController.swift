@@ -10,6 +10,7 @@ import UIKit
 
 class GuideViewController: UIViewController {
   
+  // MARK:- Properties
   let textLabel = UILabel()
   let searchTextBar = UIView()
   
@@ -19,6 +20,12 @@ class GuideViewController: UIViewController {
   let buttonBox = UIView()
   let buttonBoxInBtn = ["음식물", "재활용", "일반", "대형"]
   
+  let layout = UICollectionViewFlowLayout()
+  lazy var collectionV = UICollectionView(
+    frame: .zero, collectionViewLayout: layout
+  )
+  
+  // MARK:- viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -26,8 +33,10 @@ class GuideViewController: UIViewController {
     setConstraint()
   }
   
+  // MARK:- setUI
   func setUI() {
-    [textLabel, searchTextBar, buttonBox].forEach { view.addSubview($0) }
+    setFlowLayout()
+    [textLabel, searchTextBar, buttonBox, collectionV].forEach { view.addSubview($0) }
     
     textLabel.text = "똑똑한 분리수거 방법\n지금 찾아보세요."
     textLabel.font = UIFont.boldSystemFont(ofSize: 25)
@@ -54,6 +63,7 @@ class GuideViewController: UIViewController {
       btn.backgroundColor = .systemGray
       btn.setTitle(buttonBoxInBtn[i], for: .normal)
       btn.layer.cornerRadius = 15
+      btn.titleLabel?.font = UIFont(name: "SFProText-Regular", size: 13)
       btn.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
       btnArray.append(btn)
     }
@@ -72,12 +82,28 @@ class GuideViewController: UIViewController {
     ])
   }
   
-  @objc func btnClick(_ sender: UIButton) {
-    print(sender)
+  // MARK:- setFlowLayout
+  func setFlowLayout() {
+    layout.minimumLineSpacing = 10
+    layout.minimumInteritemSpacing = 0
+    layout.itemSize = CGSize(width: 339, height:132)
+    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
   }
   
+  // MARK:- btnClick
+  @objc func btnClick(_ sender: UIButton) {
+    if sender.isSelected {
+      sender.backgroundColor = .systemGray
+      sender.isSelected = false
+    } else {
+      sender.backgroundColor = .systemBlue
+      sender.isSelected = true
+    }
+  }
+  
+  // MARK:- setConstraint
   func setConstraint() {
-    [textLabel, searchTextBar, searchText, searchButton, buttonBox].forEach {
+    [textLabel, searchTextBar, searchText, searchButton, buttonBox, collectionV].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -107,7 +133,23 @@ class GuideViewController: UIViewController {
       buttonBox.widthAnchor.constraint(equalToConstant: 339),
       buttonBox.heightAnchor.constraint(equalToConstant: 30),
       
+      collectionV.topAnchor.constraint(equalTo: buttonBox.bottomAnchor, constant: 20),
+      collectionV.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+      collectionV.widthAnchor.constraint(equalToConstant: 339),
+      collectionV.heightAnchor.constraint(equalToConstant: 100)
     ])
-    
   }
 }
+
+// MARK:- GuideViewController
+extension GuideViewController: UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    <#code#>
+  }
+
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    <#code#>
+  }
+}
+
+
