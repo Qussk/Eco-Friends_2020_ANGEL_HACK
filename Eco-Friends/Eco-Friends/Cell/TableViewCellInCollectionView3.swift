@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol TableViewCellInCollectionView3Delegate: class {
+  func handlePresent()
+}
+
 class TableViewCellInCollectionView3 : UITableViewCell {
   
   //MARK: - Properties
+  
+  var delegate: TableViewCellInCollectionView3Delegate?
+  
   static let identifier = "TableViewCellInCollectionView3"
   private let menuLabel = UILabel()
   private let nextButton = UIButton()
-//  var menuData = ["주문목록", "멤버십 관리", "공지사항", "고객센터", "환경설정"]
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -35,6 +41,7 @@ class TableViewCellInCollectionView3 : UITableViewCell {
     
     nextButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
     nextButton.tintColor = .lightGray
+    nextButton.addTarget(self, action: #selector(moveToOrderList), for: .touchUpInside)
     contentView.addSubview(nextButton)
   }
   
@@ -58,4 +65,7 @@ class TableViewCellInCollectionView3 : UITableViewCell {
   func configure(data : String) {
     menuLabel.text = data
   }
+  
+  @objc func moveToOrderList() {
+    delegate?.handlePresent()  }
 }

@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol MyPageViewCollectionCell3Delegate {
+  func handlePresent()
+}
+
 class MyPageViewCollectionCell3 : UICollectionViewCell {
   //MARK: - Properties
+  var delegate: MyPageViewCollectionCell3Delegate?
   
   static let identifier = "MyPageViewCollectionViewCell3"
   private let tableView = UITableView()
@@ -59,6 +64,7 @@ extension MyPageViewCollectionCell3 : UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellInCollectionView3.identifier, for: indexPath) as! TableViewCellInCollectionView3
+    cell.delegate = self
     cell.configure(data: menuData[indexPath.row])
     return cell
   }
@@ -67,3 +73,10 @@ extension MyPageViewCollectionCell3 : UITableViewDataSource {
 }
 
 
+extension MyPageViewCollectionCell3: TableViewCellInCollectionView3Delegate {
+  func handlePresent() {
+    delegate?.handlePresent()
+  }
+  
+  
+}

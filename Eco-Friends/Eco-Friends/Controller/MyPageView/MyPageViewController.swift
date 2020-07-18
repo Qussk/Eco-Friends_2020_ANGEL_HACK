@@ -64,8 +64,7 @@ class MyPageViewController: UIViewController {
       collectionView.topAnchor.constraint(equalTo: guide.topAnchor),
       collectionView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       collectionView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-      collectionView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -100)
-//      collectionView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
+      collectionView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
     ])
   }
   
@@ -99,7 +98,9 @@ extension MyPageViewController : UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyPageViewCollectionCell3.identifier, for: indexPath) as! MyPageViewCollectionCell3
       cell.backgroundColor = .white
       cell.layer.cornerRadius = view.frame.width / 19
+      cell.delegate = self
       print("cell3 :" , cell.layer.cornerRadius)
+      
       return cell
     }
 
@@ -124,8 +125,16 @@ extension MyPageViewController : UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     if indexPath.section == 0 && indexPath.section ==  1{
       return CGSize(width: 339, height: 104)
-    } else {
+    } else  {
       return CGSize(width: 339, height: 300)
     }
+  }
+}
+
+extension MyPageViewController: MyPageViewCollectionCell3Delegate {
+  func handlePresent() {
+  let orderList = OrderListPageView()
+  orderList.modalPresentationStyle = .fullScreen
+  navigationController?.pushViewController(orderList, animated: true)
   }
 }
