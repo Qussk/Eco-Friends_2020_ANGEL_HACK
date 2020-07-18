@@ -42,6 +42,8 @@
 		7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */; };
 		7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 7357056124C2160800A05F84 /* CenteredCollectionView */; };
 		7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */; };
+		73AAF5C124C36E34004AE8F4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 73AAF5C024C36E34004AE8F4 /* Kingfisher */; };
+		73AAF5C324C36F36004AE8F4 /* PET.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73AAF5C224C36F36004AE8F4 /* PET.gif */; };
 		73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */; };
 		73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BC24C037EF00481AF4 /* LoginViewController.swift */; };
 		73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BD24C037EF00481AF4 /* ReserveViewController.swift */; };
@@ -87,6 +89,7 @@
 		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
 		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
+		73AAF5C224C36F36004AE8F4 /* PET.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PET.gif; sourceTree = "<group>"; };
 		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../Controller/OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AAF5C124C36E34004AE8F4 /* Kingfisher in Frameworks */,
 				73E857CE24C0393F00481AF4 /* PaperOnboarding in Frameworks */,
 				7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */,
 			);
@@ -163,6 +167,7 @@
 				0ED256E224C00A9C00DF1175 /* Assets.xcassets */,
 				0ED256E424C00A9C00DF1175 /* LaunchScreen.storyboard */,
 				0ED256E724C00A9C00DF1175 /* Info.plist */,
+				73AAF5C224C36F36004AE8F4 /* PET.gif */,
 			);
 			path = "Eco-Friends";
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			packageProductDependencies = (
 				73E857CD24C0393F00481AF4 /* PaperOnboarding */,
 				7357056124C2160800A05F84 /* CenteredCollectionView */,
+				73AAF5C024C36E34004AE8F4 /* Kingfisher */,
 			);
 			productName = "Eco-Friends";
 			productReference = 0ED256D624C00A9B00DF1175 /* Eco-Friends.app */;
@@ -333,6 +339,7 @@
 			packageReferences = (
 				73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
 				7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
+				73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 0ED256D724C00A9B00DF1175 /* Products */;
 			projectDirPath = "";
@@ -348,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AAF5C324C36F36004AE8F4 /* PET.gif in Resources */,
 				0ED256E624C00A9C00DF1175 /* LaunchScreen.storyboard in Resources */,
 				0ED256E324C00A9C00DF1175 /* Assets.xcassets in Resources */,
 				0ED256E124C00A9B00DF1175 /* Main.storyboard in Resources */,
@@ -602,6 +610,14 @@
 				minimumVersion = 2.2.2;
 			};
 		};
+		73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.1;
+			};
+		};
 		73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
@@ -617,6 +633,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
 			productName = CenteredCollectionView;
+		};
+		73AAF5C024C36E34004AE8F4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		73E857CD24C0393F00481AF4 /* PaperOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
