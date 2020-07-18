@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
   func setView(){
     
     loginButton.setTitle("로그인", for: .normal)
-    loginButton.backgroundColor = UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1)
+    loginButton.backgroundColor = ColorPiker.customHanul
     loginButton.setTitleColor(.white, for: .normal)
     loginButton.layer.cornerRadius = view.frame.width/17
     
