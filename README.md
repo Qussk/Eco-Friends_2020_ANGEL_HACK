@@ -1,6 +1,5 @@
 # Eco-Friends_2020_ANGEL_HACK
 
-
 ## Develop Start
 
 ### 2020.07.16

@@ -359,12 +359,12 @@
 				0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */,
 				0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
-<<<<<<< HEAD
+
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
-=======
+
 				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
 				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
->>>>>>> 0ff6a87aa53cedf8b079cb7ca666924d91a8e10c
+
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F98A28124C027A400F4F341 /* Button.swift in Sources */,
 				0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */,
