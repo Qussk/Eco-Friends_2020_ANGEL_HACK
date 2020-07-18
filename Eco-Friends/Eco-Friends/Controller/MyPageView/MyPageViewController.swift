@@ -9,7 +9,7 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-  
+
   //MARK: - Properties
   
   private let collectionView : UICollectionView = {

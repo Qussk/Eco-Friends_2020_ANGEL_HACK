@@ -63,12 +63,17 @@ class HomeViewController: UIViewController {
   //MARK: - setNavigation()
   
   private func setNavigation() {
-    navigationController?.isNavigationBarHidden = true
-//    navigationItem.titleView = naviTitleButton
-//    naviTitleButton.backgroundColor = .clear
-//    naviTitleButton.setTitle("성수동 성수이로 108", for: .normal)
-//    naviTitleButton.setTitleColor(.black, for: .normal)
-//    naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
+
+    navigationItem.titleView = naviTitleButton
+    naviTitleButton.backgroundColor = .clear
+    naviTitleButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+    naviTitleButton.semanticContentAttribute = .forceRightToLeft
+    naviTitleButton.tintColor = .black
+    naviTitleButton.setTitle("성수동 성수이로 108", for: .normal)
+    naviTitleButton.setTitleColor(.black, for: .normal)
+    naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
+
+
   }
   
   

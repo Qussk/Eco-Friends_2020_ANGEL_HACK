@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E13A58124C2B28C004112D8 /* RecycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13A58024C2B28C004112D8 /* RecycleData.swift */; };
+		0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */; };
+		0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */; };
+		0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7324C190660005582B /* GuideViewController.swift */; };
+		0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7624C2091D0005582B /* SingletonData.swift */; };
+		0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */; };
+		0E600D4024C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */; };
+		0E87694724C0786000E3ABA7 /* ReserveCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */; };
+		0E87694A24C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87694924C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift */; };
 		0ED256DA24C00A9B00DF1175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED256D924C00A9B00DF1175 /* AppDelegate.swift */; };
 		0ED256DE24C00A9B00DF1175 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED256DD24C00A9B00DF1175 /* AddressViewController.swift */; };
 		0ED256E124C00A9B00DF1175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED256DF24C00A9B00DF1175 /* Main.storyboard */; };
@@ -28,6 +37,11 @@
 		0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */; };
 		0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29124C0287800F4F341 /* MyPageViewController.swift */; };
 		0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29324C0289400F4F341 /* OrderViewController.swift */; };
+		7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */; };
+		7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055A24C0CBE800A05F84 /* ColorPiker.swift */; };
+		7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */; };
+		7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 7357056124C2160800A05F84 /* CenteredCollectionView */; };
+		7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */; };
 		73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */; };
 		73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BC24C037EF00481AF4 /* LoginViewController.swift */; };
 		73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BD24C037EF00481AF4 /* ReserveViewController.swift */; };
@@ -37,6 +51,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E13A58024C2B28C004112D8 /* RecycleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleData.swift; sourceTree = "<group>"; };
+		0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChildTableViewCell.swift; sourceTree = "<group>"; };
+		0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild2TableViewCell.swift; sourceTree = "<group>"; };
+		0E3BEF7324C190660005582B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		0E3BEF7624C2091D0005582B /* SingletonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonData.swift; sourceTree = "<group>"; };
+		0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild3TableViewCell.swift; sourceTree = "<group>"; };
+		0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteViewController.swift; sourceTree = "<group>"; };
+		0E87694924C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChildViewController.swift; sourceTree = "<group>"; };
 		0ED256D624C00A9B00DF1175 /* Eco-Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco-Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED256D924C00A9B00DF1175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ED256DD24C00A9B00DF1175 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +83,11 @@
 		0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		0F98A29124C0287800F4F341 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0F98A29324C0289400F4F341 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveSection3CollectionViewCell.swift; path = "Eco-Friends/Cell/ReserveSection3CollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
+		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
+		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../Controller/OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
 		73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveSection1CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -73,12 +100,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E857CE24C0393F00481AF4 /* PaperOnboarding in Frameworks */,
+				7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3BEF7224C188220005582B /* GuideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E3BEF7324C190660005582B /* GuideViewController.swift */,
+			);
+			path = GuideViewController;
+			sourceTree = "<group>";
+		};
+		0E3BEF7524C2090F0005582B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0E3BEF7624C2091D0005582B /* SingletonData.swift */,
+				0E13A58024C2B28C004112D8 /* RecycleData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0E87694324C06DBE00E3ABA7 /* ReserveCompleteView */ = {
+			isa = PBXGroup;
+			children = (
+				0E87694924C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift */,
+				0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */,
+			);
+			path = ReserveCompleteView;
+			sourceTree = "<group>";
+		};
 		0ED256CD24C00A9B00DF1175 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +152,10 @@
 		0ED256D824C00A9B00DF1175 /* Eco-Friends */ = {
 			isa = PBXGroup;
 			children = (
+				7357055A24C0CBE800A05F84 /* ColorPiker.swift */,
 				0ED256D924C00A9B00DF1175 /* AppDelegate.swift */,
+				0E3BEF7524C2090F0005582B /* Data */,
+				73E857C524C0388200481AF4 /* OnBoarding */,
 				73E857C724C038C800481AF4 /* Cell */,
 				0F98A27F24C0279500F4F341 /* View */,
 				0F98A28424C027BF00F4F341 /* Controller */,
@@ -117,6 +174,10 @@
 				0F98A28024C027A400F4F341 /* Button.swift */,
 				0F98A28224C027AE00F4F341 /* ScrollView.swift */,
 				0ED256ED24C00BF100DF1175 /* AddressCollectionViewCell.swift */,
+				0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */,
+				0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */,
+				0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */,
+				0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */,
 				0F514CAD24C0B1C400C2D9E3 /* PopUpLoginView.swift */,
 			);
 			path = View;
@@ -125,9 +186,9 @@
 		0F98A28424C027BF00F4F341 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E3BEF7224C188220005582B /* GuideViewController */,
+				0E87694324C06DBE00E3ABA7 /* ReserveCompleteView */,
 				73E857C624C038A800481AF4 /* ReserveView */,
-				73E857C524C0388200481AF4 /* OnBoarding */,
-				73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */,
 				73E857C424C037F800481AF4 /* LoginView */,
 				0F98A28524C027C900F4F341 /* HomeView */,
 				0F98A29524C028B100F4F341 /* AddressViewController */,
@@ -159,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */,
+				7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */,
 			);
 			path = DescriptionView;
 			sourceTree = "<group>";
@@ -191,6 +253,7 @@
 		73E857C524C0388200481AF4 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -206,8 +269,10 @@
 		73E857C724C038C800481AF4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */,
 				73E857C924C038E700481AF4 /* ReserveSection1CollectonViewCell.swift */,
+				73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */,
+				7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */,
+				7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */,
 				0F3BF6F124C1BF3A002BF46C /* MyPageCollectionViewCell1.swift */,
 				0F3BF6F324C1FC22002BF46C /* MyPageViewCollectionCell2.swift */,
 				0F3BF6F524C2074B002BF46C /* MyPageViewCollectionCell3.swift */,
@@ -235,6 +300,7 @@
 			name = "Eco-Friends";
 			packageProductDependencies = (
 				73E857CD24C0393F00481AF4 /* PaperOnboarding */,
+				7357056124C2160800A05F84 /* CenteredCollectionView */,
 			);
 			productName = "Eco-Friends";
 			productReference = 0ED256D624C00A9B00DF1175 /* Eco-Friends.app */;
@@ -266,6 +332,7 @@
 			mainGroup = 0ED256CD24C00A9B00DF1175;
 			packageReferences = (
 				73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
+				7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
 			);
 			productRefGroup = 0ED256D724C00A9B00DF1175 /* Products */;
 			projectDirPath = "";
@@ -294,28 +361,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E87694724C0786000E3ABA7 /* ReserveCompleteViewController.swift in Sources */,
 				73E857CA24C038E700481AF4 /* ReserveSection1CollectionViewCell.swift in Sources */,
+				0E600D4024C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift in Sources */,
 				73E857CB24C038E700481AF4 /* ReserveSection1CollectonViewCell.swift in Sources */,
 				73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */,
 				0ED256EE24C00BF100DF1175 /* AddressCollectionViewCell.swift in Sources */,
+				0E13A58124C2B28C004112D8 /* RecycleData.swift in Sources */,
 				0ED256DE24C00A9B00DF1175 /* AddressViewController.swift in Sources */,
 				0F98A28E24C0286600F4F341 /* SearchViewController.swift in Sources */,
 				73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */,
+				7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */,
 				0F98A28924C027ED00F4F341 /* DividerView.swift in Sources */,
 				0ED256DA24C00A9B00DF1175 /* AppDelegate.swift in Sources */,
+				7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */,
 				0F5A2F8724C299BA00EA0F95 /* OrderListPageViewCollectionCell.swift in Sources */,
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */,
 				0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */,
 				0F5A2F8524C2965B00EA0F95 /* OrderListPageView.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
+				0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */,
+				0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
+				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
+				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
+				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
 				0F3BF6F224C1BF3A002BF46C /* MyPageCollectionViewCell1.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F3BF6F624C2074B002BF46C /* MyPageViewCollectionCell3.swift in Sources */,
 				0F98A28124C027A400F4F341 /* Button.swift in Sources */,
+				0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */,
 				0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */,
+				0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */,
 				0F98A28724C027DD00F4F341 /* HomeViewController.swift in Sources */,
+				0E87694A24C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift in Sources */,
 				0F3BF6F424C1FC22002BF46C /* MyPageViewCollectionCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +594,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BenEmdon/CenteredCollectionView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
 		73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
@@ -525,6 +613,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7357056124C2160800A05F84 /* CenteredCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
+			productName = CenteredCollectionView;
+		};
 		73E857CD24C0393F00481AF4 /* PaperOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */;

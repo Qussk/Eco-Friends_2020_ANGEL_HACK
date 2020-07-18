@@ -55,7 +55,7 @@ class AddressViewController: UIViewController {
     searchButton.layer.cornerRadius = 10
     
     nowButton.setImage(UIImage(systemName: "leaf.arrow.circlepath"), for: .normal)
-    nowButton.setTitle("현 위치로 주소 설정", for: .normal)
+    nowButton.setTitle(" 현 위치로 주소 설정", for: .normal)
     nowButton.setTitleColor(.black, for: .normal)
     nowButton.backgroundColor = .white
     nowButton.layer.cornerRadius = 10
@@ -126,15 +126,12 @@ class AddressViewController: UIViewController {
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
     searchNavi.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
-    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 3)
-  
 
+    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
+    
     tabVC.modalPresentationStyle = .fullScreen
     present(tabVC, animated: true)
-    
-
   }
-
 }
 
 extension AddressViewController: UICollectionViewDataSource {
