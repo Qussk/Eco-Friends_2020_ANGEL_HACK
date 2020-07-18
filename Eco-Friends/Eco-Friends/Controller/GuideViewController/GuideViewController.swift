@@ -27,6 +27,7 @@ class GuideViewController: UIViewController {
   )
   
   let singleton = SingletonClass.shared
+  let data = recycleData
   
   // MARK:- viewDidLoad
   override func viewDidLoad() {
@@ -41,8 +42,9 @@ class GuideViewController: UIViewController {
     setFlowLayout()
     [textLabel, searchTextBar, buttonBox, collectionV].forEach { view.addSubview($0) }
     
+    collectionV.backgroundColor = .white
     collectionV.dataSource = self
-    collectionV.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+    collectionV.register(GuideCollectionViewCell.self, forCellWithReuseIdentifier: GuideCollectionViewCell.identifier)
     
     textLabel.text = "똑똑한 분리수거 방법\n지금 찾아보세요."
     textLabel.font = UIFont.boldSystemFont(ofSize: 25)
@@ -71,6 +73,7 @@ class GuideViewController: UIViewController {
       btn.titleLabel?.font = UIFont(name: "SFProText-Regular", size: 13)
       btn.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
       btnArray.append(btn)
+      
     }
     let stackView = UIStackView(arrangedSubviews: btnArray)
     stackView.distribution = .fillEqually
@@ -97,30 +100,21 @@ class GuideViewController: UIViewController {
   
   // MARK:- btnClick
   @objc func btnClick(_ sender: UIButton) {
+    
     guard let text = sender.titleLabel?.text else { return }
-//    var i = 0
-//    switch sender.titleLabel?.text {
-//    case "음식물" : i += 0
-//    case "재활용" : i += 1
-//    case "일반" : i += 2
-//    case "대형" : i += 3
-//    default :
-//      return
-//    }
     
     if sender.isSelected {
       singleton.arrData.removeAll()
       sender.backgroundColor = .systemGray
       sender.isSelected = false
+      collectionV.reloadData()
     } else {
       sender.backgroundColor = .systemBlue
       singleton.arrData.append(text)
       sender.isSelected = true
+      collectionV.reloadData()
     }
     
-    
-    
-    print(singleton.arrData)
   }
   
   // MARK:- setConstraint
@@ -157,8 +151,8 @@ class GuideViewController: UIViewController {
       
       collectionV.topAnchor.constraint(equalTo: buttonBox.bottomAnchor, constant: 20),
       collectionV.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
-      collectionV.widthAnchor.constraint(equalToConstant: 339),
-      collectionV.heightAnchor.constraint(equalToConstant: 100)
+      collectionV.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+      collectionV.bottomAnchor.constraint(equalTo: view.bottomAnchor)
     ])
   }
 }
@@ -166,13 +160,24 @@ class GuideViewController: UIViewController {
 // MARK:- GuideViewController
 extension GuideViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return singleton.arrData.count
+    if singleton.arrData.isEmpty == true {
+      return 1
+    } else {
+      return singleton.arrData.count
+    }
   }
-
+  
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideCollectionViewCell.identifier, for: indexPath) as! GuideCollectionViewCell
+    cell.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      cell.topAnchor.constraint(equalTo: cell.topAnchor),
+      cell.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
+      cell.widthAnchor.constraint(equalToConstant: 339),
+      cell.heightAnchor.constraint(equalToConstant: 100)
+    ])
+    cell.configure(data: data[indexPath.item])
+    print(data[indexPath.item])
     return cell
   }
 }
-
-

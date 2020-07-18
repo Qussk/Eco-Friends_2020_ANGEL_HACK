@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E13A58124C2B28C004112D8 /* RecycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13A58024C2B28C004112D8 /* RecycleData.swift */; };
 		0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */; };
 		0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */; };
 		0E3BEF7424C190660005582B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7324C190660005582B /* GuideViewController.swift */; };
-		0E3BEF7724C2091D0005582B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7624C2091D0005582B /* Data.swift */; };
+		0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7624C2091D0005582B /* SingletonData.swift */; };
 		0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */; };
 		0E600D4024C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */; };
 		0E87694724C0786000E3ABA7 /* ReserveCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */; };
@@ -38,10 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E13A58024C2B28C004112D8 /* RecycleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleData.swift; sourceTree = "<group>"; };
 		0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChildTableViewCell.swift; sourceTree = "<group>"; };
 		0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild2TableViewCell.swift; sourceTree = "<group>"; };
 		0E3BEF7324C190660005582B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		0E3BEF7624C2091D0005582B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		0E3BEF7624C2091D0005582B /* SingletonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonData.swift; sourceTree = "<group>"; };
 		0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteChild3TableViewCell.swift; sourceTree = "<group>"; };
 		0E87694624C0786000E3ABA7 /* ReserveCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveCompleteViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,8 @@
 		0E3BEF7524C2090F0005582B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0E3BEF7624C2091D0005582B /* Data.swift */,
+				0E3BEF7624C2091D0005582B /* SingletonData.swift */,
+				0E13A58024C2B28C004112D8 /* RecycleData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				73E857CB24C038E700481AF4 /* ReserveSection1CollectonViewCell.swift in Sources */,
 				73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */,
 				0ED256EE24C00BF100DF1175 /* AddressCollectionViewCell.swift in Sources */,
+				0E13A58124C2B28C004112D8 /* RecycleData.swift in Sources */,
 				0ED256DE24C00A9B00DF1175 /* AddressViewController.swift in Sources */,
 				0F98A28E24C0286600F4F341 /* SearchViewController.swift in Sources */,
 				73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */,
@@ -335,7 +339,7 @@
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
 				0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */,
-				0E3BEF7724C2091D0005582B /* Data.swift in Sources */,
+				0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,

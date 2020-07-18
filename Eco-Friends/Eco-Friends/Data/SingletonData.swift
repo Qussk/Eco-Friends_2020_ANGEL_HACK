@@ -14,3 +14,5 @@ class SingletonClass {
   
   var arrData: [String] = []
 }
+
+
