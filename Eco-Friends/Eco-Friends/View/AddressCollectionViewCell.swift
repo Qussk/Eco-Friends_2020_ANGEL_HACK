@@ -50,7 +50,7 @@ class AddressCollectionViewCell: UICollectionViewCell {
     doroLabel.font = UIFont.systemFont(ofSize: 13)
     doroLabel.textAlignment = .center
     doroLabel.tintColor = .gray
-//    doroLabel.layer.borderColor = .init(srgbRed: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+    
     doroLabel.layer.borderWidth = 1
     
     newJuso.text = "성수이로 113 제강빌딩"
@@ -73,8 +73,6 @@ class AddressCollectionViewCell: UICollectionViewCell {
       
       xButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
       xButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-//      xButton.widthAnchor.constraint(equalToConstant: <#T##CGFloat#>),
-//      xButton.heightAnchor.constraint(equalToConstant: <#T##CGFloat#>),
       
       jusoTitle.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 12),
       jusoTitle.widthAnchor.constraint(equalToConstant: 66),
