@@ -14,12 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+
     
 
     
     window = UIWindow(frame: UIScreen.main.bounds)
+<<<<<<< HEAD
     window?.rootViewController =  OnboardingViewController()
     
+=======
+    window?.rootViewController = OnboardingViewController()
+
+>>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
     window?.backgroundColor = .systemBackground
     window?.makeKeyAndVisible()
     
