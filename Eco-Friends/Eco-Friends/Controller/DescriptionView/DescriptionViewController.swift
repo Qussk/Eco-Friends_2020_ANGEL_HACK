@@ -8,7 +8,7 @@
 
 import UIKit
 
-class : UIViewController {
+class DescriptionViewController: UIViewController {
   
   let collectionView : UICollectionView = {
     let layout = UICollectionViewFlowLayout()
