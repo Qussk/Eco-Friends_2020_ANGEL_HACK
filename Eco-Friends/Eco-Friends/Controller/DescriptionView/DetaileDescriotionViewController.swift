@@ -44,8 +44,6 @@ class DetaileDescriotionViewController: UIViewController {
   //MARK:- UI
   func setView(){
     
-    //scrollView.isPagingEnabled = true
-//    scrollView.contentSize = CGSize(width: scrollView.frame.width, height: scrollView.frame.height)
     scrollView.backgroundColor = .white
     view.addSubview(scrollView)
     

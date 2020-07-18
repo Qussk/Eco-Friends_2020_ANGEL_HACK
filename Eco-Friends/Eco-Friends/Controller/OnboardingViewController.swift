@@ -38,8 +38,6 @@ class OnboardingViewController: UIViewController {
     getButton.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     
     
-    //      onboardingImage.image = UIImage(contentsOfFile: "PET.gif")
-    //onboardingImage.alpha = 0
     onboarding.addSubview(onboardingImage)
     
     getButton.translatesAutoresizingMaskIntoConstraints = false
@@ -48,15 +46,14 @@ class OnboardingViewController: UIViewController {
     
     NSLayoutConstraint.activate([
       
-      onboardingImage.topAnchor.constraint(equalTo: view.topAnchor),
-      onboardingImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      onboardingImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      //  onboardingImage.heightAnchor.constraint(equalToConstant: 100),
-      
+      onboardingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+      onboardingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      onboardingImage.widthAnchor.constraint(equalToConstant: 320),
+      onboardingImage.heightAnchor.constraint(equalToConstant: 340),
       
       getButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
       getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-      getButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -180),
+      getButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
       getButton.heightAnchor.constraint(equalToConstant: 44),
       
       
@@ -68,9 +65,11 @@ class OnboardingViewController: UIViewController {
     super.viewDidAppear(animated)
     
     self.onboardingImage.alpha = 1.0
-    self.onboardingImage.kf.indicatorType = .activity
-    let gifs = ["https://qussk.github.io/image/PET.gif"]
-    self.onboardingImage.kf.setImage(with: URL(string: gifs[0])!)
+    self.onboardingImage.image = UIImage(named: "on1")
+    
+  //  self.onboardingImage.kf.indicatorType = .activity
+  //  let gifs = ["https://qussk.github.io/image/PET.gif"]
+  //  self.onboardingImage.kf.setImage(with: URL(string: gifs[0])!)
     print("dd")
   }
   
@@ -175,14 +174,18 @@ extension OnboardingViewController: PaperOnboardingDelegate {
       if index == 0 {
         UIView.animate(withDuration: 0.1, animations: {
           self.onboardingImage.alpha = 1
+          self.onboardingImage.image = UIImage(named: "on1")
         })
       }else if index == 1 {
         UIView.animate(withDuration: 0.1, animations: {
-          self.onboardingImage.alpha = 0
+          //self.onboardingImage.alpha = 0
+          self.onboardingImage.image = UIImage(named: "on2")
+
         })
         
       } else {
         UIView.animate(withDuration: 0.2, animations: {
+          self.onboardingImage.image = UIImage(named: "on3")
           self.getButton.alpha = 1
         })
         
