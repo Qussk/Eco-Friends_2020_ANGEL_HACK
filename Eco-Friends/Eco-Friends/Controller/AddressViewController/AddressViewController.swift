@@ -126,20 +126,11 @@ class AddressViewController: UIViewController {
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
     searchNavi.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
-<<<<<<< HEAD
+
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
     
     tabVC.modalPresentationStyle = .fullScreen
     present(tabVC, animated: true)
-=======
-    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 3)
-  
-
-    tabVC.modalPresentationStyle = .fullScreen
-    present(tabVC, animated: true)
-    
-
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
   }
 }
 

@@ -9,17 +9,7 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-  
-<<<<<<< HEAD
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    view.backgroundColor = .systemPink
-  }
-  
-  
-  
-=======
+
   //MARK: - Properties
   
   private let collectionView : UICollectionView = {
@@ -147,5 +137,4 @@ extension MyPageViewController: MyPageViewCollectionCell3Delegate {
   orderList.modalPresentationStyle = .fullScreen
   navigationController?.pushViewController(orderList, animated: true)
   }
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 }

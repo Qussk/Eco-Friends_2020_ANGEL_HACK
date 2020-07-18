@@ -87,7 +87,7 @@
 		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
 		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
-		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../Controller/OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
 		73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveSection1CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -174,14 +174,11 @@
 				0F98A28024C027A400F4F341 /* Button.swift */,
 				0F98A28224C027AE00F4F341 /* ScrollView.swift */,
 				0ED256ED24C00BF100DF1175 /* AddressCollectionViewCell.swift */,
-<<<<<<< HEAD
 				0E29463124C14077008A4847 /* ReserveCompleteChildTableViewCell.swift */,
 				0E29463324C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift */,
 				0E600D3F24C16B24009E75E2 /* ReserveCompleteChild3TableViewCell.swift */,
 				0E3BEF7824C20CDC0005582B /* GuideCollectionViewCell.swift */,
-=======
 				0F514CAD24C0B1C400C2D9E3 /* PopUpLoginView.swift */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,11 +189,6 @@
 				0E3BEF7224C188220005582B /* GuideViewController */,
 				0E87694324C06DBE00E3ABA7 /* ReserveCompleteView */,
 				73E857C624C038A800481AF4 /* ReserveView */,
-<<<<<<< HEAD
-=======
-				73E857C524C0388200481AF4 /* OnBoarding */,
-				73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 				73E857C424C037F800481AF4 /* LoginView */,
 				0F98A28524C027C900F4F341 /* HomeView */,
 				0F98A29524C028B100F4F341 /* AddressViewController */,
@@ -261,6 +253,7 @@
 		73E857C524C0388200481AF4 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -277,17 +270,14 @@
 			isa = PBXGroup;
 			children = (
 				73E857C924C038E700481AF4 /* ReserveSection1CollectonViewCell.swift */,
-<<<<<<< HEAD
 				73E857C824C038E700481AF4 /* ReserveSection1CollectionViewCell.swift */,
 				7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */,
 				7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */,
-=======
 				0F3BF6F124C1BF3A002BF46C /* MyPageCollectionViewCell1.swift */,
 				0F3BF6F324C1FC22002BF46C /* MyPageViewCollectionCell2.swift */,
 				0F3BF6F524C2074B002BF46C /* MyPageViewCollectionCell3.swift */,
 				0F3BF6F724C21758002BF46C /* TableViewCellInCollectionView3.swift */,
 				0F5A2F8624C299BA00EA0F95 /* OrderListPageViewCollectionCell.swift */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -384,11 +374,8 @@
 				7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */,
 				0F98A28924C027ED00F4F341 /* DividerView.swift in Sources */,
 				0ED256DA24C00A9B00DF1175 /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
 				7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */,
-=======
 				0F5A2F8724C299BA00EA0F95 /* OrderListPageViewCollectionCell.swift in Sources */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */,
 				0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */,
@@ -397,16 +384,10 @@
 				0E3BEF7924C20CDC0005582B /* GuideCollectionViewCell.swift in Sources */,
 				0E3BEF7724C2091D0005582B /* SingletonData.swift in Sources */,
 				73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */,
-<<<<<<< HEAD
-
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
-
 				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
 				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
-
-=======
 				0F3BF6F224C1BF3A002BF46C /* MyPageCollectionViewCell1.swift in Sources */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F3BF6F624C2074B002BF46C /* MyPageViewCollectionCell3.swift in Sources */,
 				0F98A28124C027A400F4F341 /* Button.swift in Sources */,
@@ -414,11 +395,8 @@
 				0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */,
 				0E29463424C15421008A4847 /* ReserveCompleteChild2TableViewCell.swift in Sources */,
 				0F98A28724C027DD00F4F341 /* HomeViewController.swift in Sources */,
-<<<<<<< HEAD
 				0E87694A24C0BC8200E3ABA7 /* ReserveCompleteChildViewController.swift in Sources */,
-=======
 				0F3BF6F424C1FC22002BF46C /* MyPageViewCollectionCell2.swift in Sources */,
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

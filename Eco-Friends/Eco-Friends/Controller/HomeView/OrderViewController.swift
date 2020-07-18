@@ -174,13 +174,12 @@ class OrderViewController: UIViewController {
       stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
       stackView.heightAnchor.constraint(equalToConstant: 80),
       
-<<<<<<< HEAD
-      reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 32),
-      reserveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 59.5),
-      reserveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64.5),
+//      reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 32),
+//      reserveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 59.5),
+//      reserveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64.5),
 //      reserveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35)
-      reserveButton.heightAnchor.constraint(equalToConstant: 50)
-=======
+//      reserveButton.heightAnchor.constraint(equalToConstant: 50),
+
       reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 20),
       reserveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       reserveButton.widthAnchor.constraint(equalToConstant: 251),
@@ -195,7 +194,7 @@ class OrderViewController: UIViewController {
       cancelButton.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 329),
       cancelButton.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: -2),
       cancelButton.heightAnchor.constraint(equalToConstant: 44)
->>>>>>> 76f09aa8017398765776226b777f2db5ea4f0536
+
     ])
     
       let defaultCenterYConst = popUpView.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
