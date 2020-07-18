@@ -21,10 +21,10 @@ class HomeViewController: UIViewController {
   //MARK: - viewDidLoad()
   override func viewDidLoad() {
     super.viewDidLoad()
- 
+    navigationController?.navigationBar.isHidden = true
+    
     setUI()
     setConstraint()
-    setNavigation()
     setMyPlace()
   }
   
@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
   
   //MARK: - setConstraint()
   private func setConstraint() {
-//    let guide = view.safeAreaLayoutGuide
+    //    let guide = view.safeAreaLayoutGuide
     
     [mapView, orderChildVC.view].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
@@ -59,25 +59,7 @@ class HomeViewController: UIViewController {
       
     ])
   }
-  
-  //MARK: - setNavigation()
-  
-  private func setNavigation() {
 
-    navigationItem.titleView = naviTitleButton
-    naviTitleButton.backgroundColor = .clear
-    naviTitleButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-    naviTitleButton.semanticContentAttribute = .forceRightToLeft
-    naviTitleButton.tintColor = .black
-    naviTitleButton.setTitle("성수동 성수이로 108", for: .normal)
-    naviTitleButton.setTitleColor(.black, for: .normal)
-    naviTitleButton.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 40))
-
-
-  }
-  
-  
-  
   private func setMyPlace() {
     myPlace.coordinate = CLLocationCoordinate2D(latitude: 37.541708, longitude: 127.056256)
     myPlace.title = "우리집"
@@ -89,5 +71,5 @@ class HomeViewController: UIViewController {
   }
   
   
-
+  
 }
