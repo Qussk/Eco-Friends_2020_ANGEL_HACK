@@ -29,7 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
     
     window = UIWindow(frame: UIScreen.main.bounds)
+<<<<<<< HEAD
     window?.rootViewController = GuideViewController()
+=======
+    window?.rootViewController = DetaileDescriotionViewController()
+>>>>>>> 0ff6a87aa53cedf8b079cb7ca666924d91a8e10c
     window?.backgroundColor = .systemBackground
     window?.makeKeyAndVisible()
     
