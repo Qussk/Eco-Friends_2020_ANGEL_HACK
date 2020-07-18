@@ -98,13 +98,14 @@ extension MyPageViewController : UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyPageViewCollectionCell3.identifier, for: indexPath) as! MyPageViewCollectionCell3
       cell.backgroundColor = .white
       cell.layer.cornerRadius = view.frame.width / 19
+      cell.layer.masksToBounds = true
       cell.delegate = self
       print("cell3 :" , cell.layer.cornerRadius)
       
       return cell
     }
-
   }
+
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
@@ -123,10 +124,12 @@ extension MyPageViewController : UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    if indexPath.section == 0 && indexPath.section ==  1{
-      return CGSize(width: 339, height: 104)
-    } else  {
+    
+    switch indexPath.section {
+    case 2:
       return CGSize(width: 339, height: 300)
+    default:
+      return CGSize(width: 339, height: 104)
     }
   }
 }
