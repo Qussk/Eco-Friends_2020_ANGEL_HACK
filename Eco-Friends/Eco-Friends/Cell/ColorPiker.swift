@@ -15,5 +15,7 @@ class ColorPiker {
   static let customHanul = UIColor(red: 153/255, green: 193/255, blue: 252/255, alpha: 1)
 
   static let customBackground = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
+  
+  static let customTextColor = UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)
 }
 

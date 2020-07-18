@@ -44,6 +44,7 @@
 		7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */; };
 		73AAF5C124C36E34004AE8F4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 73AAF5C024C36E34004AE8F4 /* Kingfisher */; };
 		73AAF5C324C36F36004AE8F4 /* PET.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73AAF5C224C36F36004AE8F4 /* PET.gif */; };
+		73AAF5C524C37611004AE8F4 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF5C424C37610004AE8F4 /* DataList.swift */; };
 		73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */; };
 		73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BC24C037EF00481AF4 /* LoginViewController.swift */; };
 		73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BD24C037EF00481AF4 /* ReserveViewController.swift */; };
@@ -90,6 +91,7 @@
 		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
 		73AAF5C224C36F36004AE8F4 /* PET.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PET.gif; sourceTree = "<group>"; };
+		73AAF5C424C37610004AE8F4 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../Controller/OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				0E3BEF7624C2091D0005582B /* SingletonData.swift */,
 				0E13A58024C2B28C004112D8 /* RecycleData.swift */,
+				73AAF5C424C37610004AE8F4 /* DataList.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
 				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
 				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
+				73AAF5C524C37611004AE8F4 /* DataList.swift in Sources */,
 				0F3BF6F224C1BF3A002BF46C /* MyPageCollectionViewCell1.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F3BF6F624C2074B002BF46C /* MyPageViewCollectionCell3.swift in Sources */,
