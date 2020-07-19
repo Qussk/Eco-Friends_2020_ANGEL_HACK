@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     window = UIWindow(frame: UIScreen.main.bounds)
+<<<<<<< HEAD
     window?.rootViewController = OnboardingViewController()
+=======
+    window?.rootViewController = DetailGuideViewController()
+    
+>>>>>>> b037f9379b330799a42ca3ca9edccaa5c8c9d02e
     window?.backgroundColor = .systemBackground
     window?.makeKeyAndVisible()
     return true

@@ -10,6 +10,8 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
   
+  var selectIndexPathArray : [IndexPath] = []
+
   let collectionView : UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
@@ -164,54 +166,9 @@ extension DescriptionViewController: UIScrollViewDelegate {
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.width)
     pageControl.currentPage = Int(pageNumber)
-  }
-  
-//  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//          let centerX = self.collectionView.center.x
-//
-//          for cell in self.collectionView.visibleCells {
-//            cell.transform = CGAffineTransform(scaleX: Standard.standard, y: Standard.standard)
-//
-//              // change the alpha of the image view
-//              let coverCell = cell as! DescriotionCollectionViewCell
-//            //  coverCell.coverImageView.alpha = changeSizeScaleToAlphaScale(scale)
-//          }
-//      }
-//
-//        func changeSizeScaleToAlphaScale(_ x : CGFloat) -> CGFloat {
-//          let minScale : CGFloat = 0.86
-//          let maxScale : CGFloat = 1.0
-//
-//          let minAlpha : CGFloat = 0.25
-//          let maxAlpha : CGFloat = 1.0
-//
-//          return ((maxAlpha - minAlpha) * (x - minScale)) / (maxScale - minScale) + minAlpha
-//      }
-  }
-  
-  
-  func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-    let pageWidth = 430 + 30
-//
-//    let currentOffset = scrollView.contentOffset.x
-//    let targetOffset = targetContentOffset
-//    let newTargetOffset = 0
-//
-//    if (targetOffset > currentOffset) {
-//            newTargetOffset = ceilf(currentOffset /pageWidth) * pageWidth
-//    } else {
-//            newTargetOffset = floorf(currentOffset /pageWidth) * pageWidth
-//
-//      if (newTargetOffset < 0) {
-//            newTargetOffset = 0;
-//        else if (newTargetOffset > scrollView.contentSize.width)
-//            newTargetOffset = scrollView.contentSize.width;
-//
-//        targetContentOffset->x = currentOffset
-//        [scrollView setContentOffset:CGPointMake(newTargetOffset, scrollView.contentOffset.y) animated:YES];
 
-    }
-
+  }
+}
 
 extension DescriptionViewController: UICollectionViewDataSource{
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -225,6 +182,27 @@ extension DescriptionViewController: UICollectionViewDataSource{
     return cell
   }
 }
+
+extension DescriptionViewController: UICollectionViewDelegate{
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    selectIndexPathArray.append(indexPath)
+
+    let cell = collectionView.beginInteractiveMovementForItem(at: indexPath)
+    
+//    switch companyList[indexPath.item] {
+//      case "로티스" :
+//           let vc = DetaileDescriotionViewController()
+//           navigationController?.pushViewController(vc, animated: true)
+//           let nv = UINavigationController(rootViewController: vc)
+//           nv.modalPresentationStyle = .fullScreen
+//           self.present(nv, animated: false)
+//    } default:
+//    print("")
+  }
+}
+
 
 //MARK:-UICollectionViewDelegateFlowLayout
 extension DescriptionViewController : UICollectionViewDelegateFlowLayout{
