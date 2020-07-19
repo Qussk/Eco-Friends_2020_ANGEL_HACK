@@ -33,6 +33,8 @@ class OrderViewController: UIViewController {
   private let cancelButton = UIButton()
   private var floatingCenterYConstraint : NSLayoutConstraint!
   private let reserveButton = UIButton()
+//  let homeVC = HomeViewController()
+//  let hidingView = UIView()
   
   //MARK: - viewDidLoad()
   
@@ -54,6 +56,11 @@ class OrderViewController: UIViewController {
     setUI()
     setConstraint()
   }
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> f87edfd8df03af09137274af5e1fb53466e5f647
   
   //MARK: - setUI()
   private func setUI() {
@@ -190,6 +197,7 @@ class OrderViewController: UIViewController {
   }
   
   @objc func reserveClicked(_ sender: UIButton){
+<<<<<<< HEAD
     if loginCheck == false {
       view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
 
@@ -202,6 +210,29 @@ class OrderViewController: UIViewController {
       let vc = SelectReserveViewController()
       vc.modalPresentationStyle = .fullScreen
       present(vc, animated: true)
+=======
+    
+    
+    let homeVC = HomeViewController()
+    homeVC.hidingView.alpha = 1
+    homeVC.hidingView.backgroundColor = .lightGray
+    
+    
+////    let hidingView = UIView()
+//    homeVC.mapView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+//
+////    hidingView.alpha = 1
+////    hidingView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+//    let homeVC = HomeViewController()
+//            homeVC.mapView.backgroundColor = UIColor.lightGray
+    view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+    
+    
+    UIView.animate(withDuration: 0.4) {
+      self.floatingCenterYConstraint.priority = .defaultHigh
+      self.view.layoutIfNeeded()
+     
+>>>>>>> f87edfd8df03af09137274af5e1fb53466e5f647
     }
 
     

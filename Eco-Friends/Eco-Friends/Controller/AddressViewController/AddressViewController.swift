@@ -141,24 +141,43 @@ class AddressViewController: UIViewController {
   }
   
   @objc func moveToHomeView() {
-    let homeNavi = UINavigationController(rootViewController: HomeViewController())
-    let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
-    let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
-    let guideNavi  = UINavigationController(rootViewController: GuideViewController())
-    let tabVC = UITabBarController()
+      let homeNavi = UINavigationController(rootViewController: HomeViewController())
+      let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
+      let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
+      let guideNavi  = UINavigationController(rootViewController: GuideViewController())
+      let tabVC = UITabBarController()
 
 
-    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
-    
-    homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
-    descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
-    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
-    
-    tabVC.modalPresentationStyle = .fullScreen
-    present(tabVC, animated: true)
+      tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
+      
+      homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
+      guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
+      descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
+      myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
+      
+      tabVC.modalPresentationStyle = .fullScreen
+      present(tabVC, animated: true)
+    }
   }
-}
+//  @objc func moveToHomeView() {
+//    let homeNavi = UINavigationController(rootViewController: HomeViewController())
+//    let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
+//    let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
+//    let guideNavi  = UINavigationController(rootViewController: GuideViewController())
+//    let tabVC = UITabBarController()
+//
+//
+//    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
+//
+//    homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
+//    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
+//    descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
+//    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
+//
+//    tabVC.modalPresentationStyle = .fullScreen
+//    present(tabVC, animated: true)
+//  }
+//}
 
 extension AddressViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

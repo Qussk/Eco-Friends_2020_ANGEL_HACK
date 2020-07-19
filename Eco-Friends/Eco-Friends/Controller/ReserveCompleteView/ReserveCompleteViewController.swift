@@ -43,12 +43,17 @@ class ReserveCompleteViewController: UIViewController {
     text.font = .boldSystemFont(ofSize: 20)
     
     xButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+    xButton.addTarget(self, action: #selector(moveToBack), for: .touchUpInside)
     xButton.tintColor = .black
     
     completeButton.setTitle("확인", for: .normal)
     completeButton.backgroundColor = .systemBlue
     completeButton.layer.cornerRadius = 23
     
+  }
+  
+  @objc func moveToBack () {
+    dismiss(animated: true, completion: nil )
   }
   // MARK:- setConstraint
   func setConstraint() {
