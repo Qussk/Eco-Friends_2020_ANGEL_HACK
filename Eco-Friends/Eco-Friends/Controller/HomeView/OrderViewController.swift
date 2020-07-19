@@ -64,6 +64,7 @@ class OrderViewController: UIViewController {
     view.addSubview(divider1)
     
     imageView.image = UIImage(named: "Ellipse 258")
+    imageView.contentMode = .scaleToFill
     view.addSubview(imageView)
     
     dateButton.setTitle("수요일", for: .normal)

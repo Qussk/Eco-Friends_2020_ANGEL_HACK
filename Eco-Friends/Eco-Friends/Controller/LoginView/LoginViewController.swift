@@ -70,6 +70,10 @@ class LoginViewController: UIViewController {
     dismiss(animated: true)
   }
   
+  @objc func loginGoing(_ sender: UIButton){
+    dismiss(animated: true)
+  }
+  
   func setConstrain(){
     
     let guide = view.safeAreaLayoutGuide
