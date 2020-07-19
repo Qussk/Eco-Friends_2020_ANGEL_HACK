@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "instagram-2.png",
+      "filename" : "1200px-Rothy's_logo 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "instagram-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "instagram.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

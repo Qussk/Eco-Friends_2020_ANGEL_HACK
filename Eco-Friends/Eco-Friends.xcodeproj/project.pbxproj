@@ -37,11 +37,16 @@
 		0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */; };
 		0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29124C0287800F4F341 /* MyPageViewController.swift */; };
 		0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29324C0289400F4F341 /* OrderViewController.swift */; };
+		73223EF924C3C48800355B9D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73223EF824C3C48800355B9D /* LaunchViewController.swift */; };
+		73223EFB24C3C6D500355B9D /* DetailGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */; };
 		7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */; };
 		7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055A24C0CBE800A05F84 /* ColorPiker.swift */; };
 		7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */; };
 		7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 7357056124C2160800A05F84 /* CenteredCollectionView */; };
 		7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */; };
+		73AAF5C124C36E34004AE8F4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 73AAF5C024C36E34004AE8F4 /* Kingfisher */; };
+		73AAF5C324C36F36004AE8F4 /* PET.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73AAF5C224C36F36004AE8F4 /* PET.gif */; };
+		73AAF5C524C37611004AE8F4 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF5C424C37610004AE8F4 /* DataList.swift */; };
 		73E857BF24C037F000481AF4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */; };
 		73E857C124C037F000481AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BC24C037EF00481AF4 /* LoginViewController.swift */; };
 		73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E857BD24C037EF00481AF4 /* ReserveViewController.swift */; };
@@ -83,10 +88,14 @@
 		0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		0F98A29124C0287800F4F341 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0F98A29324C0289400F4F341 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		73223EF824C3C48800355B9D /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = "Eco-Friends/Controller/LaunchViewController.swift"; sourceTree = SOURCE_ROOT; };
+		73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGuideViewController.swift; sourceTree = "<group>"; };
 		7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveSection3CollectionViewCell.swift; path = "Eco-Friends/Cell/ReserveSection3CollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
 		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7357056324C21C6A00A05F84 /* DetaileDescriotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileDescriotionViewController.swift; path = "Eco-Friends/Controller/DescriptionView/DetaileDescriotionViewController.swift"; sourceTree = SOURCE_ROOT; };
+		73AAF5C224C36F36004AE8F4 /* PET.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PET.gif; sourceTree = "<group>"; };
+		73AAF5C424C37610004AE8F4 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../Controller/OnboardingViewController.swift; sourceTree = "<group>"; };
 		73E857BC24C037EF00481AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73E857BD24C037EF00481AF4 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AAF5C124C36E34004AE8F4 /* Kingfisher in Frameworks */,
 				73E857CE24C0393F00481AF4 /* PaperOnboarding in Frameworks */,
 				7357056224C2160800A05F84 /* CenteredCollectionView in Frameworks */,
 			);
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3BEF7324C190660005582B /* GuideViewController.swift */,
+				73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */,
 			);
 			path = GuideViewController;
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 			children = (
 				0E3BEF7624C2091D0005582B /* SingletonData.swift */,
 				0E13A58024C2B28C004112D8 /* RecycleData.swift */,
+				73AAF5C424C37610004AE8F4 /* DataList.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -163,6 +175,7 @@
 				0ED256E224C00A9C00DF1175 /* Assets.xcassets */,
 				0ED256E424C00A9C00DF1175 /* LaunchScreen.storyboard */,
 				0ED256E724C00A9C00DF1175 /* Info.plist */,
+				73AAF5C224C36F36004AE8F4 /* PET.gif */,
 			);
 			path = "Eco-Friends";
 			sourceTree = "<group>";
@@ -254,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				73E857BA24C037EF00481AF4 /* OnboardingViewController.swift */,
+				73223EF824C3C48800355B9D /* LaunchViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -301,6 +315,7 @@
 			packageProductDependencies = (
 				73E857CD24C0393F00481AF4 /* PaperOnboarding */,
 				7357056124C2160800A05F84 /* CenteredCollectionView */,
+				73AAF5C024C36E34004AE8F4 /* Kingfisher */,
 			);
 			productName = "Eco-Friends";
 			productReference = 0ED256D624C00A9B00DF1175 /* Eco-Friends.app */;
@@ -333,6 +348,7 @@
 			packageReferences = (
 				73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
 				7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
+				73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 0ED256D724C00A9B00DF1175 /* Products */;
 			projectDirPath = "";
@@ -348,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AAF5C324C36F36004AE8F4 /* PET.gif in Resources */,
 				0ED256E624C00A9C00DF1175 /* LaunchScreen.storyboard in Resources */,
 				0ED256E324C00A9C00DF1175 /* Assets.xcassets in Resources */,
 				0ED256E124C00A9B00DF1175 /* Main.storyboard in Resources */,
@@ -374,10 +391,12 @@
 				7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */,
 				0F98A28924C027ED00F4F341 /* DividerView.swift in Sources */,
 				0ED256DA24C00A9B00DF1175 /* AppDelegate.swift in Sources */,
+				73223EF924C3C48800355B9D /* LaunchViewController.swift in Sources */,
 				7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */,
 				0F5A2F8724C299BA00EA0F95 /* OrderListPageViewCollectionCell.swift in Sources */,
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */,
+				73223EFB24C3C6D500355B9D /* DetailGuideViewController.swift in Sources */,
 				0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */,
 				0F5A2F8524C2965B00EA0F95 /* OrderListPageView.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
@@ -387,6 +406,7 @@
 				0E29463224C14077008A4847 /* ReserveCompleteChildTableViewCell.swift in Sources */,
 				7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */,
 				7357056424C21C6A00A05F84 /* DetaileDescriotionViewController.swift in Sources */,
+				73AAF5C524C37611004AE8F4 /* DataList.swift in Sources */,
 				0F3BF6F224C1BF3A002BF46C /* MyPageCollectionViewCell1.swift in Sources */,
 				0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */,
 				0F3BF6F624C2074B002BF46C /* MyPageViewCollectionCell3.swift in Sources */,
@@ -602,6 +622,14 @@
 				minimumVersion = 2.2.2;
 			};
 		};
+		73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.1;
+			};
+		};
 		73E857CC24C0393F00481AF4 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
@@ -617,6 +645,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7357056024C2160800A05F84 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
 			productName = CenteredCollectionView;
+		};
+		73AAF5C024C36E34004AE8F4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73AAF5BF24C36E34004AE8F4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		73E857CD24C0393F00481AF4 /* PaperOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
