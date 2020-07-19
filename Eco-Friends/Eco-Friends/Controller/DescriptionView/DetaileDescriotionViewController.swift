@@ -33,22 +33,28 @@ class DetaileDescriotionViewController: UIViewController {
   let comentLable3 = UILabel()
 
   let viewsButton = UIButton()
+
+  let naviBackButton: UIBarButtonItem = {
+    let button = UIBarButtonItem(title: "", style: .done, target: self, action: #selector(xButtonMove(_:)))
+    return button
+  }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
       title = "로티스"
+      
       setView()
       setConstrain()
-<<<<<<< HEAD
-navigationLess()
-=======
       navigationLess()
->>>>>>> 6bbd76005a3c7c152cf07373ac9d37232f151bf5
+
     }
   
   func navigationLess(){
     //네비게이션바 디자인 생략
+    navigationItem.leftBarButtonItem = naviBackButton
+    naviBackButton.image = UIImage(systemName: "chevron.left")
+    naviBackButton.tintColor = .black
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.backgroundColor = UIColor.clear
@@ -56,6 +62,7 @@ navigationLess()
     
   //MARK:- UI
   func setView(){
+
     
     scrollView.backgroundColor = .white
     view.addSubview(scrollView)
@@ -144,7 +151,11 @@ navigationLess()
     viewsButton.addTarget(self, action: #selector(clickedBtn), for: .touchUpInside)
   }
   
-  @objc func clickedBtn(_ sender: UIButton){
+  @objc func xButtonMove(_ sender: UIButton) {
+    navigationController?.popViewController(animated: true)
+  }
+  
+  @objc func clickedBtn(_ sender: UIButton) {
     navigationController?.popViewController(animated: true)
   }
   

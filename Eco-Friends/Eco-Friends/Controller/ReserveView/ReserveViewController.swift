@@ -55,18 +55,7 @@ class ReserveViewController: UIViewController {
     reserveButton.setTitleColor(.white, for: .normal)
     reserveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
     reserveButton.layer.cornerRadius = view.frame.width/17
-    
     collectionView.addSubview(reserveButton)
-<<<<<<< HEAD
-    reserveButton.addTarget(self, action: #selector(reserveClick(_:)), for: .touchUpInside)
-  }
-  
-  @objc func reserveClick(_ sender: UIButton){
-      let vc = ReserveCompleteViewController()
-     let nv = UINavigationController(rootViewController: vc)
-     nv.modalPresentationStyle = .fullScreen
-     navigationController?.pushViewController(vc, animated: true)
-=======
     
     reserveButton.addTarget(self, action: #selector(reserveClick(_:)), for: .touchUpInside)
   }
@@ -82,7 +71,6 @@ class ReserveViewController: UIViewController {
 present(vc, animated: false)
   print("dd")
     
->>>>>>> 6bbd76005a3c7c152cf07373ac9d37232f151bf5
   }
   
   func setupConstrain(){

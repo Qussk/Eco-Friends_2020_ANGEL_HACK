@@ -30,7 +30,7 @@ class ReserveCompleteViewController: UIViewController {
     view.addSubview(childViewController.view)
     childViewController.didMove(toParent: self)
     
-    view.backgroundColor = .lightGray
+    view.backgroundColor = .systemBackground
     [imgV, text, xButton, completeButton].forEach { view.addSubview($0) }
     
     imgV.image = UIImage(named: "완료")
@@ -49,10 +49,14 @@ class ReserveCompleteViewController: UIViewController {
     completeButton.setTitle("확인", for: .normal)
     completeButton.backgroundColor = .systemBlue
     completeButton.layer.cornerRadius = 23
-    
+    completeButton.addTarget(self, action: #selector(moveHome(_:)), for: .touchUpInside)
   }
   
-  @objc func moveToBack () {
+  @objc func moveHome(_ sender: UIButton) {
+    presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true)
+  }
+  
+  @objc func moveToBack() {
     dismiss(animated: true, completion: nil )
   }
   // MARK:- setConstraint

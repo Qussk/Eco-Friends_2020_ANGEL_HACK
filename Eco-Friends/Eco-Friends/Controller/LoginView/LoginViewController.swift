@@ -60,11 +60,11 @@ class LoginViewController: UIViewController {
     loginLable.font = UIFont.systemFont(ofSize: 16)
     
     signUpButton.setTitle("회원가입", for: .normal)
-<<<<<<< HEAD
-    signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 169/255, alpha: 1), for: .normal)
-=======
+
+//    signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 169/255, alpha: 1), for: .normal)
+
     signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 1), for: .normal)
->>>>>>> 6bbd76005a3c7c152cf07373ac9d37232f151bf5
+
     signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
     
     signUpButton.alpha = 0

@@ -20,6 +20,9 @@ class ReserveCompleteChildViewController: UIViewController {
   }
   // MARK:- setUI
   func setUI() {
+    view.layer.cornerRadius = 20
+    view.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0.3)
+    view.layer.borderWidth = 1
     
     view.addSubview(tableV)
     tableV.backgroundColor = .white
