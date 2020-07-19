@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
   private let myPlace = MKPointAnnotation()
   private let orderChildVC = OrderViewController()
   let naviTitleButton = UIButton(type: .system)
-  
+  let hidingView = UIView()
   
   //MARK: - viewDidLoad()
   override func viewDidLoad() {
@@ -33,6 +33,10 @@ class HomeViewController: UIViewController {
     view.backgroundColor = .systemBackground
     view.addSubview(mapView)
     
+    hidingView.backgroundColor = .lightGray
+    hidingView.alpha = 0
+    mapView.addSubview(hidingView)
+    
     addChild(orderChildVC)
     view.addSubview(orderChildVC.view)
     orderChildVC.didMove(toParent: self)
@@ -42,7 +46,7 @@ class HomeViewController: UIViewController {
   private func setConstraint() {
     //    let guide = view.safeAreaLayoutGuide
     
-    [mapView, orderChildVC.view].forEach {
+    [mapView, orderChildVC.view, ].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -51,6 +55,11 @@ class HomeViewController: UIViewController {
       mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       mapView.heightAnchor.constraint(equalToConstant: 300),
+      
+      hidingView.topAnchor.constraint(equalTo: view.topAnchor),
+           hidingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+           hidingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+           hidingView.heightAnchor.constraint(equalToConstant: 300),
       
       orderChildVC.view.topAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -25),
       orderChildVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),

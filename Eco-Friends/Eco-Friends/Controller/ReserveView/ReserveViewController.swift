@@ -50,6 +50,7 @@ class ReserveViewController: UIViewController {
     reserveButton.setTitleColor(.white, for: .normal)
     reserveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
     reserveButton.layer.cornerRadius = view.frame.width/17
+    
     collectionView.addSubview(reserveButton)
   }
   

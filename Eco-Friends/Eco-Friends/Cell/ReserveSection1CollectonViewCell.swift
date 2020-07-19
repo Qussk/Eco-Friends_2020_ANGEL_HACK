@@ -24,6 +24,7 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
   //현관정보
   let doorTitle = UILabel()
   let doorNumberButton = UIButton()
+  
   let setBule1 = UIImageView()
   let doorTextField = UITextField()
   
@@ -36,6 +37,8 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
   let phonTitle = UILabel()
   let phonNumber = UILabel()
   
+  var isClicked : Bool = false
+  
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:)")
@@ -46,8 +49,30 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     
     setupView()
     setupConstraint()
+    checkColor()
 
   }
+  
+  @objc func checkColor () {
+    if isClicked == false {
+      setBule1.alpha = 1
+      isClicked = true
+    } else {
+      setBule2.alpha = 0
+      isClicked = false
+    }
+  }
+  
+  @objc func checkColor2 () {
+    if isClicked == false {
+      setBule1.alpha = 1
+      isClicked = true
+    } else {
+      setBule2.alpha = 0
+      isClicked = false
+    }
+  }
+
   
   //MARK:- UI
   
@@ -90,6 +115,7 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     
     doorNumberButton.setImage(UIImage(systemName: "circle"), for: .normal)
     doorNumberButton.tintColor = ColorPiker.customAlpha
+    doorNumberButton.addTarget(self, action: #selector(checkColor), for: .touchUpInside)
     
     setBule1.image = UIImage(systemName: "circle.fill")
     setBule1.tintColor = ColorPiker.customBlue
@@ -100,6 +126,7 @@ class ReserveSection1CollectionViewCell: UICollectionViewCell {
     doorTextField.placeholder = "#1234"
     
     noNumberButton.setImage(UIImage(systemName: "circle"), for: .normal)
+    noNumberButton.addTarget(self, action: #selector(checkColor2), for: .touchUpInside)
     noNumberButton.tintColor = ColorPiker.customAlpha
   
     setBule2.image = UIImage(systemName: "circle.fill")

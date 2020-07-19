@@ -189,8 +189,8 @@ extension DescriptionViewController: UICollectionViewDelegate{
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-    selectIndexPathArray.append(indexPath)
-    print(indexPath)
+//    selectIndexPathArray.append(indexPath)
+//    print(indexPath)
     
 let vc = DetaileDescriotionViewController()
     let nv = UINavigationController(rootViewController: vc)
