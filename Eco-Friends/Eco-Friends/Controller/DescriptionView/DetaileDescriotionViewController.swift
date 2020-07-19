@@ -33,13 +33,23 @@ class DetaileDescriotionViewController: UIViewController {
 
   let viewsButton = UIButton()
   
+  let images = ["88","99"]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      title = "로티스"
       setView()
       setConstrain()
 
     }
+  
+  func navigationLess(){
+    //네비게이션바 디자인 생략
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
+  }
     
   //MARK:- UI
   func setView(){
@@ -129,8 +139,7 @@ class DetaileDescriotionViewController: UIViewController {
   }
   
   @objc func clickedBtn(_ sender: UIButton){
-    //vc = DescriotionViewController()
-    
+    navigationController?.popViewController(animated: true)
   }
   
   //MARK:- setConstrain
