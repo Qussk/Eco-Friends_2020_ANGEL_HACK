@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-<<<<<<< HEAD:Eco-Friends/Eco-Friends/Assets.xcassets/Group 861.imageset/Contents.json
+
       "filename" : "Group 861.png",
-=======
+
       "filename" : "Rectangle 944.png",
->>>>>>> b037f9379b330799a42ca3ca9edccaa5c8c9d02e:Eco-Friends/Eco-Friends/Assets.xcassets/blue.imageset/Contents.json
+
       "idiom" : "universal",
       "scale" : "1x"
     },

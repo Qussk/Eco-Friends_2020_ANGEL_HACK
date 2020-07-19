@@ -115,18 +115,18 @@ class AddressViewController: UIViewController {
 
 
     let homeNavi = UINavigationController(rootViewController: HomeViewController())
-    let searchNavi = UINavigationController(rootViewController: SearchViewController())
     let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
     let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
+    let guideNavi  = UINavigationController(rootViewController: GuideViewController())
     let tabVC = UITabBarController()
 
 
-    tabVC.viewControllers = [homeNavi, searchNavi, descriptionNavi, myPageNavi]
+    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi, ]
     
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-    searchNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: ""), tag: 1)
+    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: ""), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
-
+    
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
     
     tabVC.modalPresentationStyle = .fullScreen

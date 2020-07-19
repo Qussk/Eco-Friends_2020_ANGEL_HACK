@@ -1,19 +1,17 @@
 {
   "images" : [
     {
-<<<<<<< HEAD:Eco-Friends/Eco-Friends/Assets.xcassets/Group 833.imageset/Contents.json
-      "filename" : "Group 833.png",
-=======
       "filename" : "Vector.png",
->>>>>>> b037f9379b330799a42ca3ca9edccaa5c8c9d02e:Eco-Friends/Eco-Friends/Assets.xcassets/back.imageset/Contents.json
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Vector-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Vector-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
