@@ -13,7 +13,7 @@ class OrderListPageViewCollectionCell : UICollectionViewCell {
   static let identifier = "OrderListPageViewCollectionCell"
   private let numberLabel = UILabel()
   private let nextButton = UIButton()
-  private let statusLabel = UILabel()
+  let statusLabel = UILabel()
   private let dateLabel = UILabel()
   private let timeLabel = UILabel()
   
@@ -30,22 +30,23 @@ class OrderListPageViewCollectionCell : UICollectionViewCell {
   
   //MARK: - setUI()
   private func setUI() {
-    numberLabel.text = "2020712-963"
+    numberLabel.text = ""
     numberLabel.textAlignment = .left
     numberLabel.textColor = .black
     numberLabel.font = UIFont.boldSystemFont(ofSize: 14)
     contentView.addSubview(numberLabel)
     
     nextButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+    nextButton.tintColor = .lightGray
     contentView.addSubview(nextButton)
     
-    statusLabel.text = "수거대기"
+    statusLabel.text = ""
     statusLabel.textAlignment = .left
     statusLabel.textColor = UIColor.black.withAlphaComponent(0.5)
     statusLabel.font = UIFont.boldSystemFont(ofSize: 12)
     contentView.addSubview(statusLabel)
     
-    dateLabel.text = "수거 7/15 (월)"
+    dateLabel.text = ""
     dateLabel.textAlignment = .left
     dateLabel.textColor = .lightGray
     dateLabel.font = UIFont.boldSystemFont(ofSize: 12)
@@ -90,5 +91,11 @@ class OrderListPageViewCollectionCell : UICollectionViewCell {
       timeLabel.widthAnchor.constraint(equalToConstant: 200),
       timeLabel.heightAnchor.constraint(equalToConstant: 20),
     ])
+  }
+  
+  func configure(number : String ,status : String, date : String ) {
+    numberLabel.text = number
+    statusLabel.text = status
+    dateLabel.text = date 
   }
 }
