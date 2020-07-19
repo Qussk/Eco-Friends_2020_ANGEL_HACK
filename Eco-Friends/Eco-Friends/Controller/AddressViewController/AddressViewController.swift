@@ -63,8 +63,7 @@ class AddressViewController: UIViewController {
     searchButton.layer.borderWidth = 1
     searchButton.layer.cornerRadius = 10
     
-    nowButton.setImage(UIImage(systemName: "leaf.arrow.circlepath"), for: .normal)
-    nowButton.tintColor = .black
+    nowButton.setImage(UIImage(named: "지도"), for: .normal)
     nowButton.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0.1)
     nowButton.layer.borderWidth = 1
     nowButton.setTitle(" 현 위치로 주소 설정", for: .normal)
@@ -129,14 +128,13 @@ class AddressViewController: UIViewController {
     let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
     let guideNavi  = UINavigationController(rootViewController: GuideViewController())
     let tabVC = UITabBarController()
-
-
-    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
-    
+ 
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
     guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
+    
+    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
     
     tabVC.modalPresentationStyle = .fullScreen
     present(tabVC, animated: true)

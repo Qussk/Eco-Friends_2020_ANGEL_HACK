@@ -16,6 +16,8 @@ class SelectReserveViewController: UIViewController {
   let stackFirst = UIView()
   let stackSecond = UIView()
   
+  let backButton = UIButton()
+  
   let stackFirstData = ["일반버튼", "음식물버튼"]
   let stackSecondData = ["재활용버튼", "대형버튼"]
   
@@ -37,7 +39,7 @@ class SelectReserveViewController: UIViewController {
   
   func setUI() {
     view.backgroundColor = .systemBackground
-    [titleLabel, subLabel, selectButton, stackFirst, stackSecond].forEach { view.addSubview($0) }
+    [titleLabel, subLabel, stackFirst, stackSecond, selectButton, backButton].forEach { view.addSubview($0) }
     
     titleLabel.text = "수거 예약할 폐기물 종류를 \n선택해 주세요."
     titleLabel.numberOfLines = 2
@@ -50,6 +52,15 @@ class SelectReserveViewController: UIViewController {
     selectButton.setTitle("선택완료", for: .normal)
     selectButton.backgroundColor = .systemBlue
     selectButton.layer.cornerRadius = 20
+    selectButton.addTarget(self, action: #selector(moveNextView(_:)), for: .touchUpInside)
+    
+    backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+    backButton.tintColor = .lightGray
+    backButton.addTarget(self, action: #selector(back(_:)), for: .touchUpInside)
+  }
+  
+  @objc func back(_ sender: UIButton) {
+      dismiss(animated: true)
   }
   
   func setStack() {
@@ -66,17 +77,20 @@ class SelectReserveViewController: UIViewController {
       btn.tag = i
       btn.setImage(UIImage(named: stackSecondData[i]), for: .normal)
       btn.addTarget(self, action: #selector(secondStack(_:)), for: .touchUpInside)
+      
       stackInSecondData.append(btn)
     }
     
     let stackView = UIStackView(arrangedSubviews: stackInFirstData)
     let stackView2 = UIStackView(arrangedSubviews: stackInSecondData)
+
+    stackView.distribution = .fillEqually
+    stackView.axis = .horizontal
+    stackView.spacing = 13
     
-    [stackView, stackView2].forEach {
-      $0.distribution = .fillEqually
-      $0.axis = .horizontal
-      $0.spacing = 13
-    }
+    stackView2.distribution = .fillEqually
+    stackView2.axis = .horizontal
+    stackView2.spacing = 13
     
     stackFirst.addSubview(stackView)
     stackSecond.addSubview(stackView2)
@@ -96,6 +110,12 @@ class SelectReserveViewController: UIViewController {
       stackView2.trailingAnchor.constraint(equalTo: stackSecond.trailingAnchor),
       stackView2.bottomAnchor.constraint(equalTo: stackSecond.bottomAnchor)
     ])
+  }
+  
+  @objc func moveNextView(_ sender: UIButton) {
+    let vc = ReserveViewController()
+    vc.modalPresentationStyle = .fullScreen
+    present(vc, animated: true)
   }
   
   @objc func firstStack(_ sender: UIButton) {
@@ -126,11 +146,16 @@ class SelectReserveViewController: UIViewController {
   
   
   func setConstraint() {
-    [titleLabel, subLabel, selectButton, stackFirst, stackSecond].forEach {
+    [backButton, titleLabel, subLabel, selectButton, stackFirst, stackSecond].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     NSLayoutConstraint.activate([
+      backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 56),
+      backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+      backButton.widthAnchor.constraint(equalToConstant: 20),
+      backButton.heightAnchor.constraint(equalToConstant: 20),
+      
       titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 124),
       titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
       titleLabel.heightAnchor.constraint(equalToConstant: 70),

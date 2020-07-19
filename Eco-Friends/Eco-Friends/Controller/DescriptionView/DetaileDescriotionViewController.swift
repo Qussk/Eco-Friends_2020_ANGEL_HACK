@@ -41,7 +41,7 @@ class DetaileDescriotionViewController: UIViewController {
       title = "로티스"
       setView()
       setConstrain()
-
+navigationLess()
     }
   
   func navigationLess(){

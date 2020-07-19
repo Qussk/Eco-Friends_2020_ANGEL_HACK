@@ -11,6 +11,7 @@ import UIKit
 class OrderViewController: UIViewController {
   //MARK: - Properties
   let text = UITextField()
+  var loginCheck = false
   private let textLabel = UILabel()
   private let addressButton : UIButton = {
     let bt = UIButton()
@@ -54,14 +55,12 @@ class OrderViewController: UIViewController {
     setConstraint()
   }
   
-  
-  
-  
-  
   //MARK: - setUI()
   private func setUI() {
     view.addSubview(addressButton)
     view.addSubview(divider1)
+    
+    addressButton.addTarget(self, action: #selector(addressButtonClick), for: .touchUpInside)
     
     imageView.image = UIImage(named: "Ellipse 258")
     imageView.contentMode = .scaleToFill
@@ -179,6 +178,10 @@ class OrderViewController: UIViewController {
   
   //MARK:- Action
   
+  @objc func addressButtonClick() {
+    dismiss(animated: true)
+  }
+  
   @objc func dateButtonClicked() {
     let selectDateVC = UINavigationController(rootViewController: SelectDateView())
     selectDateVC.modalPresentationStyle = .fullScreen
@@ -187,13 +190,20 @@ class OrderViewController: UIViewController {
   }
   
   @objc func reserveClicked(_ sender: UIButton){
-    
-    view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
-    
-    UIView.animate(withDuration: 0.4) {
-      self.floatingCenterYConstraint.priority = .defaultHigh
-      self.view.layoutIfNeeded()
+    if loginCheck == false {
+      view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
+
+      UIView.animate(withDuration: 0.4) {
+        self.floatingCenterYConstraint.priority = .defaultHigh
+        self.view.layoutIfNeeded()
+      }
+      loginCheck = true
+    } else {
+      let vc = SelectReserveViewController()
+      vc.modalPresentationStyle = .fullScreen
+      present(vc, animated: true)
     }
+
     
   }
   

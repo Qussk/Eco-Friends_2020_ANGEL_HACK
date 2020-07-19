@@ -52,8 +52,8 @@ class GuideViewController: UIViewController {
     collectionV.delegate = self
     collectionV.register(GuideCollectionViewCell.self, forCellWithReuseIdentifier: GuideCollectionViewCell.identifier)
     
-    textLabel.text = "똑똑한 분리수거 방법\n지금 찾아보세요."
-    textLabel.font = UIFont.boldSystemFont(ofSize: 25)
+    textLabel.text = "똑똑한 쓰레기 처리 방법\n지금 찾아보세요."
+    textLabel.font = UIFont.boldSystemFont(ofSize: 23)
     textLabel.numberOfLines = 2
     
     searchTextBar.backgroundColor = ColorPiker.customGray

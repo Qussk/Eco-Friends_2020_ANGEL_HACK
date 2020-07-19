@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     
     
     signUpButton.setTitle("회원가입", for: .normal)
-    signUpButton.setTitleColor(UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1), for: .normal)
+    signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 169/255, alpha: 1), for: .normal)
     signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
     
     signUpButton.alpha = 0
@@ -93,13 +93,11 @@ class LoginViewController: UIViewController {
       loginButton.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       loginButton.widthAnchor.constraint(equalToConstant: 251),
       
-      loginLable.topAnchor.constraint(equalTo: loginButton.bottomAnchor),
       loginLable.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
-      loginLable.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -130),
+      loginLable.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -5),
       
-      signUpButton.topAnchor.constraint(equalTo: loginLable.bottomAnchor),
+      signUpButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -106),
       signUpButton.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
-      signUpButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -260)
     ])
   }
   
