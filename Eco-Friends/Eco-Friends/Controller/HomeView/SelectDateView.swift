@@ -41,7 +41,11 @@ class SelectDateView : UIViewController {
   
   private func setNavigation() {
     self.title = "예약하기"
-  }
+    let goBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: nil)
+    goBackButton.tintColor = .lightGray
+    
+    navigationItem.leftBarButtonItem = goBackButton
+   }
   
   //MARK: - setUI()
   
