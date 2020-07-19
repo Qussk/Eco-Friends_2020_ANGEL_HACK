@@ -148,7 +148,6 @@ class OrderViewController: UIViewController {
       reserveButton.widthAnchor.constraint(equalToConstant: 251),
       reserveButton.heightAnchor.constraint(equalToConstant: 44),
       
-      
       popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       

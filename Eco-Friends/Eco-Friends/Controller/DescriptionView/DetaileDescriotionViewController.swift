@@ -14,6 +14,7 @@ class DetaileDescriotionViewController: UIViewController {
   var scrollView = UIScrollView()
   
   let detailimageView = UIImageView()
+  let grayImage = UIImageView()
   let detailTitle = UILabel()
   let detailLable = UILabel()
   
@@ -32,16 +33,14 @@ class DetaileDescriotionViewController: UIViewController {
   let comentLable3 = UILabel()
 
   let viewsButton = UIButton()
-  
-  let images = ["88","99"]
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
       title = "로티스"
       setView()
       setConstrain()
-
+      navigationLess()
     }
   
   func navigationLess(){
@@ -61,6 +60,9 @@ class DetaileDescriotionViewController: UIViewController {
     detailimageView.image = UIImage(named: "dc1")
     scrollView.addSubview(detailimageView)
 
+    grayImage.image = UIImage(named: "Vac")
+    detailimageView.addSubview(grayImage)
+    
     detailTitle.text = "로티스"
     detailTitle.textColor = .white
     detailTitle.font = UIFont.systemFont(ofSize: 16)
@@ -151,7 +153,7 @@ class DetaileDescriotionViewController: UIViewController {
 //      $0.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20).isActive = true
 //    }
     
-    [detailTitle,scrollView,detailimageView,detailLable,detailView,logoLable,logoIamge,comentLable, viewsButton].forEach{
+    [detailTitle,scrollView,detailimageView,grayImage,detailLable,detailView,logoLable,logoIamge,comentLable, viewsButton].forEach{
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
    
@@ -164,7 +166,7 @@ class DetaileDescriotionViewController: UIViewController {
     
     NSLayoutConstraint.activate([
 
-      scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+      scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: -90),
       scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -174,6 +176,11 @@ class DetaileDescriotionViewController: UIViewController {
       detailimageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
       detailimageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
       detailimageView.heightAnchor.constraint(equalToConstant: 480),
+      
+      grayImage.topAnchor.constraint(equalTo: detailimageView.topAnchor),
+      grayImage.leadingAnchor.constraint(equalTo: detailimageView.leadingAnchor),
+      grayImage.trailingAnchor.constraint(equalTo: detailimageView.trailingAnchor),
+      grayImage.bottomAnchor.constraint(equalTo: detailimageView.bottomAnchor),
       
       detailTitle.topAnchor.constraint(equalTo: detailimageView.topAnchor, constant: 156),
       detailTitle.leadingAnchor.constraint(equalTo: detailimageView.leadingAnchor, constant: 20),

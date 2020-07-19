@@ -184,9 +184,12 @@ extension GuideViewController: UICollectionViewDataSource {
 
 extension GuideViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     let vc = DetailGuideViewController()
-    vc.modalPresentationStyle = .pageSheet
-    present(vc, animated: true)
+    let vc = DetailGuideViewController()
+    let nv = UINavigationController(rootViewController: vc)
+    nv.modalPresentationStyle = .fullScreen
+    navigationController?.pushViewController(vc, animated: true)
+    
+    
     
   }
 }

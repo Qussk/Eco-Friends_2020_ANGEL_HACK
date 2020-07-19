@@ -115,7 +115,7 @@ class DescriptionViewController: UIViewController {
       collectionView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
       collectionView.heightAnchor.constraint(equalToConstant: 430),
       
-      pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 20),
+      pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
       pageControl.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       
     ])

@@ -27,6 +27,7 @@ class MyPageViewController: UIViewController {
     setNavigation()
     setUI()
     setConstraint()
+    navigationLess()
   }
   
   //MARK: - struct
@@ -42,6 +43,14 @@ class MyPageViewController: UIViewController {
     navigationItem.title = "마이페이지"
     
   }
+  
+  func navigationLess(){
+     //네비게이션바 디자인 생략
+     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+     navigationController?.navigationBar.shadowImage = UIImage()
+     navigationController?.navigationBar.backgroundColor = UIColor.clear
+   }
+  
   //MARK: - setUI()
   
   private func setUI() {

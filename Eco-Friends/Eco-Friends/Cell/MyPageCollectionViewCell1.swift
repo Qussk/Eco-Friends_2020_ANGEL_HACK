@@ -30,10 +30,10 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
   }
   
   private func setUI() {
-    nameLabel.text = "변윤나 님"
+    nameLabel.text = "변윤나님"
     nameLabel.textColor = .black
     nameLabel.textAlignment = .left
-    nameLabel.font = UIFont.boldSystemFont(ofSize: 30)
+    nameLabel.font = UIFont.boldSystemFont(ofSize: 26)
     contentView.addSubview(nameLabel)
     
     imageView.image = UIImage(named: "Union")
@@ -42,7 +42,7 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
     textLabel.text = "새싹이 자라는 중이에요!"
     textLabel.textColor = UIColor.black
     textLabel.textAlignment = .left
-    textLabel.font = UIFont.boldSystemFont(ofSize: 20)
+    textLabel.font = UIFont(name: "PingFangHK-Light", size: 15)
     contentView.addSubview(textLabel)
     
     nextButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
