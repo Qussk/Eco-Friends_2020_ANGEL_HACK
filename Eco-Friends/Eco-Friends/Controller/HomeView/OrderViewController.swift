@@ -34,7 +34,7 @@ class OrderViewController: UIViewController {
 //    return bt
 //  }()
   private let dateButton = UIButton()
-  
+  private let imageView = UIImageView()
   private let divider1 = DividerView()
   private var popUpView = PopUpLoginView()
   private let cancelButton = UIButton()
@@ -66,9 +66,7 @@ class OrderViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    dateButton.setTitle("수요일", for: .normal)
-    dateButton.setTitleColor(.white, for: .normal)
-    dateButton.clipsToBounds = true
+
 //    let gradient = CAGradientLayer()
 ////    gradient.colors = [UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 0.5) , UIColor(red: 152/255, green: 193/255, blue: 252/255, alpha: 0.5)]
 //    gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemBlue.cgColor]
@@ -103,24 +101,32 @@ class OrderViewController: UIViewController {
   
   //MARK: - setUI()
   private func setUI() {
+    view.addSubview(addressButton)
+    view.addSubview(divider1)
+    
+    imageView.image = UIImage(named: "Ellipse 258")
+    view.addSubview(imageView)
+    
+    dateButton.setTitle("수요일", for: .normal)
+    dateButton.backgroundColor = .clear
+    dateButton.setTitleColor(.white, for: .normal)
+    dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+    imageView.addSubview(dateButton)
+      
+    dateButton.setImage(UIImage(named: "Ellipse 258"), for: .normal)
+    dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+    view.addSubview(dateButton)
     
     textLabel.text = "오늘 11시 50분 전 예약하면\n 내일 오전 7시 전 수거!"
     textLabel.numberOfLines = 2
     textLabel.textColor = UIColor.lightGray.withAlphaComponent(0.9)
     textLabel.font = UIFont.boldSystemFont(ofSize: 15)
     textLabel.textAlignment = .center
-    
     view.addSubview(textLabel)
     
-    
-    view.addSubview(addressButton)
 
     
-    dateButton.setImage(UIImage(named: "Ellipse 258"), for: .normal)
-    dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
-    view.addSubview(dateButton)
     
-    view.addSubview(divider1)
     
     
     reserveButton.setTitle("예약하기", for: .normal)
