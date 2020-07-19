@@ -27,6 +27,8 @@ class DetailGuideViewController: UIViewController {
   let ch3 = UILabel()
   let ch4 = UILabel()
   
+  let dateilTitle2 = UILabel()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +37,8 @@ class DetailGuideViewController: UIViewController {
     setConstrain()
     
   }
-  
+  //MARK: -kf
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
     
@@ -49,6 +52,7 @@ class DetailGuideViewController: UIViewController {
     
   }
   
+  //MARK: -UI
   func setView(){
     
     scrollView.backgroundColor = .white
@@ -78,7 +82,6 @@ class DetailGuideViewController: UIViewController {
     detailTitle.text = "분리배출 요령"
     detailTitle.font = UIFont.boldSystemFont(ofSize: 20)
     detailView.addSubview(detailTitle)
-    
     
     
     //가이드
@@ -127,8 +130,15 @@ class DetailGuideViewController: UIViewController {
     detailView.addSubview(ch4)
     
     
+    //
+    dateilTitle2.text = "플라스틱 종류"
+    dateilTitle2.font = UIFont.boldSystemFont(ofSize: 20)
+    detailView.addSubview(dateilTitle2)
+    
+    
   }
   
+  //MARK: -UI
   func setConstrain(){
     //Views
     [scrollView,guideView,guideimage,titleView,detailView].forEach{
@@ -149,13 +159,18 @@ class DetailGuideViewController: UIViewController {
       $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22).isActive = true
     }
     
+    [dateilTitle2].forEach{
+      $0.translatesAutoresizingMaskIntoConstraints = false
+      $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+      $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+    }
+    
     NSLayoutConstraint.activate([
       
       scrollView.topAnchor.constraint(equalTo: view.topAnchor),
       scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-      
       
       guideView.topAnchor.constraint(equalTo: scrollView.topAnchor),
       guideView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
@@ -190,6 +205,9 @@ class DetailGuideViewController: UIViewController {
       ch2.topAnchor.constraint(equalTo: ch1.bottomAnchor, constant: 10),
       ch3.topAnchor.constraint(equalTo: ch2.bottomAnchor, constant: 10),
       ch4.topAnchor.constraint(equalTo: ch3.bottomAnchor, constant: 10),
+      
+      dateilTitle2.topAnchor.constraint(equalTo: ch4.bottomAnchor,constant: 32),
+      
       
       
     ])
