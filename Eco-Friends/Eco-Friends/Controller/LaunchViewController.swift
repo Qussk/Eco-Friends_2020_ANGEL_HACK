@@ -27,7 +27,7 @@ class LaunchViewController: UIViewController {
     
   }
   
-  
+  //
   func constrain(){
     
     launchImage.translatesAutoresizingMaskIntoConstraints = false
