@@ -155,7 +155,6 @@ extension GuideViewController: UICollectionViewDataSource {
     } else {
       return 4
     }
-    collectionV.reloadData()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
