@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
 <<<<<<< HEAD
+<<<<<<< HEAD
     window?.rootViewController = OnboardingViewController()
 =======
     window?.rootViewController = DetailGuideViewController()
+=======
+    window?.rootViewController = DetaileDescriotionViewController()
+>>>>>>> 3bf9ac4af846e6d332cf7ee9d49ce88f5298f41d
     
 >>>>>>> b037f9379b330799a42ca3ca9edccaa5c8c9d02e
     window?.backgroundColor = .systemBackground
