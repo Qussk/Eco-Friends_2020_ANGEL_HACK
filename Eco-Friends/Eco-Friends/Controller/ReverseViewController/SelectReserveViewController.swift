@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReserveViewController: UIViewController {
+class SelectReserveViewController: UIViewController {
   
   let titleLabel = UILabel()
   let subLabel = UILabel()
