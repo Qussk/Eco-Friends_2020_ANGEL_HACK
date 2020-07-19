@@ -38,6 +38,7 @@
 		0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29124C0287800F4F341 /* MyPageViewController.swift */; };
 		0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29324C0289400F4F341 /* OrderViewController.swift */; };
 		73223EF924C3C48800355B9D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73223EF824C3C48800355B9D /* LaunchViewController.swift */; };
+		73223EFB24C3C6D500355B9D /* DetailGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */; };
 		7357055924C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */; };
 		7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055A24C0CBE800A05F84 /* ColorPiker.swift */; };
 		7357055F24C205F900A05F84 /* DescriotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */; };
@@ -88,6 +89,7 @@
 		0F98A29124C0287800F4F341 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0F98A29324C0289400F4F341 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		73223EF824C3C48800355B9D /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = "Eco-Friends/Controller/LaunchViewController.swift"; sourceTree = SOURCE_ROOT; };
+		73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGuideViewController.swift; sourceTree = "<group>"; };
 		7357055824C0C70E00A05F84 /* ReserveSection3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveSection3CollectionViewCell.swift; path = "Eco-Friends/Cell/ReserveSection3CollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		7357055A24C0CBE800A05F84 /* ColorPiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPiker.swift; path = Cell/ColorPiker.swift; sourceTree = "<group>"; };
 		7357055E24C205F900A05F84 /* DescriotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriotionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3BEF7324C190660005582B /* GuideViewController.swift */,
+				73223EFA24C3C6D500355B9D /* DetailGuideViewController.swift */,
 			);
 			path = GuideViewController;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				0F5A2F8724C299BA00EA0F95 /* OrderListPageViewCollectionCell.swift in Sources */,
 				0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */,
 				0F3BF6F824C21758002BF46C /* TableViewCellInCollectionView3.swift in Sources */,
+				73223EFB24C3C6D500355B9D /* DetailGuideViewController.swift in Sources */,
 				0F514CAE24C0B1C400C2D9E3 /* PopUpLoginView.swift in Sources */,
 				0F5A2F8524C2965B00EA0F95 /* OrderListPageView.swift in Sources */,
 				0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */,
