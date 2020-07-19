@@ -124,7 +124,7 @@ class AddressViewController: UIViewController {
     tabVC.viewControllers = [homeNavi, searchNavi, descriptionNavi, myPageNavi]
     
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-    searchNavi.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
+    searchNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: ""), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
 
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)

@@ -61,6 +61,42 @@ class OrderViewController: UIViewController {
     setUI()
     setConstraint()
     
+<<<<<<< HEAD
+=======
+  }
+  //MARK: - viewDidAppear()
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+
+//    let gradient = CAGradientLayer()
+////    gradient.colors = [UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 0.5) , UIColor(red: 152/255, green: 193/255, blue: 252/255, alpha: 0.5)]
+//    gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemBlue.cgColor]
+//    gradient.locations = [0, 1]
+//    gradient.frame.size = dateButton.frame.size
+//    dateButton.layer.addSublayer(gradient)
+//
+//    dateButton.setTitleColor(.black, for: .normal)
+//    dateButton.clipsToBounds = true
+//    dateButton.titleLabel?.numberOfLines = 2
+//    dateButton.titleLabel?.textAlignment = .center
+//
+//    let button = UIButton(type: .system)
+//    button.setTitle("수요일\n15일", for: .normal)
+//    button.titleLabel?.numberOfLines = 2
+//    button.titleLabel?.textAlignment = .center
+//    button.setTitleColor(.white, for: .normal)
+//    button.titleLabel?.font = .boldSystemFont(ofSize: 24)
+//    button.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+//
+//    dateButton.addSubview(button)
+//    button.translatesAutoresizingMaskIntoConstraints = false
+//    NSLayoutConstraint.activate([
+//    button.centerXAnchor.constraint(equalTo: dateButton.centerXAnchor),
+//    button.centerYAnchor.constraint(equalTo: dateButton.centerYAnchor),
+//    ])
+//    view.layoutIfNeeded()
+>>>>>>> feature/jy
   }
   //MARK: - viewDidAppear()
   override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +131,9 @@ class OrderViewController: UIViewController {
 //    ])
 //    view.layoutIfNeeded()
   }
+  
+  
+
   
   
 
@@ -239,9 +278,12 @@ class OrderViewController: UIViewController {
     
   }
 }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> feature/jy

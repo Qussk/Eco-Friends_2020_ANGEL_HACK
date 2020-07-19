@@ -68,12 +68,12 @@ class GuideViewController: UIViewController {
     for i in buttonBoxInBtn.indices {
       let btn = UIButton()
       btn.backgroundColor = .systemGray
+      btn.tag = i
       btn.setTitle(buttonBoxInBtn[i], for: .normal)
       btn.layer.cornerRadius = 15
       btn.titleLabel?.font = UIFont(name: "SFProText-Regular", size: 13)
       btn.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
       btnArray.append(btn)
-      
     }
     let stackView = UIStackView(arrangedSubviews: btnArray)
     stackView.distribution = .fillEqually
@@ -100,21 +100,11 @@ class GuideViewController: UIViewController {
   
   // MARK:- btnClick
   @objc func btnClick(_ sender: UIButton) {
-    
     guard let text = sender.titleLabel?.text else { return }
     
-    if sender.isSelected {
-      singleton.arrData.removeAll()
-      sender.backgroundColor = .systemGray
-      sender.isSelected = false
-      collectionV.reloadData()
-    } else {
-      sender.backgroundColor = .systemBlue
-      singleton.arrData.append(text)
-      sender.isSelected = true
-      collectionV.reloadData()
-    }
-    
+    sender.backgroundColor = .systemBlue
+    singleton.arrData.append(text)
+    collectionV.reloadData()
   }
   
   // MARK:- setConstraint
@@ -163,8 +153,9 @@ extension GuideViewController: UICollectionViewDataSource {
     if singleton.arrData.isEmpty == true {
       return 1
     } else {
-      return singleton.arrData.count
+      return 4
     }
+    collectionV.reloadData()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -177,7 +168,6 @@ extension GuideViewController: UICollectionViewDataSource {
       cell.heightAnchor.constraint(equalToConstant: 100)
     ])
     cell.configure(data: data[indexPath.item])
-    print(data[indexPath.item])
     return cell
   }
 }
