@@ -39,18 +39,24 @@ class GuideViewController: UIViewController {
   
   // MARK:- setUI
   func setUI() {
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
+    navigationItem.title = "가이드"
+    
     setFlowLayout()
     [textLabel, searchTextBar, buttonBox, collectionV].forEach { view.addSubview($0) }
     
     collectionV.backgroundColor = .white
     collectionV.dataSource = self
+    collectionV.delegate = self
     collectionV.register(GuideCollectionViewCell.self, forCellWithReuseIdentifier: GuideCollectionViewCell.identifier)
     
     textLabel.text = "똑똑한 분리수거 방법\n지금 찾아보세요."
     textLabel.font = UIFont.boldSystemFont(ofSize: 25)
     textLabel.numberOfLines = 2
     
-    searchTextBar.backgroundColor = .lightGray
+    searchTextBar.backgroundColor = ColorPiker.customGray
     searchTextBar.layer.cornerRadius = 10
     
     [searchText, searchButton].forEach {
@@ -67,11 +73,14 @@ class GuideViewController: UIViewController {
     
     for i in buttonBoxInBtn.indices {
       let btn = UIButton()
-      btn.backgroundColor = .systemGray
+      btn.backgroundColor = .systemBackground
       btn.tag = i
       btn.setTitle(buttonBoxInBtn[i], for: .normal)
+      btn.setTitleColor(ColorPiker.customHanul, for: .normal)
       btn.layer.cornerRadius = 15
-      btn.titleLabel?.font = UIFont(name: "SFProText-Regular", size: 13)
+      btn.layer.borderWidth = 1
+      btn.layer.borderColor = .init(srgbRed: 67/255, green: 184/255, blue: 254/255, alpha: 0.5)
+      btn.titleLabel?.font = UIFont(name: "SFProText-Medium", size: 13)
       btn.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
       btnArray.append(btn)
     }
@@ -94,7 +103,7 @@ class GuideViewController: UIViewController {
   func setFlowLayout() {
     layout.minimumLineSpacing = 10
     layout.minimumInteritemSpacing = 0
-    layout.itemSize = CGSize(width: 339, height:132)
+    layout.itemSize = CGSize(width: 339, height: 100)
     layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
   }
   
@@ -102,7 +111,8 @@ class GuideViewController: UIViewController {
   @objc func btnClick(_ sender: UIButton) {
     guard let text = sender.titleLabel?.text else { return }
     
-    sender.backgroundColor = .systemBlue
+    sender.backgroundColor = ColorPiker.customHanul
+    sender.setTitleColor(.white, for: .normal)
     singleton.arrData.append(text)
     collectionV.reloadData()
   }
@@ -153,20 +163,30 @@ extension GuideViewController: UICollectionViewDataSource {
     if singleton.arrData.isEmpty == true {
       return 1
     } else {
-      return 4
+      return 7
     }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideCollectionViewCell.identifier, for: indexPath) as! GuideCollectionViewCell
-    cell.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-      cell.topAnchor.constraint(equalTo: cell.topAnchor),
-      cell.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
-      cell.widthAnchor.constraint(equalToConstant: 339),
-      cell.heightAnchor.constraint(equalToConstant: 100)
-    ])
-    cell.configure(data: data[indexPath.item])
-    return cell
+    if singleton.arrData.isEmpty == true {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideCollectionViewCell.identifier, for: indexPath) as! GuideCollectionViewCell
+      cell.imgV.image = UIImage(named: "on1")
+      cell.titleLabel.text = "쓰레기 가이드"
+      return cell
+    } else {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideCollectionViewCell.identifier, for: indexPath) as! GuideCollectionViewCell
+      cell.imgV.image = UIImage(named: recycleItem[indexPath.item])
+      cell.titleLabel.text = recycleItem[indexPath.item]
+      return cell
+    }
+  }
+}
+
+extension GuideViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     let vc = DetailGuideViewController()
+    vc.modalPresentationStyle = .pageSheet
+    present(vc, animated: true)
+    
   }
 }

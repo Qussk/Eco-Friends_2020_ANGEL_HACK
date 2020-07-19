@@ -39,7 +39,6 @@ class ReserveCompleteChildViewController: UIViewController {
       tableV.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       tableV.bottomAnchor.constraint(equalTo: view.bottomAnchor)
     ])
-
   }
 }
 // MARK:- tableViewDataSource

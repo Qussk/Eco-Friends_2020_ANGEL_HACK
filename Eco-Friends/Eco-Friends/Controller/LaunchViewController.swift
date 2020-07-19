@@ -11,6 +11,7 @@ import UIKit
 class LaunchViewController: UIViewController {
 
   let launchImage = UIImageView()
+  let img = UIImageView()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,11 @@ class LaunchViewController: UIViewController {
       setView()
       constrain()
       
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+       let vc = OnboardingViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+      }
   }
     
   func setView(){
@@ -25,12 +31,15 @@ class LaunchViewController: UIViewController {
     launchImage.image = UIImage(named: "blue")
     view.addSubview(launchImage)
     
+    img.image = UIImage(named: "런치스크린")
+    view.addSubview(img)
   }
   
   //
   func constrain(){
     
     launchImage.translatesAutoresizingMaskIntoConstraints = false
+    img.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
       
@@ -38,7 +47,11 @@ class LaunchViewController: UIViewController {
       launchImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
       launchImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -10),
       launchImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-
+      
+      img.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      img.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      img.widthAnchor.constraint(equalToConstant: 116),
+      img.heightAnchor.constraint(equalToConstant: 94)
     ])
       
     

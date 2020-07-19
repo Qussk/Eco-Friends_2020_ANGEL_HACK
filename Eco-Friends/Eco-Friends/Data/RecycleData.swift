@@ -16,3 +16,5 @@ let recycleData: [[String: Any]] =
     ["재활용": "종이류"]
   ]
 
+let recycleItem = ["플라스틱", "병", "비닐", "스티로폼", "헌 옷", "종이류", "건전지"]
+

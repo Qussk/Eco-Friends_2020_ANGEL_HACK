@@ -15,7 +15,10 @@ class AddressViewController: UIViewController {
   let searchButton = UIButton()
   let nowButton = UIButton()
   let nearLabel = UILabel()
-  let naviXButton = UIBarButtonItem()
+  let naviXButton: UIBarButtonItem = {
+    let button = UIBarButtonItem(title: "", style: .done, target: self, action: #selector(xButtonMove))
+    return button
+  }()
   let layout = UICollectionViewFlowLayout()
   lazy var collectionView = UICollectionView(
     frame: .zero, collectionViewLayout: layout
@@ -30,13 +33,16 @@ class AddressViewController: UIViewController {
   }
   
   func setUI() {
-    navigationItem.title = "주소 검색"
     navigationItem.rightBarButtonItem = naviXButton
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
     naviXButton.image = UIImage(systemName: "xmark")
     naviXButton.tintColor = .black
+
     
-    view.backgroundColor = .lightGray
-    collectionView.backgroundColor = .lightGray
+    view.backgroundColor = .systemBackground
+    collectionView.backgroundColor = .systemBackground
     collectionView.dataSource = self
     collectionView.register(AddressCollectionViewCell.self, forCellWithReuseIdentifier: AddressCollectionViewCell.identifier)
     
@@ -47,14 +53,20 @@ class AddressViewController: UIViewController {
     text.font = .preferredFont(forTextStyle: .title2)
     
     searchText.placeholder = "  예) 성동구 성수이로 108"
-    searchText.backgroundColor = .white
+    searchText.backgroundColor = ColorPiker.customGray
     searchText.layer.cornerRadius = 10
     
     searchButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+    searchButton.tintColor = .black
     searchButton.backgroundColor = .white
+    searchButton.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0.1)
+    searchButton.layer.borderWidth = 1
     searchButton.layer.cornerRadius = 10
     
     nowButton.setImage(UIImage(systemName: "leaf.arrow.circlepath"), for: .normal)
+    nowButton.tintColor = .black
+    nowButton.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0.1)
+    nowButton.layer.borderWidth = 1
     nowButton.setTitle(" 현 위치로 주소 설정", for: .normal)
     nowButton.setTitleColor(.black, for: .normal)
     nowButton.backgroundColor = .white
@@ -111,9 +123,7 @@ class AddressViewController: UIViewController {
     ])
   }
   
-  @objc func moveToHomeView() {
-
-
+  @objc func xButtonMove() {
     let homeNavi = UINavigationController(rootViewController: HomeViewController())
     let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
     let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
@@ -121,12 +131,30 @@ class AddressViewController: UIViewController {
     let tabVC = UITabBarController()
 
 
-    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi, ]
+    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
     
     homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: ""), tag: 1)
+    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
     descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
+    myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
     
+    tabVC.modalPresentationStyle = .fullScreen
+    present(tabVC, animated: true)
+  }
+  
+  @objc func moveToHomeView() {
+    let homeNavi = UINavigationController(rootViewController: HomeViewController())
+    let descriptionNavi = UINavigationController(rootViewController: DescriptionViewController())
+    let myPageNavi = UINavigationController(rootViewController: MyPageViewController())
+    let guideNavi  = UINavigationController(rootViewController: GuideViewController())
+    let tabVC = UITabBarController()
+
+
+    tabVC.viewControllers = [homeNavi, guideNavi, descriptionNavi, myPageNavi]
+    
+    homeNavi.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
+    guideNavi.tabBarItem = UITabBarItem(title: "폐기물 안내", image: UIImage(systemName: "trash"), tag: 1)
+    descriptionNavi.tabBarItem = UITabBarItem(title: "기업 소개", image: UIImage(systemName: "globe"), tag: 2)
     myPageNavi.tabBarItem = UITabBarItem(title: "마이 페이지", image: UIImage(systemName: "person"), tag: 4)
     
     tabVC.modalPresentationStyle = .fullScreen
@@ -141,6 +169,9 @@ extension AddressViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddressCollectionViewCell.identifier, for: indexPath) as! AddressCollectionViewCell
+    cell.layer.borderWidth = 1
+    cell.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0.1)
+    cell.layer.cornerRadius = 10
     
     return cell
   }
