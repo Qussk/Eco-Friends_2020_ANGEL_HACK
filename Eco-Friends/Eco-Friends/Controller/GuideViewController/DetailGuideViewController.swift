@@ -29,10 +29,13 @@ class DetailGuideViewController: UIViewController {
   
   let dateilTitle2 = UILabel()
   
+  let detailImageView = UIImageView()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = "가이드"
     setView()
     setConstrain()
     
@@ -51,6 +54,8 @@ class DetailGuideViewController: UIViewController {
     
     
   }
+  
+
   
   //MARK: -UI
   func setView(){
@@ -131,17 +136,21 @@ class DetailGuideViewController: UIViewController {
     
     
     //
-    dateilTitle2.text = "플라스틱 종류"
-    dateilTitle2.font = UIFont.boldSystemFont(ofSize: 20)
-    detailView.addSubview(dateilTitle2)
+//    dateilTitle2.text = "플라스틱 종류"
+//    dateilTitle2.font = UIFont.boldSystemFont(ofSize: 20)
+//    detailView.addSubview(dateilTitle2)
     
+    
+    detailImageView.image = UIImage(named: "detail")
+    detailImageView.contentMode = .scaleAspectFit
+    detailView.addSubview(detailImageView)
     
   }
   
   //MARK: -UI
   func setConstrain(){
     //Views
-    [scrollView,guideView,guideimage,titleView,detailView].forEach{
+    [scrollView,guideView,guideimage,titleView,detailView,detailImageView].forEach{
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -158,12 +167,12 @@ class DetailGuideViewController: UIViewController {
       $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22).isActive = true
       $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22).isActive = true
     }
-    
-    [dateilTitle2].forEach{
-      $0.translatesAutoresizingMaskIntoConstraints = false
-      $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-      $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-    }
+//
+//    [dateilTitle2].forEach{
+//      $0.translatesAutoresizingMaskIntoConstraints = false
+//      $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+//      $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+//    }
     
     NSLayoutConstraint.activate([
       
@@ -197,7 +206,7 @@ class DetailGuideViewController: UIViewController {
       detailView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
       detailView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
       detailView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20),
-      detailView.heightAnchor.constraint(equalToConstant: 830),
+      detailView.heightAnchor.constraint(equalToConstant: 1120),
       
       detailTitle.topAnchor.constraint(equalTo: detailView.topAnchor, constant: 32),
       
@@ -206,13 +215,16 @@ class DetailGuideViewController: UIViewController {
       ch3.topAnchor.constraint(equalTo: ch2.bottomAnchor, constant: 10),
       ch4.topAnchor.constraint(equalTo: ch3.bottomAnchor, constant: 10),
       
-      dateilTitle2.topAnchor.constraint(equalTo: ch4.bottomAnchor,constant: 32),
+     // dateilTitle2.topAnchor.constraint(equalTo: ch4.bottomAnchor,constant: 32),
       
-      
+      detailImageView.topAnchor.constraint(equalTo: ch4.bottomAnchor),
+      detailImageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+      detailImageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+      detailImageView.heightAnchor.constraint(equalToConstant: 800),
+      //  detailImageView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
       
     ])
     
   }
   
 }
-

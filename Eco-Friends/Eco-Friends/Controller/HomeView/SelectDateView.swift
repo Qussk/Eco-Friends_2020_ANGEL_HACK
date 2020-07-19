@@ -22,7 +22,7 @@ class SelectDateView : UIViewController {
   private let selectButton = UIButton()
   
   var dayData : [String] = ["오늘", "월요일", "화요일" ,"수요일", "목요일", "금요일", "토요일", "일요일"]
-  var dateData : [String] = ["14일", "15일", "16일", "17일", "18일", "19일", "20일", "21일"]
+  var dateData : [String] = ["12일", "13일", "14일", "15일", "16일", "17일", "18일", "19일"]
   var isClicked : Bool = false
   //MARK: - viewDidLoad()
   override func viewDidLoad() {
@@ -41,12 +41,16 @@ class SelectDateView : UIViewController {
   
   private func setNavigation() {
     self.title = "예약하기"
-    let goBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: nil)
+    let goBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(goBack))
     goBackButton.tintColor = .lightGray
     
     navigationItem.leftBarButtonItem = goBackButton
    }
   
+  @objc func goBack() {
+//    navigationController?.popViewController(animated: true)
+     dismiss(animated: true, completion: nil)
+  }
   //MARK: - setUI()
   
   private func setUI() {
@@ -73,10 +77,14 @@ class SelectDateView : UIViewController {
     selectButton.setTitleColor(.white, for: .normal)
     selectButton.backgroundColor = ColorPiker.customHanul
     selectButton.layer.cornerRadius = view.frame.width / 19
+    selectButton.addTarget(self, action: #selector(selectButtonDidTap), for: .touchUpInside)
     view.addSubview(selectButton)
     
   }
   
+  @objc func selectButtonDidTap() {
+    dismiss(animated: true, completion: nil)
+  }
   //MARK: - setConstraint()
   
   private func setConstraint() {
@@ -148,7 +156,7 @@ extension SelectDateView : UICollectionViewDelegate {
       cell.backgroundColor = .white
       cell.dateLabel.textColor = .black
       cell.dayLabel.textColor = .black
-      isClicked = false 
+      isClicked = false
     }
   }
   
@@ -173,4 +181,3 @@ extension SelectDateView : UICollectionViewDelegateFlowLayout {
     return CGSize(width: 96, height: 124)
   }
 }
-

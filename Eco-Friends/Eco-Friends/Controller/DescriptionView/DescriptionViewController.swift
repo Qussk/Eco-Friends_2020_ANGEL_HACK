@@ -2,7 +2,7 @@
 //  DescriptionViewController.swift
 //  Eco-Friends
 //
-//  Created by 윤병일 on 2020/07/15.
+//  Created by Qussk on 2020/07/15.
 //  Copyright © 2020 Byoungil Youn. All rights reserved.
 //
 
@@ -25,7 +25,7 @@ class DescriptionViewController: UIViewController {
   //스크롤뷰
   //  lazy var scrollView = UIScrollView()
   //  var scrollFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-  let images = ["naver","instagram","naver"]
+  let images = ["88","99","88"]
   
   //페이지뷰
   lazy var pageControl = UIPageControl(frame: CGRect(x: view.frame.midX - 100, y: view.frame.maxY - 200, width: 200, height: 50))
@@ -67,7 +67,7 @@ class DescriptionViewController: UIViewController {
     descriptionLable.textColor = ColorPiker.customGray
     view.addSubview(descriptionLable)
     
-    collectionView.backgroundColor = .red
+    collectionView.backgroundColor = .white
     collectionView.register(DescriotionCollectionViewCell.self, forCellWithReuseIdentifier: "deCell")
     view.addSubview(collectionView)
     
@@ -149,13 +149,12 @@ class DescriptionViewController: UIViewController {
     pageControl.pageIndicatorTintColor = .lightGray
     pageControl.currentPageIndicatorTintColor = ColorPiker.customBlue
     pageControl.addTarget(self, action: #selector(handlePageControl(_:)), for: .valueChanged)
-    
   }
   
   
   @objc func handlePageControl(_ sender: UIPageControl) {
-    //  let x = CGFloat(pageControl.currentPage) * scrollView.frame.width
-    //scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+      let x = CGFloat(pageControl.currentPage) * view.frame.width - 40
+    collectionView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
   }
   
 }
@@ -172,13 +171,16 @@ extension DescriptionViewController: UIScrollViewDelegate {
 
 extension DescriptionViewController: UICollectionViewDataSource{
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    3
+    images.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deCell", for: indexPath) as! DescriotionCollectionViewCell
     cell.backgroundColor = .white
+    
+    cell.descriptionImage.image = UIImage(named: images[indexPath.item])
+    
     return cell
   }
 }
@@ -188,18 +190,15 @@ extension DescriptionViewController: UICollectionViewDelegate{
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
     selectIndexPathArray.append(indexPath)
-
-    let cell = collectionView.beginInteractiveMovementForItem(at: indexPath)
+    print(indexPath)
     
-//    switch companyList[indexPath.item] {
-//      case "로티스" :
-//           let vc = DetaileDescriotionViewController()
-//           navigationController?.pushViewController(vc, animated: true)
-//           let nv = UINavigationController(rootViewController: vc)
-//           nv.modalPresentationStyle = .fullScreen
-//           self.present(nv, animated: false)
-//    } default:
-//    print("")
+let vc = DetaileDescriotionViewController()
+    let nv = UINavigationController(rootViewController: vc)
+    nv.modalPresentationStyle = .fullScreen
+    navigationController?.pushViewController(vc, animated: true)
+
+   // present(nv, animated: false)
+   
   }
 }
 
@@ -227,4 +226,3 @@ extension DescriptionViewController : UICollectionViewDelegateFlowLayout{
 
 
 }
-

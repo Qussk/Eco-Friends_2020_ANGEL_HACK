@@ -8,7 +8,6 @@
 
 import UIKit
 import PaperOnboarding
-import Kingfisher
 
 class OnboardingViewController: UIViewController {
   
@@ -25,7 +24,17 @@ class OnboardingViewController: UIViewController {
     onboarding.delegate = self
     setupOnboarding()
     setView()
+    navigationLess()
   }
+  
+  func navigationLess(){
+    //네비게이션바 디자인 생략
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
+  }
+  
+  
   
   //MARK:- UI
    func setView(){
@@ -147,7 +156,7 @@ extension OnboardingViewController: PaperOnboardingDataSource {
   let adressNV = UINavigationController(rootViewController: adressVC)
 
   adressNV.modalPresentationStyle = .fullScreen
-  present(adressNV, animated: true)
+  present(adressNV, animated: false)
   
   
 }
@@ -197,8 +206,3 @@ extension OnboardingViewController: PaperOnboardingDelegate {
     
     
   }
-
-
-
-
-

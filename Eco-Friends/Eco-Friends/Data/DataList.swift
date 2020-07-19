@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 var companyList = ["로티스"]
 
 var onImage = ["on1","on2","on3"]

@@ -31,7 +31,7 @@ class MyPageViewCollectionCell2 : UICollectionViewCell {
   //MARK: - setUI()
   
   private func setUI() {
-    imageView.backgroundColor = .blue
+    imageView.image = UIImage(named: "Union")
     contentView.addSubview(imageView)
     
     benefitButton.setTitle("등급별 혜택", for: .normal)
@@ -41,7 +41,7 @@ class MyPageViewCollectionCell2 : UICollectionViewCell {
     benefitButton.semanticContentAttribute = .forceRightToLeft
     contentView.addSubview(benefitButton)
     
-    titleLabel.text = "UX writing"
+    titleLabel.text = "새싹이 자라는 중이에요!"
     titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
     titleLabel.textAlignment = .left
     contentView.addSubview(titleLabel)

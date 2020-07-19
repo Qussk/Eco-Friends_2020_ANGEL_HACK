@@ -9,7 +9,7 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-
+  
   //MARK: - Properties
   
   private let collectionView : UICollectionView = {
@@ -22,7 +22,7 @@ class MyPageViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     collectionView.backgroundColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
     setNavigation()
     setUI()
@@ -40,7 +40,7 @@ class MyPageViewController: UIViewController {
   
   private func setNavigation() {
     navigationItem.title = "마이페이지"
-  
+    
   }
   //MARK: - setUI()
   
@@ -49,7 +49,7 @@ class MyPageViewController: UIViewController {
     collectionView.dataSource = self
     collectionView.delegate = self
     collectionView.register( MyPageCollectionViewCell1.self, forCellWithReuseIdentifier:  MyPageCollectionViewCell1.identifier)
-    collectionView.register(MyPageViewCollectionCell2.self, forCellWithReuseIdentifier: MyPageViewCollectionCell2.identifier)
+    //    collectionView.register(MyPageViewCollectionCell2.self, forCellWithReuseIdentifier: MyPageViewCollectionCell2.identifier)
     collectionView.register(MyPageViewCollectionCell3.self, forCellWithReuseIdentifier: MyPageViewCollectionCell3.identifier)
     view.addSubview(collectionView)
   }
@@ -74,7 +74,7 @@ class MyPageViewController: UIViewController {
 
 extension MyPageViewController : UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    3
+    2
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,15 +86,8 @@ extension MyPageViewController : UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  MyPageCollectionViewCell1.identifier, for: indexPath) as!  MyPageCollectionViewCell1
       cell.backgroundColor = .white
       cell.layer.cornerRadius = view.frame.width / 19
-     return cell
-    } else if indexPath.section == 1 {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyPageViewCollectionCell2.identifier, for: indexPath) as! MyPageViewCollectionCell2
-      
-      cell.backgroundColor = .white
-      cell.layer.cornerRadius = view.frame.width / 19
-      print("cell2 : ", cell.layer.cornerRadius)
       return cell
-    } else {
+    } else   {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyPageViewCollectionCell3.identifier, for: indexPath) as! MyPageViewCollectionCell3
       cell.backgroundColor = .white
       cell.layer.cornerRadius = view.frame.width / 19
@@ -104,8 +97,9 @@ extension MyPageViewController : UICollectionViewDataSource {
       
       return cell
     }
+    
   }
-
+  
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
@@ -126,7 +120,7 @@ extension MyPageViewController : UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
     switch indexPath.section {
-    case 2:
+    case 1:
       return CGSize(width: 339, height: 300)
     default:
       return CGSize(width: 339, height: 104)
@@ -136,8 +130,8 @@ extension MyPageViewController : UICollectionViewDelegateFlowLayout {
 
 extension MyPageViewController: MyPageViewCollectionCell3Delegate {
   func handlePresent() {
-  let orderList = OrderListPageView()
-  orderList.modalPresentationStyle = .fullScreen
-  navigationController?.pushViewController(orderList, animated: true)
+    let orderList = OrderListPageView()
+    orderList.modalPresentationStyle = .fullScreen
+    navigationController?.pushViewController(orderList, animated: true)
   }
 }

@@ -36,7 +36,6 @@
 		0F98A28324C027AE00F4F341 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28224C027AE00F4F341 /* ScrollView.swift */; };
 		0F98A28724C027DD00F4F341 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28624C027DD00F4F341 /* HomeViewController.swift */; };
 		0F98A28924C027ED00F4F341 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28824C027ED00F4F341 /* DividerView.swift */; };
-		0F98A28E24C0286600F4F341 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28D24C0286600F4F341 /* SearchViewController.swift */; };
 		0F98A29024C0287000F4F341 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */; };
 		0F98A29224C0287800F4F341 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29124C0287800F4F341 /* MyPageViewController.swift */; };
 		0F98A29424C0289400F4F341 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A29324C0289400F4F341 /* OrderViewController.swift */; };
@@ -90,7 +89,6 @@
 		0F98A28224C027AE00F4F341 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		0F98A28624C027DD00F4F341 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F98A28824C027ED00F4F341 /* DividerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
-		0F98A28D24C0286600F4F341 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0F98A28F24C0287000F4F341 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		0F98A29124C0287800F4F341 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		0F98A29324C0289400F4F341 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				73E857C424C037F800481AF4 /* LoginView */,
 				0F98A28524C027C900F4F341 /* HomeView */,
 				0F98A29524C028B100F4F341 /* AddressViewController */,
-				0F98A28A24C0281A00F4F341 /* SearchView */,
 				0F98A28B24C0282200F4F341 /* DescriptionView */,
 				0F98A28C24C0283300F4F341 /* MyPageView */,
 			);
@@ -235,14 +232,6 @@
 				0F6A301224C36E650038A7D2 /* SelectDateView.swift */,
 			);
 			path = HomeView;
-			sourceTree = "<group>";
-		};
-		0F98A28A24C0281A00F4F341 /* SearchView */ = {
-			isa = PBXGroup;
-			children = (
-				0F98A28D24C0286600F4F341 /* SearchViewController.swift */,
-			);
-			path = SearchView;
 			sourceTree = "<group>";
 		};
 		0F98A28B24C0282200F4F341 /* DescriptionView */ = {
@@ -403,7 +392,6 @@
 				0ED256EE24C00BF100DF1175 /* AddressCollectionViewCell.swift in Sources */,
 				0E13A58124C2B28C004112D8 /* RecycleData.swift in Sources */,
 				0ED256DE24C00A9B00DF1175 /* AddressViewController.swift in Sources */,
-				0F98A28E24C0286600F4F341 /* SearchViewController.swift in Sources */,
 				73E857C224C037F000481AF4 /* ReserveViewController.swift in Sources */,
 				0F6A301524C3719E0038A7D2 /* SelectDataViewCollectionCell.swift in Sources */,
 				7357055B24C0CBE800A05F84 /* ColorPiker.swift in Sources */,

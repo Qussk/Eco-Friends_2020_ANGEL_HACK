@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
+    view.backgroundColor = .systemBackground
    
     setView()
     setConstrain()
@@ -30,11 +30,11 @@ class LoginViewController: UIViewController {
   
   
   func setView(){
-    
     loginButton.setTitle("로그인", for: .normal)
     loginButton.backgroundColor = ColorPiker.customHanul
     loginButton.setTitleColor(.white, for: .normal)
     loginButton.layer.cornerRadius = view.frame.width/17
+    loginButton.addTarget(self, action: #selector(loginGoing(_:)), for: .touchUpInside)
     
     loginLable.alpha = 0
     
@@ -59,6 +59,10 @@ class LoginViewController: UIViewController {
 
     signUpButton.alpha = 0
 
+  }
+  
+  @objc func loginGoing(_ sender: UIButton){
+    dismiss(animated: true)
   }
   
   func setConstrain(){
