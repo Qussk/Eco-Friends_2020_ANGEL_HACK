@@ -55,6 +55,8 @@ class DetailGuideViewController: UIViewController {
     
   }
   
+
+  
   //MARK: -UI
   func setView(){
     

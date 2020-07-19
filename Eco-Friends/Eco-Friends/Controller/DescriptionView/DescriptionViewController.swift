@@ -2,7 +2,7 @@
 //  DescriptionViewController.swift
 //  Eco-Friends
 //
-//  Created by 윤병일 on 2020/07/15.
+//  Created by Qussk on 2020/07/15.
 //  Copyright © 2020 Byoungil Youn. All rights reserved.
 //
 

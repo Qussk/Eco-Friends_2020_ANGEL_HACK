@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
     loginButton.backgroundColor = ColorPiker.customHanul
     loginButton.setTitleColor(.white, for: .normal)
     loginButton.layer.cornerRadius = view.frame.width/17
+    loginButton.addTarget(self, action: #selector(loginGoing(_:)), for: .touchUpInside)
     
     loginLable.alpha = 0
     
@@ -59,6 +60,10 @@ class LoginViewController: UIViewController {
 
     signUpButton.alpha = 0
 
+  }
+  
+  @objc func loginGoing(_ sender: UIButton){
+    dismiss(animated: true)
   }
   
   func setConstrain(){
