@@ -10,7 +10,7 @@ import UIKit
 
 class PopUpLoginView : UIView {
   //MARK: - Properties
-  
+
   private let imageView = UIImageView()
   private let loginButton = UIButton()
   private let notUserLoginButton = UIButton()
@@ -33,13 +33,10 @@ class PopUpLoginView : UIView {
   private func setUI() {
 
     imageView.image = UIImage(named: "Group 861")
+    imageView.contentMode = .scaleAspectFit
     self.addSubview(imageView)
     
-    loginButton.setTitle("로그인", for: .normal)
-    loginButton.setTitleColor(ColorPiker.customHanul, for: .normal)
-    loginButton.backgroundColor = UIColor.white
-    loginButton.layer.cornerRadius = 25
-    self.addSubview(loginButton)
+
     
     let atts : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.white, .font : UIFont.systemFont(ofSize : 15)]
     let attributedTitle = NSMutableAttributedString(string: "비회원으로 예약하기", attributes: atts)
@@ -62,17 +59,14 @@ class PopUpLoginView : UIView {
       imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -139),
       imageView.heightAnchor.constraint(equalToConstant: 92.71),
       
-      loginButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 7.98),
-      loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 62),
-      loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -62),
-      loginButton.heightAnchor.constraint(equalToConstant: 43.86),
+
       
-      notUserLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 12),
-      notUserLoginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 122),
-      notUserLoginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -122),
-      notUserLoginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -33.62)
-      
+      notUserLoginButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 62),
+          notUserLoginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 122),
+          notUserLoginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -122),
+          notUserLoginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -33.62)
     ])
   }
   
+
 }

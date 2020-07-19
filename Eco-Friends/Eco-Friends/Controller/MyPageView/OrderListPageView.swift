@@ -81,6 +81,15 @@ extension OrderListPageView : UICollectionViewDataSource {
   }
 }
 
+//MARK: - UICollectionViewDelegate
+extension OrderListPageView : UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let orderWaitingVC = OrderListWaitingView()
+    orderWaitingVC.modalPresentationStyle = .fullScreen
+    navigationController?.pushViewController(orderWaitingVC, animated: true)
+  }
+}
+
 //MARK: - UICollectionViewDelegateFlowLayout
 
 extension OrderListPageView : UICollectionViewDelegateFlowLayout {

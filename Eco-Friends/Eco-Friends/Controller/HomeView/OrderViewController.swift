@@ -23,16 +23,8 @@ class OrderViewController: UIViewController {
     return bt
   }()
   
-//  private let dateButton : UIButton = {
-//    let bt = UIButton()
-//    bt.setTitle("수요일", for: .normal)
-//    bt.titleLabel?.numberOfLines = 2
-//    bt.titleLabel?.textAlignment = .center
-//    bt.setTitleColor(.black, for: .normal)
-//    bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-//
-//    return bt
-//  }()
+  private let loginButton = UIButton()
+  
   private let dateButton = UIButton()
   private let imageView = UIImageView()
   private let divider1 = DividerView()
@@ -61,45 +53,10 @@ class OrderViewController: UIViewController {
     setUI()
     setConstraint()
   }
-  //MARK: - viewDidAppear()
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
-
-//    let gradient = CAGradientLayer()
-////    gradient.colors = [UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 0.5) , UIColor(red: 152/255, green: 193/255, blue: 252/255, alpha: 0.5)]
-//    gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemBlue.cgColor]
-//    gradient.locations = [0, 1]
-//    gradient.frame.size = dateButton.frame.size
-//    dateButton.layer.addSublayer(gradient)
-//
-//    dateButton.setTitleColor(.black, for: .normal)
-//    dateButton.clipsToBounds = true
-//    dateButton.titleLabel?.numberOfLines = 2
-//    dateButton.titleLabel?.textAlignment = .center
-//
-//    let button = UIButton(type: .system)
-//    button.setTitle("수요일\n15일", for: .normal)
-//    button.titleLabel?.numberOfLines = 2
-//    button.titleLabel?.textAlignment = .center
-//    button.setTitleColor(.white, for: .normal)
-//    button.titleLabel?.font = .boldSystemFont(ofSize: 24)
-//    button.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
-//
-//    dateButton.addSubview(button)
-//    button.translatesAutoresizingMaskIntoConstraints = false
-//    NSLayoutConstraint.activate([
-//    button.centerXAnchor.constraint(equalTo: dateButton.centerXAnchor),
-//    button.centerYAnchor.constraint(equalTo: dateButton.centerYAnchor),
-//    ])
-//    view.layoutIfNeeded()
-  }
   
   
-
   
   
-
   
   //MARK: - setUI()
   private func setUI() {
@@ -114,7 +71,7 @@ class OrderViewController: UIViewController {
     dateButton.setTitleColor(.white, for: .normal)
     dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
     imageView.addSubview(dateButton)
-      
+    
     dateButton.setImage(UIImage(named: "Group 833"), for: .normal)
     dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
     view.addSubview(dateButton)
@@ -126,7 +83,7 @@ class OrderViewController: UIViewController {
     textLabel.textAlignment = .center
     view.addSubview(textLabel)
     
-
+    
     
     
     
@@ -142,6 +99,13 @@ class OrderViewController: UIViewController {
     popUpView.addSubview(cancelButton)
     view.addSubview(popUpView)
     
+    loginButton.setTitle("로그인", for: .normal)
+    loginButton.setTitleColor(ColorPiker.customHanul, for: .normal)
+    loginButton.backgroundColor = UIColor.white
+    loginButton.layer.cornerRadius = 25
+    loginButton.addTarget(self, action: #selector(moveToLoginPage), for: .touchUpInside)
+    popUpView.addSubview(loginButton)
+    
     cancelButton.setImage(UIImage(systemName: "xmark"), for: .normal)
     cancelButton.addTarget(self, action: #selector(clickCancelButton(_:)), for: .touchUpInside)
     popUpView.addSubview(cancelButton)
@@ -153,7 +117,7 @@ class OrderViewController: UIViewController {
   private func setConstraint() {
     
     
-    [addressButton, divider1, textLabel, dateButton, reserveButton, popUpView, cancelButton].forEach {
+    [addressButton, divider1, textLabel, dateButton, reserveButton, popUpView, loginButton, cancelButton].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -191,6 +155,11 @@ class OrderViewController: UIViewController {
       popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
+      loginButton.topAnchor.constraint(equalTo: popUpView.topAnchor, constant: 138),
+      loginButton.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 62),
+      loginButton.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: -62),
+      loginButton.heightAnchor.constraint(equalToConstant: 43.86),
+      
       
       cancelButton.topAnchor.constraint(equalTo: popUpView.topAnchor, constant: 6),
       cancelButton.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 329),
@@ -217,7 +186,7 @@ class OrderViewController: UIViewController {
     let selectDateVC = UINavigationController(rootViewController: SelectDateView())
     selectDateVC.modalPresentationStyle = .fullScreen
     present(selectDateVC, animated: true)
-
+    
   }
   
   @objc func reserveClicked(_ sender: UIButton){
@@ -238,6 +207,14 @@ class OrderViewController: UIViewController {
       self.floatingCenterYConstraint.priority  =  .defaultLow
       self.view.layoutIfNeeded()
     }
+    
+  }
+  
+  @objc func moveToLoginPage() {
+    let loginVC = LoginViewController()
+    let loginNavi = UINavigationController(rootViewController: loginVC)
+    loginNavi.modalPresentationStyle = .fullScreen
+    present(loginNavi, animated: true)
     
   }
 }

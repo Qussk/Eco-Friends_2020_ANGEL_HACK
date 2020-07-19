@@ -12,7 +12,8 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
   static let identifier = " MyPageCollectionViewCell1"
   
   private let nameLabel = UILabel()
-  private let memberShipLabel = UILabel()
+  private let textLabel = UILabel()
+  private let imageView = UIImageView()
   private let nextButton = UIButton()
   
   override init(frame: CGRect) {
@@ -35,11 +36,14 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
     nameLabel.font = UIFont.boldSystemFont(ofSize: 30)
     contentView.addSubview(nameLabel)
     
-    memberShipLabel.text = "멤버쉽 이용중"
-    memberShipLabel.textColor = UIColor(red: 67/255, green: 186/255, blue: 254/255, alpha: 1)
-    memberShipLabel.textAlignment = .left
-    memberShipLabel.font = UIFont.boldSystemFont(ofSize: 20)
-    contentView.addSubview(memberShipLabel)
+    imageView.image = UIImage(named: "Union")
+    contentView.addSubview(imageView)
+    
+    textLabel.text = "새싹이 자라는 중이에요!"
+    textLabel.textColor = UIColor.black
+    textLabel.textAlignment = .left
+    textLabel.font = UIFont.boldSystemFont(ofSize: 20)
+    contentView.addSubview(textLabel)
     
     nextButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
     nextButton.tintColor = .lightGray
@@ -48,7 +52,7 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
   }
   
   private func setConstraint() {
-    [nameLabel, nextButton, memberShipLabel].forEach {
+    [nameLabel, nextButton, imageView, textLabel].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -58,15 +62,20 @@ class  MyPageCollectionViewCell1 : UICollectionViewCell {
       nameLabel.widthAnchor.constraint(equalToConstant: 130),
       nameLabel.heightAnchor.constraint(equalToConstant: 40),
       
-      nextButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 27),
+      nextButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
       nextButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
       nextButton.widthAnchor.constraint(equalToConstant: 15),
       nextButton.heightAnchor.constraint(equalToConstant: 20),
       
-      memberShipLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 14),
-      memberShipLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-      memberShipLabel.widthAnchor.constraint(equalToConstant: 130),
-      memberShipLabel.heightAnchor.constraint(equalToConstant: 40)
+      imageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 7),
+      imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+      imageView.widthAnchor.constraint(equalToConstant: 25),
+      imageView.heightAnchor.constraint(equalToConstant: 25),
+      
+      textLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+      textLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
+      textLabel.widthAnchor.constraint(equalToConstant: contentView.frame.width),
+      textLabel.heightAnchor.constraint(equalToConstant: 25)
     ])
   }
   

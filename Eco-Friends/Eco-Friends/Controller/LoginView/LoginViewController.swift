@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
-   
+    
     setView()
     setConstrain()
     setNavigationBar()
@@ -51,14 +51,14 @@ class LoginViewController: UIViewController {
     
     loginLable.text = "혹시, 쓸애기가 처음이신가요?"
     loginLable.font = UIFont.systemFont(ofSize: 16)
-
+    
     
     signUpButton.setTitle("회원가입", for: .normal)
     signUpButton.setTitleColor(UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1), for: .normal)
     signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-
+    
     signUpButton.alpha = 0
-
+    
   }
   
   func setConstrain(){
@@ -102,7 +102,9 @@ class LoginViewController: UIViewController {
   func setNavigationBar(){
     
     navigationItem.title = "로그인"
-    
+    let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clickXmarkButton))
+    navigationItem.rightBarButtonItem = barButtonItem
+    //
   }
   
   func passwordUnderline() {
@@ -132,6 +134,10 @@ class LoginViewController: UIViewController {
     passwordUnderline()
     
     
+  }
+  
+  @objc func clickXmarkButton () {
+    self.dismiss(animated: true, completion: nil)
   }
   
   

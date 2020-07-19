@@ -18,7 +18,7 @@ class MyPageViewCollectionCell3 : UICollectionViewCell {
   
   static let identifier = "MyPageViewCollectionViewCell3"
   private let tableView = UITableView()
-  var menuData = ["주문목록", "멤버쉽 관리", "공지사항", "고객센터", "환경설정"]
+  var menuData = ["주문목록", "이벤트", "공지사항", "고객센터", "환경설정"]
   
   //MARK: - init
   override init(frame: CGRect) {
@@ -36,6 +36,7 @@ class MyPageViewCollectionCell3 : UICollectionViewCell {
   private func setUI(){
     tableView.rowHeight = 50
     tableView.allowsSelection = false
+    tableView.delegate = self
     tableView.dataSource = self
     tableView.register(TableViewCellInCollectionView3.self, forCellReuseIdentifier: TableViewCellInCollectionView3.identifier)
     contentView.addSubview(tableView)
@@ -68,8 +69,14 @@ extension MyPageViewCollectionCell3 : UITableViewDataSource {
     cell.configure(data: menuData[indexPath.row])
     return cell
   }
-  
-  
+}
+
+extension MyPageViewCollectionCell3 : UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let orderListVC = OrderListPageView()
+    orderListVC.modalPresentationStyle = .fullScreen
+    
+  }
 }
 
 
