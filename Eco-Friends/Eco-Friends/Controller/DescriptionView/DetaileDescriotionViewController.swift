@@ -135,7 +135,6 @@ class DetaileDescriotionViewController: UIViewController {
   
   //MARK:- setConstrain
   func setConstrain(){
-    let guide = view.safeAreaLayoutGuide
     
 //    [detailTitle,detailLable,logoLable,comenteLabel].forEach{
 //      $0.translatesAutoresizingMaskIntoConstraints = false

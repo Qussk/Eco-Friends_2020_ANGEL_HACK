@@ -22,37 +22,23 @@ class OrderViewController: UIViewController {
     bt.semanticContentAttribute = .forceRightToLeft
     return bt
   }()
+  
+//  private let dateButton : UIButton = {
+//    let bt = UIButton()
+//    bt.setTitle("수요일", for: .normal)
+//    bt.titleLabel?.numberOfLines = 2
+//    bt.titleLabel?.textAlignment = .center
+//    bt.setTitleColor(.black, for: .normal)
+//    bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+//
+//    return bt
+//  }()
+  private let dateButton = UIButton()
+  private let imageView = UIImageView()
   private let divider1 = DividerView()
-  private let divider2 = DividerView()
-  private var stackView = UIStackView()
-  private var scrollView = UIScrollView()
-  private var scrollFrame = CGRect(x: 0, y: 306, width: 0, height: 0)
-
-  private var datas : [String] = ["14\n오늘", "15\n수요일", "16\n목요일", "17\n금요일", "18\n토요일"]
   private var popUpView = PopUpLoginView()
   private let cancelButton = UIButton()
   private var floatingCenterYConstraint : NSLayoutConstraint!
-  
-  private let buttonGeneral : Button = {
-    let bt = Button()
-    bt.setTitle("일반", for: .normal)
-    return bt
-  }()
-  private let buttonTrash : Button = {
-    let bt = Button()
-    bt.setTitle("음식물", for: .normal)
-    return bt
-  }()
-  private let buttonRecycle : Button = {
-    let bt = Button()
-    bt.setTitle("재활용", for: .normal)
-    return bt
-  }()
-  private let buttonBig : Button = {
-    let bt = Button()
-    bt.setTitle("대형", for: .normal)
-    return bt
-  }()
   private let reserveButton = UIButton()
   
   //MARK: - viewDidLoad()
@@ -64,40 +50,86 @@ class OrderViewController: UIViewController {
     view.layer.cornerRadius = 20
     view.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
     
+    
+    
     popUpView.clipsToBounds = true
     popUpView.layer.cornerRadius = 20
     popUpView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner,.layerMaxXMinYCorner)
     
+    
+    
     setUI()
-    setScrollView()
     setConstraint()
   }
+  //MARK: - viewDidAppear()
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+
+//    let gradient = CAGradientLayer()
+////    gradient.colors = [UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 0.5) , UIColor(red: 152/255, green: 193/255, blue: 252/255, alpha: 0.5)]
+//    gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemBlue.cgColor]
+//    gradient.locations = [0, 1]
+//    gradient.frame.size = dateButton.frame.size
+//    dateButton.layer.addSublayer(gradient)
+//
+//    dateButton.setTitleColor(.black, for: .normal)
+//    dateButton.clipsToBounds = true
+//    dateButton.titleLabel?.numberOfLines = 2
+//    dateButton.titleLabel?.textAlignment = .center
+//
+//    let button = UIButton(type: .system)
+//    button.setTitle("수요일\n15일", for: .normal)
+//    button.titleLabel?.numberOfLines = 2
+//    button.titleLabel?.textAlignment = .center
+//    button.setTitleColor(.white, for: .normal)
+//    button.titleLabel?.font = .boldSystemFont(ofSize: 24)
+//    button.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+//
+//    dateButton.addSubview(button)
+//    button.translatesAutoresizingMaskIntoConstraints = false
+//    NSLayoutConstraint.activate([
+//    button.centerXAnchor.constraint(equalTo: dateButton.centerXAnchor),
+//    button.centerYAnchor.constraint(equalTo: dateButton.centerYAnchor),
+//    ])
+//    view.layoutIfNeeded()
+  }
+  
+  
+
+  
+  
+
   
   //MARK: - setUI()
   private func setUI() {
+    view.addSubview(addressButton)
+    view.addSubview(divider1)
+    
+    imageView.image = UIImage(named: "Ellipse 258")
+    view.addSubview(imageView)
+    
+    dateButton.setTitle("수요일", for: .normal)
+    dateButton.backgroundColor = .clear
+    dateButton.setTitleColor(.white, for: .normal)
+    dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+    imageView.addSubview(dateButton)
+      
+    dateButton.setImage(UIImage(named: "Group 833"), for: .normal)
+    dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+    view.addSubview(dateButton)
     
     textLabel.text = "오늘 11시 50분 전 예약하면\n 내일 오전 7시 전 수거!"
     textLabel.numberOfLines = 2
-    textLabel.textColor = UIColor.black.withAlphaComponent(0.6)
+    textLabel.textColor = UIColor.lightGray.withAlphaComponent(0.9)
     textLabel.font = UIFont.boldSystemFont(ofSize: 15)
+    textLabel.textAlignment = .center
     view.addSubview(textLabel)
     
-    view.addSubview(addressButton)
+
     
-    view.addSubview(divider1)
-    view.addSubview(divider2)
     
-    view.addSubview(scrollView)
     
-    stackView.addArrangedSubview(buttonGeneral)
-    stackView.addArrangedSubview(buttonTrash)
-    stackView.addArrangedSubview(buttonRecycle)
-    stackView.addArrangedSubview(buttonBig)
-    stackView.axis = .horizontal
-    stackView.alignment = .fill
-    stackView.distribution = .fillEqually
-    stackView.spacing = 10
-    view.addSubview(stackView)
     
     reserveButton.setTitle("예약하기", for: .normal)
     reserveButton.setTitleColor(.white, for: .normal)
@@ -106,7 +138,7 @@ class OrderViewController: UIViewController {
     reserveButton.addTarget(self, action: #selector(reserveClicked(_:)), for: .touchUpInside)
     view.addSubview(reserveButton)
     
-    popUpView.backgroundColor = .white
+    popUpView.backgroundColor = ColorPiker.customHanul
     popUpView.addSubview(cancelButton)
     view.addSubview(popUpView)
     
@@ -115,77 +147,47 @@ class OrderViewController: UIViewController {
     popUpView.addSubview(cancelButton)
   }
   
-  //MARK: -  setScrollView()
-  private func setScrollView() {
-
-    scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(3), height: 80)
-    scrollView.isPagingEnabled = true
-    scrollView.delegate = self
-    
-    for index in datas.indices {
-
-      scrollFrame.size = scrollView.frame.size
-      
-      var dateLabel = UILabel()
-      dateLabel = UILabel(frame: CGRect(x: 100 * CGFloat(index), y: 0, width: 80, height: 80))
-      dateLabel.numberOfLines = 2
-      dateLabel.text = datas[index]
-      scrollView.addSubview(dateLabel)
-    }
-    
-  }
+  
   
   //MARK: - setConstraint()
   private func setConstraint() {
     
     
-    [textLabel, addressButton, divider1, divider2, scrollView ,stackView, reserveButton, popUpView, cancelButton].forEach {
+    [addressButton, divider1, textLabel, dateButton, reserveButton, popUpView, cancelButton].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     NSLayoutConstraint.activate([
-      textLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
-      textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      textLabel.heightAnchor.constraint(equalToConstant: 50),
-      
-      addressButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 5),
+      addressButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 21),
       addressButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      addressButton.heightAnchor.constraint(equalToConstant: 30),
+      addressButton.heightAnchor.constraint(equalToConstant: 50),
       
       
       divider1.topAnchor.constraint(equalTo: addressButton.bottomAnchor, constant: 10),
-      divider1.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
-      divider1.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+      divider1.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       divider1.heightAnchor.constraint(equalToConstant: 1),
+      divider1.widthAnchor.constraint(equalToConstant: view.frame.width),
       
-      scrollView.topAnchor.constraint(equalTo: divider1.bottomAnchor, constant: 10),
-      scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      scrollView.heightAnchor.constraint(equalToConstant: 80),
       
-      divider2.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 10),
-      divider2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
-      divider2.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-      divider2.heightAnchor.constraint(equalToConstant: 1),
+      dateButton.topAnchor.constraint(equalTo: divider1.bottomAnchor, constant: 40),
+      dateButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      dateButton.heightAnchor.constraint(equalToConstant: 158),
+      dateButton.widthAnchor.constraint(equalToConstant: 158),
       
-      stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      stackView.topAnchor.constraint(equalTo: divider2.bottomAnchor, constant: 30),
-      stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
-      stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
-      stackView.heightAnchor.constraint(equalToConstant: 80),
       
-//      reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 32),
-//      reserveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 59.5),
-//      reserveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64.5),
-//      reserveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35)
-//      reserveButton.heightAnchor.constraint(equalToConstant: 50),
-
-      reserveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant : 20),
+      
+      textLabel.topAnchor.constraint(equalTo: dateButton.bottomAnchor, constant: 24),
+      textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      textLabel.widthAnchor.constraint(equalToConstant: 200),
+      textLabel.heightAnchor.constraint(equalToConstant: 50),
+      
+      
+      reserveButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant : 38),
       reserveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       reserveButton.widthAnchor.constraint(equalToConstant: 251),
       reserveButton.heightAnchor.constraint(equalToConstant: 44),
       
-
+      
       popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
@@ -194,12 +196,12 @@ class OrderViewController: UIViewController {
       cancelButton.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 329),
       cancelButton.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: -2),
       cancelButton.heightAnchor.constraint(equalToConstant: 44)
-
+      
     ])
     
-      let defaultCenterYConst = popUpView.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
-      defaultCenterYConst.priority = UILayoutPriority(500)
-      defaultCenterYConst.isActive  = true
+    let defaultCenterYConst = popUpView.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
+    defaultCenterYConst.priority = UILayoutPriority(500)
+    defaultCenterYConst.isActive  = true
     
     floatingCenterYConstraint = popUpView.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -180)
     floatingCenterYConstraint.priority = .defaultLow
@@ -207,17 +209,26 @@ class OrderViewController: UIViewController {
     
   }
   
+  
+  
   //MARK:- Action
   
-  @objc func reserveClicked(_ sender: UIButton){
+  @objc func dateButtonClicked() {
+    let selectDateVC = UINavigationController(rootViewController: SelectDateView())
+    selectDateVC.modalPresentationStyle = .fullScreen
+    present(selectDateVC, animated: true)
 
+  }
+  
+  @objc func reserveClicked(_ sender: UIButton){
+    
     view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
     
     UIView.animate(withDuration: 0.4) {
       self.floatingCenterYConstraint.priority = .defaultHigh
-        self.view.layoutIfNeeded()
+      self.view.layoutIfNeeded()
     }
-  
+    
   }
   
   @objc func clickCancelButton(_ sender : UIButton) {
@@ -225,16 +236,8 @@ class OrderViewController: UIViewController {
     view.backgroundColor = .clear
     UIView.animate(withDuration: 0.4) {
       self.floatingCenterYConstraint.priority  =  .defaultLow
-        self.view.layoutIfNeeded()
+      self.view.layoutIfNeeded()
     }
-
-  }
-}
-
-//MARK: - extension UIScrollViewDelegate
-
-extension OrderViewController : UIScrollViewDelegate {
-  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     
   }
 }
