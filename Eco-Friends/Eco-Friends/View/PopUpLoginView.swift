@@ -19,7 +19,7 @@ class PopUpLoginView : UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
+  
     setUI()
     setConstraint()
   }
@@ -32,15 +32,16 @@ class PopUpLoginView : UIView {
   
   private func setUI() {
 
-    imageView.backgroundColor = UIColor(red: 172/255, green: 172/255, blue: 172/255, alpha: 1)
+    imageView.image = UIImage(named: "Group 861")
     self.addSubview(imageView)
     
     loginButton.setTitle("로그인", for: .normal)
-    loginButton.backgroundColor = UIColor(red: 67/255, green: 187/255, blue: 254/255, alpha: 1)
+    loginButton.setTitleColor(ColorPiker.customHanul, for: .normal)
+    loginButton.backgroundColor = UIColor.white
     loginButton.layer.cornerRadius = 25
     self.addSubview(loginButton)
     
-    let atts : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.black, .font : UIFont.systemFont(ofSize : 15)]
+    let atts : [NSAttributedString.Key : Any] = [.foregroundColor : UIColor.white, .font : UIFont.systemFont(ofSize : 15)]
     let attributedTitle = NSMutableAttributedString(string: "비회원으로 예약하기", attributes: atts)
     notUserLoginButton.setAttributedTitle(attributedTitle, for: .normal)
     self.addSubview(notUserLoginButton)

@@ -16,7 +16,9 @@ class OrderListPageView : UIViewController {
     layout.scrollDirection = .vertical
     return UICollectionView(frame: .zero, collectionViewLayout: layout)
   }()
-  
+  var number : [String] = ["20200712-952", "20200329-304", "20045925-103"]
+  var status : [String] = ["수거대기", "수거완료", "수거완료"]
+  var date : [String] = ["수거 7/15 (수)", "수거 7/12 (일)", "수거 7/19 (목)"]
   //MARK: - viewDidLoad()
   
   override func viewDidLoad() {
@@ -63,14 +65,18 @@ class OrderListPageView : UIViewController {
 //MARK: - UICollectionViewDataSource
 
 extension OrderListPageView : UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    1
+  }
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    2
+    3
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderListPageViewCollectionCell.identifier, for: indexPath) as! OrderListPageViewCollectionCell
     cell.backgroundColor = .white
     cell.layer.cornerRadius = view.frame.width / 19
+    cell.configure(number : number[indexPath.item],status: status[indexPath.item], date: date[indexPath.item] )
     return cell
   }
 }
