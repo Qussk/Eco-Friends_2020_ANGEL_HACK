@@ -44,3 +44,22 @@
  
 ****
 
+### 2020.07.18
+
+### *Jun-young*
+
+### *Byoung-il* 
+
+### *Yoon-na*
+
+**DetaileDescriotionViewController**
+ - UIVeiw -> ScrolleView changed
+  
+ **OnboardingViewController**
+ - gif -> Image 
+ 
+ **DetailGuideViewController**
+ - Kingfisher
+ 
+****
+

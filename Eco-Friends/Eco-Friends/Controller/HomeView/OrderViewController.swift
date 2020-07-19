@@ -60,7 +60,6 @@ class OrderViewController: UIViewController {
     
     setUI()
     setConstraint()
-    
   }
   //MARK: - viewDidAppear()
   override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +94,9 @@ class OrderViewController: UIViewController {
 //    ])
 //    view.layoutIfNeeded()
   }
+  
+  
+
   
   
 
@@ -239,9 +241,3 @@ class OrderViewController: UIViewController {
     
   }
 }
-
-
-
-
-
-

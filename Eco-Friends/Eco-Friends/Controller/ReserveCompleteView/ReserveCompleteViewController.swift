@@ -33,8 +33,7 @@ class ReserveCompleteViewController: UIViewController {
     view.backgroundColor = .lightGray
     [imgV, text, xButton, completeButton].forEach { view.addSubview($0) }
     
-    imgV.image = UIImage(systemName: "checkmark.circle.fill")
-    imgV.backgroundColor = .white
+    imgV.image = UIImage(named: "완료")
     imgV.tintColor = .systemBlue
     imgV.layer.borderWidth = 0
     imgV.layer.cornerRadius = 50

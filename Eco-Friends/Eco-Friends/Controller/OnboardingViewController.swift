@@ -8,23 +8,27 @@
 
 import UIKit
 import PaperOnboarding
+import Kingfisher
 
 class OnboardingViewController: UIViewController {
   
   let onboarding = PaperOnboarding()
   let getButton = UIButton()
   
+  let onboardingImage = UIImageView()
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     
     onboarding.dataSource = self
     onboarding.delegate = self
     setupOnboarding()
-    setButton()
+    setView()
   }
   
   //MARK:- UI
-  func setButton(){
+   func setView(){
     
     getButton.backgroundColor = ColorPiker.customHanul
     getButton.alpha = 0
@@ -34,15 +38,45 @@ class OnboardingViewController: UIViewController {
     onboarding.addSubview(getButton)
     getButton.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     
-    getButton.translatesAutoresizingMaskIntoConstraints = false
+    onboardingImage.contentMode = .scaleAspectFill
+    onboarding.addSubview(onboardingImage)
     
-    getButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
-    getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
-    getButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -180).isActive = true
-    getButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    
+    
+    getButton.translatesAutoresizingMaskIntoConstraints = false
+    onboardingImage.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+      
+      onboardingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+      onboardingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      onboardingImage.widthAnchor.constraint(equalToConstant: 320),
+      onboardingImage.heightAnchor.constraint(equalToConstant: 360),
+      
+      getButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+      getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+      getButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
+      getButton.heightAnchor.constraint(equalToConstant: 44),
+      
+      
+    ])
+  }
+  //MARK: -viewDidAppear
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    self.onboardingImage.alpha = 1.0
+    self.onboardingImage.image = UIImage(named: "on1")
+    
+  //  self.onboardingImage.kf.indicatorType = .activity
+  //  let gifs = ["https://qussk.github.io/image/PET.gif"]
+  //  self.onboardingImage.kf.setImage(with: URL(string: gifs[0])!)
+    print("dd")
   }
   
   
+  //MARK: - Onboarding
   func setupOnboarding(){
     view.backgroundColor = .white
     view.addSubview(onboarding)
@@ -68,42 +102,39 @@ extension OnboardingViewController: PaperOnboardingDataSource {
   
   func onboardingItem(at index: Int) -> OnboardingItemInfo {
     
-//    let bgOne = UIColor(red: 217/255, green: 72/255, blue: 89/255, alpha: 1)
-//    let bgTwo = UIColor(red: 186/255, green: 166/255, blue: 211/255, alpha: 1)
-//    let bgThree = UIColor(red: 168/255, green: 166/255, blue: 78/255, alpha: 1)
     
     let titleFont = UIFont(name: "AvenirNext-Bold", size: 24)!
     let descirptionFont = UIFont(name: "AvenirNext-Regular", size: 18)!
     
-    return [OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
-                               title: "환경을 살리는 분리수거",
-                               description: "11111111111111\n11111111111111\n111111111111",
-                               pageIcon: UIImage(named:"naver")!,
-                               color: UIColor.white,
-                               titleColor: UIColor.black,
-                               descriptionColor: UIColor.black,
-                               titleFont: titleFont,
-                               descriptionFont: descirptionFont),
-            OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
-                               title: "환영합니다2",
-                               description: "ㅏㅓㅓㅓㅓㅓㅓㅓ",
-                               pageIcon: UIImage(named:"naver")!,
-                               color: UIColor.white,
-                               titleColor: UIColor.black,
-                               descriptionColor: UIColor.black,
-                               titleFont: titleFont,
-                               descriptionFont: descirptionFont),
-            OnboardingItemInfo(informationImage: UIImage(named:"naver")!,
-                               title: "환영합니다",
-                               description: "ㅏㅓㅓㅓㅓㅓㅓㅓ",
-                               pageIcon: UIImage(named:"naver")!,
-                               color: UIColor.white,
-                               titleColor: UIColor.black,
-                               descriptionColor: UIColor.black,
-                               titleFont: titleFont,
-                               descriptionFont: descirptionFont)
-      ][index]
-  }
+    return [OnboardingItemInfo(informationImage: UIImage(named:"back")!,
+                                 title: "확실한 분리수거",
+                                 description: "폐기물 처리 가이드를 통해\n제대로 된 분리수거 방법을 알아보세요.\n작은 노력 하나로 깨끗한 지구를 만들어요.",
+                                 pageIcon: UIImage(named:"on")!,
+                                 color: UIColor.white,
+                                 titleColor: UIColor.black,
+                                 descriptionColor: UIColor.black,
+                                 titleFont: titleFont,
+                                 descriptionFont: descirptionFont),
+              OnboardingItemInfo(informationImage: UIImage(named:"back")!,
+                                 title: "집 앞에서 픽업",
+                                 description: "잠들기 전, 집 문 앞에 폐기물을 놓아두고\n쓸애기 서비스를 이용해보세요.\n잠든 사이에 수거해갈게요.",
+                                 pageIcon: UIImage(named:"on")!,
+                                 color: UIColor.white,
+                                 titleColor: UIColor.black,
+                                 descriptionColor: UIColor.black,
+                                 titleFont: titleFont,
+                                 descriptionFont: descirptionFont),
+              OnboardingItemInfo(informationImage: UIImage(named:"back")!,
+                                 title: "환경을 살리는 분리수거",
+                                 description: "분리수거를 제대로 해야 재활용이 된다는 사실,\n알고 계신가요?",
+                                 pageIcon: UIImage(named:"on")!,
+                                 color: UIColor.white,
+                                 titleColor: UIColor.black,
+                                 descriptionColor: UIColor.black,
+                                 titleFont: titleFont,
+                                 descriptionFont: descirptionFont)
+        ][index]
+    }
   func onboardingItemsCount() -> Int {
     return 3
   }
@@ -126,27 +157,48 @@ extension OnboardingViewController: PaperOnboardingDataSource {
 //MARK:-PaperOnboardingDelegate
 extension OnboardingViewController: PaperOnboardingDelegate {
 
-  func onboardingConfigurationItem(_: OnboardingContentViewItem, index _: Int) {
+   func onboardingConfigurationItem(_: OnboardingContentViewItem, index _: Int) {
+      
+    }
     
-  }
-  
-  func onboardingWillTransitonToIndex(_ index: Int) {
-     if index == 1 {
-         if self.getButton.alpha == 1 {
-           UIView.animate(withDuration: 0.1, animations: {
-             self.getButton.alpha = 0
-           })
-         }
-       }
-  }
-  func onboardingDidTransitonToIndex(_ index: Int) {
-    if index == 2 {
+    func onboardingWillTransitonToIndex(_ index: Int) {
+      
+      if index == 0 {
+        if self.getButton.alpha == 1 {
+          UIView.animate(withDuration: 0.1, animations: {
+            self.getButton.alpha = 0
+          })
+        }
+      }
+    }
+    
+    func onboardingDidTransitonToIndex(_ index: Int) {
+      if index == 0 {
+        UIView.animate(withDuration: 0.1, animations: {
+          self.onboardingImage.alpha = 1
+          self.onboardingImage.image = UIImage(named: "on1")
+        })
+      }else if index == 1 {
+        UIView.animate(withDuration: 0.1, animations: {
+          //self.onboardingImage.alpha = 0
+          self.onboardingImage.image = UIImage(named: "on2")
+
+        })
+        
+      } else {
         UIView.animate(withDuration: 0.2, animations: {
+          self.onboardingImage.image = UIImage(named: "on3")
           self.getButton.alpha = 1
         })
+        
+      }
     }
+    
+    
+    
   }
-}
+
+
 
 
 
