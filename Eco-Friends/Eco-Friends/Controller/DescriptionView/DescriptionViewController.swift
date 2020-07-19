@@ -49,7 +49,6 @@ class DescriptionViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     UIView.animate(withDuration: 1.5) {
       self.descriptionTitle.alpha = 1
-      
     }
   }
   
@@ -62,9 +61,10 @@ class DescriptionViewController: UIViewController {
     descriptionTitle.font = UIFont(name: "PingFangHK-Light", size: 25)
     view.addSubview(descriptionTitle)
     
-    descriptionLable.text = "우리의 노력으로 새로운"
+    descriptionLable.text = "여러분이 열심히 분리수거한 쓰레기는\n재활용 전문 업체에서 새로운 제품으로 태어날 거에요."
+    descriptionLable.numberOfLines = 2
     descriptionLable.font = UIFont.systemFont(ofSize: 14)
-    descriptionLable.textColor = ColorPiker.customGray
+    descriptionLable.textColor = UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)
     view.addSubview(descriptionLable)
     
     collectionView.backgroundColor = .white

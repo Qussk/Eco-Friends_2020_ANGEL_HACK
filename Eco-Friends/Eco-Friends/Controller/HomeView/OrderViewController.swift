@@ -83,11 +83,7 @@ class OrderViewController: UIViewController {
     textLabel.font = UIFont.boldSystemFont(ofSize: 15)
     textLabel.textAlignment = .center
     view.addSubview(textLabel)
-    
-    
-    
-    
-    
+
     
     reserveButton.setTitle("예약하기", for: .normal)
     reserveButton.setTitleColor(.white, for: .normal)
@@ -216,6 +212,12 @@ class OrderViewController: UIViewController {
     let loginNavi = UINavigationController(rootViewController: loginVC)
     loginNavi.modalPresentationStyle = .fullScreen
     present(loginNavi, animated: true)
+    
+    view.backgroundColor = .clear
+    UIView.animate(withDuration: 0.4) {
+      self.floatingCenterYConstraint.priority  =  .defaultLow
+      self.view.layoutIfNeeded()
+    }
     
   }
 }

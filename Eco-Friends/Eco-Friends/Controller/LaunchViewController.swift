@@ -22,7 +22,7 @@ class LaunchViewController: UIViewController {
       DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
        let vc = OnboardingViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.present(vc, animated: false)
       }
   }
     

@@ -20,13 +20,8 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-<<<<<<< HEAD
     view.backgroundColor = .systemBackground
-   
-=======
-    view.backgroundColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
-    
->>>>>>> e13ce55a7dd1f31262999831c876699bdc707e9c
+
     setView()
     setConstrain()
     setNavigationBar()
@@ -64,10 +59,6 @@ class LoginViewController: UIViewController {
     
     signUpButton.alpha = 0
     
-  }
-  
-  @objc func loginGoing(_ sender: UIButton){
-    dismiss(animated: true)
   }
   
   @objc func loginGoing(_ sender: UIButton){
