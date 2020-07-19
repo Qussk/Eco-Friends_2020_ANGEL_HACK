@@ -33,7 +33,7 @@ class TableViewCellInCollectionView3 : UITableViewCell {
   }
   
   private func setUI() {
-    menuLabel.font = UIFont.boldSystemFont(ofSize: 15)
+    menuLabel.font = UIFont(name: "PingFangHK-Light", size: 15)
     menuLabel.textAlignment = .left
     menuLabel.textColor = .black
     menuLabel.backgroundColor = .white

@@ -37,6 +37,14 @@ class SelectReserveViewController: UIViewController {
     setConstraint()
   }
   
+  func navigationLess(){
+    //네비게이션바 디자인 생략
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
+  }
+  
+  
   func setUI() {
     view.backgroundColor = .systemBackground
     [titleLabel, subLabel, stackFirst, stackSecond, selectButton, backButton].forEach { view.addSubview($0) }

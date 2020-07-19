@@ -25,9 +25,16 @@ class LoginViewController: UIViewController {
     setView()
     setConstrain()
     setNavigationBar()
-    
+    navigationLess()
   }
   
+  
+  func navigationLess(){
+    //네비게이션바 디자인 생략
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.backgroundColor = UIColor.clear
+  }
   
   func setView(){
     loginButton.setTitle("로그인", for: .normal)
@@ -52,9 +59,12 @@ class LoginViewController: UIViewController {
     loginLable.text = "혹시, 쓸애기가 처음이신가요?"
     loginLable.font = UIFont.systemFont(ofSize: 16)
     
-    
     signUpButton.setTitle("회원가입", for: .normal)
+<<<<<<< HEAD
     signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 169/255, alpha: 1), for: .normal)
+=======
+    signUpButton.setTitleColor(UIColor(red: 78/255, green: 239/255, blue: 168/255, alpha: 1), for: .normal)
+>>>>>>> 6bbd76005a3c7c152cf07373ac9d37232f151bf5
     signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
     
     signUpButton.alpha = 0

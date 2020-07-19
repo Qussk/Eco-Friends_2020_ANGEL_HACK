@@ -16,7 +16,7 @@ class ReserveViewController: UIViewController {
     return UICollectionView(frame: .zero, collectionViewLayout: layout)
   }()
   
-      
+  let backButton = UIButton()
   let reserveButton = UIButton()
   
   override func viewDidLoad() {
@@ -44,6 +44,11 @@ class ReserveViewController: UIViewController {
     collectionView.register(ReserveSection3CollectionViewCell.self, forCellWithReuseIdentifier: "Cell3")
     view.addSubview(collectionView)
     
+    backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+    backButton.tintColor = .lightGray
+    collectionView.addSubview(backButton)
+    backButton.addTarget(self, action: #selector(backClick), for: .touchUpInside)
+    
     //67, 187, 254
     reserveButton.backgroundColor = ColorPiker.customHanul
     reserveButton.setTitle("예약하기", for: .normal)
@@ -52,6 +57,7 @@ class ReserveViewController: UIViewController {
     reserveButton.layer.cornerRadius = view.frame.width/17
     
     collectionView.addSubview(reserveButton)
+<<<<<<< HEAD
     reserveButton.addTarget(self, action: #selector(reserveClick(_:)), for: .touchUpInside)
   }
   
@@ -60,6 +66,23 @@ class ReserveViewController: UIViewController {
      let nv = UINavigationController(rootViewController: vc)
      nv.modalPresentationStyle = .fullScreen
      navigationController?.pushViewController(vc, animated: true)
+=======
+    
+    reserveButton.addTarget(self, action: #selector(reserveClick(_:)), for: .touchUpInside)
+  }
+  
+  @objc func backClick(_ sender: UIButton){
+    dismiss(animated: true)
+  }
+  
+ @objc func reserveClick(_ sender: UIButton){
+    
+    let vc = ReserveCompleteViewController()
+   vc.modalPresentationStyle = .fullScreen
+present(vc, animated: false)
+  print("dd")
+    
+>>>>>>> 6bbd76005a3c7c152cf07373ac9d37232f151bf5
   }
   
   func setupConstrain(){
@@ -68,14 +91,20 @@ class ReserveViewController: UIViewController {
     
     collectionView.translatesAutoresizingMaskIntoConstraints = false
     reserveButton.translatesAutoresizingMaskIntoConstraints = false
+    backButton.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
       
-      collectionView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 6),
+      collectionView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 12),
       collectionView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       collectionView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
       collectionView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
       // collectionView.heightAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 1)
+      
+      backButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 8),
+      backButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 16),
+      backButton.heightAnchor.constraint(equalToConstant: 20),
+      backButton.widthAnchor.constraint(equalToConstant: 12),
       
       reserveButton.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       reserveButton.heightAnchor.constraint(equalToConstant: 44),
@@ -150,7 +179,7 @@ extension ReserveViewController : UICollectionViewDataSource {
       collectionView.frame.origin.y = -100 }
 
     @objc private func keyboardWillHide(_ notification: Notification) {
-       collectionView.frame.origin.y = 100 }
+       collectionView.frame.origin.y = 60 }
     
   }
    
