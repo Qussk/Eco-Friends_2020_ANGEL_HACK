@@ -20,6 +20,7 @@ class OnboardingViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    
     onboarding.dataSource = self
     onboarding.delegate = self
     setupOnboarding()
@@ -37,19 +38,20 @@ class OnboardingViewController: UIViewController {
     onboarding.addSubview(getButton)
     getButton.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     
-    
+    onboardingImage.contentMode = .scaleAspectFill
     onboarding.addSubview(onboardingImage)
+    
+    
     
     getButton.translatesAutoresizingMaskIntoConstraints = false
     onboardingImage.translatesAutoresizingMaskIntoConstraints = false
     
-    
     NSLayoutConstraint.activate([
       
-      onboardingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+      onboardingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
       onboardingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       onboardingImage.widthAnchor.constraint(equalToConstant: 320),
-      onboardingImage.heightAnchor.constraint(equalToConstant: 340),
+      onboardingImage.heightAnchor.constraint(equalToConstant: 360),
       
       getButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
       getButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
