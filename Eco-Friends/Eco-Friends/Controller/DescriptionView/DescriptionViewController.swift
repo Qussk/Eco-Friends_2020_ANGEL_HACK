@@ -25,7 +25,7 @@ class DescriptionViewController: UIViewController {
   //스크롤뷰
   //  lazy var scrollView = UIScrollView()
   //  var scrollFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-  let images = ["88","99","88"]
+  let images = ["88","99","00"]
   
   //페이지뷰
   lazy var pageControl = UIPageControl(frame: CGRect(x: view.frame.midX - 100, y: view.frame.maxY - 200, width: 200, height: 50))

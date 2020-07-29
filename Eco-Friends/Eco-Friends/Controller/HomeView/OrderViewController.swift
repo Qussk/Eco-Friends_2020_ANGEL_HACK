@@ -31,6 +31,7 @@ class OrderViewController: UIViewController {
   private let divider1 = DividerView()
   private var popUpView = PopUpLoginView()
   private let cancelButton = UIButton()
+  //2.
   private var floatingCenterYConstraint : NSLayoutConstraint!
   private let reserveButton = UIButton()
   //  let homeVC = HomeViewController()
@@ -149,6 +150,7 @@ class OrderViewController: UIViewController {
       reserveButton.widthAnchor.constraint(equalToConstant: 251),
       reserveButton.heightAnchor.constraint(equalToConstant: 44),
       
+      //1.
       popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
@@ -164,7 +166,7 @@ class OrderViewController: UIViewController {
       cancelButton.heightAnchor.constraint(equalToConstant: 44)
       
     ])
-    
+    //3
     let defaultCenterYConst = popUpView.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
     defaultCenterYConst.priority = UILayoutPriority(500)
     defaultCenterYConst.isActive  = true
@@ -189,13 +191,15 @@ class OrderViewController: UIViewController {
     present(selectDateVC, animated: true)
   }
   
+  
   @objc func reserveClicked(_ sender: UIButton){
     if loginCheck == false {
       view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
       
+      //4 우선순위를 .defaultHigh로 바꿔줌.
       UIView.animate(withDuration: 0.4) {
         self.floatingCenterYConstraint.priority = .defaultHigh
-        self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded() //안먹어서 써줌. 필요할때 써라.
       }
       loginCheck = true
     } else {
@@ -213,6 +217,7 @@ class OrderViewController: UIViewController {
   
   @objc func clickCancelButton(_ sender : UIButton) {
     
+    //4 우선순위를 .defaultLow로 바꿔줌.
     view.backgroundColor = .clear
     UIView.animate(withDuration: 0.4) {
       self.floatingCenterYConstraint.priority  =  .defaultLow
